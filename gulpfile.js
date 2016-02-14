@@ -26,7 +26,7 @@ gulp.task('sass', ['minifycss'], function () {
 
 gulp.task('watch', function () {
     gulp.watch('./sass/**/*.scss', ['sass']);
-    gulp.watch('./css/theme.css', ['minifycss']);
+    gulp.watch('./css/understrap.css', ['minifycss']);
 });
 
 gulp.task('minifycss', ['cleancss'], function(){
