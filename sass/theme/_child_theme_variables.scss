@@ -6,45 +6,4 @@
 // Just add your color code here, compile the theme.scss file to change this color everywhere
 
 
-//Fonts
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100);
-$font-family-sans-serif:  "Roboto", Helvetica, Arial, sans-serif !default;
-$font-size-base:          15px !default;
-$line-height-base:        1.6 !default; // 20/14
-
-
-$font-size-h1:            floor(($font-size-base * 6)) !default; // ~36px
-$font-size-h2:            floor(($font-size-base * 4)) !default; // ~30px
-$font-size-h3:            ceil(($font-size-base * 3)) !default; // ~24px
-$font-size-h4:            ceil(($font-size-base * 1.5)) !default; // ~18px
-$font-size-h5:            $font-size-base !default;
-$font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
-
-//Font Colors
-$text-color:            #555555;
-$brand-dark-text:		#fff;
-
-// Colors
-$brand-dark: #333;
-$brand-primary:         #777; //#ff6d5a
-$brand-success:         #4cd463 !default;
-
-//Sizes and Paddings
-$grid-gutter-width:         10px !default;
-
-//=== Inverted navbar
-$navbar-height:                    80px !default;
-$navbar-inverse-bg:                $brand-dark;
-$navbar-inverse-border:            darken($navbar-inverse-bg, 0%) !default;
-
-// Inverted navbar brand label
-$navbar-inverse-brand-color:                #777;
-
-
-//Paddings
-$padding-large-vertical:    ($grid-gutter-width / 5);
-$padding-large-horizontal:  $grid-gutter-width;
-
-$border-radius-base:        3px !default;
-$border-radius-large:       3px !default;
-$border-radius-small:       2px !default;
+$brand-primary:         #ff6600; //#ff6d5a
