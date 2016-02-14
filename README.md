@@ -29,3 +29,9 @@ Add your own color like:
 $brand-primary: #ff6600;
 in /sass/theme/_child_theme_variables.scss to overwrite it.
 That will change automatically all elements who use this variable.
+It will be outputted into:
+/css/understrap-child.min.css
+and
+/css/understrap-child.css
+
+So you have one clean CSS file at the end and just one request.
