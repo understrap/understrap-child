@@ -1,10 +1,11 @@
 
 //@import "../../understrap/bower_components/_s/sass/style";
 
+@import "theme/child_theme_variables";  // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap variables here
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../bower_components/understrap/sass/understrap/understrap.scss";
 @import "../bower_components/fontawesome/scss/font-awesome";
-@import "theme/child_theme_variables";  // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap variables here
+
 
 // Any additional imported files //
 @import "theme/child_theme";  // <--------- Add your styles into this file

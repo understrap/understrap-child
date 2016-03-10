@@ -1104,7 +1104,7 @@ a.label:focus,a.label:hover{color:#fff;text-decoration:none;cursor:pointer}
 .nav-pills>li>a>.badge{margin-left:3px}
 a.badge:focus,a.badge:hover{color:#fff;text-decoration:none;cursor:pointer}
 .jumbotron,.jumbotron .h1,.jumbotron h1{color:inherit}
-.jumbotron{padding-top:30px;padding-bottom:30px;margin-bottom:30px;background-color:#eee}
+.jumbotron{padding-top:30px;padding-bottom:30px;background-color:#eee}
 .jumbotron p{margin-bottom:15px;font-size:21px;font-weight:200}
 .alert,.thumbnail{margin-bottom:20px}
 .alert .alert-link,.close{font-weight:700}
@@ -1384,7 +1384,6 @@ button.close{padding:0;cursor:pointer;background:0 0;border:0;-webkit-appearance
 }
 .clearfix:after,.clearfix:before{content:" ";display:table}
 .center-block{display:block;margin-left:auto;margin-right:auto}
-.fa.fa-pull-left,.fa.pull-left{margin-right:.3em}
 .pull-right{float:right!important}
 .pull-left{float:left!important}
 .hide{display:none!important}
@@ -1392,7 +1391,7 @@ button.close{padding:0;cursor:pointer;background:0 0;border:0;-webkit-appearance
 .hidden,.visible-lg,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block,.visible-md,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-sm,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-xs,.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block{display:none!important}
 .invisible{visibility:hidden}
 .text-hide{font:0/0 a;color:transparent;background-color:transparent;border:0}
-.aligncenter,.alignleft,.alignright,.bypostauthor,.gallery-caption,.screen-reader-text,.sticky,.wp-caption,.wp-caption-text{font-size:inherit}
+.bypostauthor,.gallery-caption,.screen-reader-text,.sticky,.wp-caption,.wp-caption-text{font-size:inherit}
 .affix{position:fixed}
 .fa-ul>li,a.skip-link{position:relative}
 @-ms-viewport{width:device-width}
@@ -1452,12 +1451,18 @@ td.visible-print,th.visible-print{display:table-cell!important}
 .hidden-print{display:none!important}
 }
 .wrapper{padding:30px 0}
-#wrapper-hero,#wrapper-static-hero{padding:0!important}
-.wrapper#wrapper-sticky{border-bottom:1px solid #eee}
+#wrapper-hero{padding:0!important}
+.wrapper#wrapper-sticky{border-bottom:1px solid #777}
+#wrapper-footer-full,#wrapper-static-hero{background-color:#eee}
+.alignright{float:right}
+.alignleft,.fa-pull-left{float:left}
+.aligncenter{margin:0 auto}
+.fa.fa-pull-left,.fa.pull-left{margin-right:.3em}
 .entry-footer span{padding-right:10px}
 article img,figure,img.wp-post-image{max-width:100%}
 a.skip-link{z-index:1000;margin-bottom:-20px;display:block}
 .fa,.fa-stack{display:inline-block}
+.jumbotron{margin-bottom:0}
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -1475,7 +1480,6 @@ a.skip-link{z-index:1000;margin-bottom:-20px;display:block}
 .fa-li{position:absolute;left:-2.14286em;width:2.14286em;top:.14286em;text-align:center}
 .fa-li.fa-lg{left:-1.85714em}
 .fa-border{padding:.2em .25em .15em;border:.08em solid #eee;border-radius:.1em}
-.fa-pull-left{float:left}
 .fa-pull-right{float:right}
 .fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}
 .fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}
