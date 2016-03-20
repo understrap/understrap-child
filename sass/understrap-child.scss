@@ -1,10 +1,17 @@
 
 //@import "../../understrap/bower_components/_s/sass/style";
 
-@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
-@import "../bower_components/understrap/sass/understrap/understrap.scss";
-@import "../bower_components/fontawesome/scss/font-awesome";
 @import "theme/child_theme_variables";  // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap variables here
+@import "../src/sass/bootstrap-sass/bootstrap";
+@import "../src/sass/understrap/theme";
+@import "../src/sass/fontawesome/font-awesome";
+@import "../src/sass/owl-carousel2/owl.carousel";
+@import "../src/sass/owl-carousel2/owl.animate";
+@import "../src/sass/owl-carousel2/owl.autoheight";
+@import "../src/sass/owl-carousel2/owl.lazyload";
+@import "../src/sass/owl-carousel2/owl.video";
+@import "../src/sass/owl-carousel2/owl.theme.default";
+
 
 // Any additional imported files //
 @import "theme/child_theme";  // <--------- Add your styles into this file

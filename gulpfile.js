@@ -84,6 +84,10 @@ gulp.task('copy-assets', function() {
     gulp.src(basePaths.bower + 'bootstrap-sass/assets/fonts/bootstrap/*.{ttf,woff,woff2,eof,svg}')
         .pipe(gulp.dest('./fonts'));
 
+// Copy all UnderStrap SCSS files
+    gulp.src(basePaths.bower + 'understrap/sass/**/*.scss')
+       .pipe(gulp.dest(basePaths.dev + '/sass/understrap'));
+
 // Copy all Font Awesome Fonts
     gulp.src(basePaths.bower + 'fontawesome/fonts/**/*.{ttf,woff,woff2,eof,svg}')
         .pipe(gulp.dest('./fonts'));
