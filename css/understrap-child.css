@@ -1,33 +1,4 @@
 @charset "UTF-8";
-/*****************************************************************
-Import all needed 3rd party sass files plus your own style and variables
-
-1. ../bower_components/_s/sass/style  // Adding underscores default styles ake sure you run bower install before! <- Dont edit this files!
---------------------------------------
-2. theme/theme_variables.scss // Overwriting Bootstrap variables and for own variables <-- ADD YOUR VARIABLES HERE
---------------------------------------
-3.../bower_components/bootstrap-sass/assets/stylesheets/bootstrap // adding bootstrap from bower components folder. Make sure you run bower install before! <- Dont edit this files!
---------------------------------------
-4. understrap/understrap.scss // Some basic understrap styles. Helps to combine Bootsrap and _s theme and provides some basic styleing for additonal functions <- Dont edit this files!
---------------------------------------
-5. ../bower_components/fontawesome/scss/font-awesome <- Dont edit this files! If you don´t need/want Font Awesome support comment out this line
---------------------------------------
-
-
-
-          *
-          *
-          *
-       *******
-        *****
-         ***
-          *
-
-
-
-// Any additional imported files //
-6. theme/theme.scss"; // <-- ADD YOUR STYLES HERE
-***************************************************************** */
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -5849,14 +5820,17 @@ button.close {
 .wrapper {
   padding: 30px 0; }
 
-#wrapper-hero, #wrapper-static-hero {
+#wrapper-hero {
   padding: 0px !important; }
 
 .sticky, .gallery-caption, .bypostauthor {
   font-size: inherit; }
 
 .wrapper#wrapper-sticky {
-  border-bottom: 1px solid #eeeeee; }
+  border-bottom: 1px solid #777777; }
+
+#wrapper-footer-full, #wrapper-static-hero {
+  background-color: #eeeeee; }
 
 .wp-caption {
   font-size: inherit; }
@@ -5868,13 +5842,13 @@ button.close {
   font-size: inherit; }
 
 .alignright {
-  font-size: inherit; }
+  float: right; }
 
 .alignleft {
-  font-size: inherit; }
+  float: left; }
 
 .aligncenter {
-  font-size: inherit; }
+  margin: 0px auto; }
 
 .entry-footer span {
   padding-right: 10px; }
@@ -5887,6 +5861,9 @@ a.skip-link {
   margin-bottom: -20px;
   position: relative;
   display: block; }
+
+.jumbotron {
+  margin-bottom: 0px; }
 
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome

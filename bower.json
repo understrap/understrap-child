@@ -17,7 +17,7 @@
       "_s",
       "sass"
     ],
-  "license": "MIT",
+  "license": "GPL-2.0",
   "ignore": [
     "**/.*",
     "test",
@@ -27,7 +27,7 @@
     "bootstrap-sass": "~3.3.6",
     "fontawesome": "~4.5.0",
     "_s": "https://github.com/Automattic/_s.git",
-    "understrap": "~0.3.7",
+    "understrap": "~0.3.8",
     "OwlCarousel2": "~2.0.0-beta.3"
   },
   "_source": "https://github.com/holger1411/understrap-child.git",
