@@ -32,7 +32,7 @@ gulp.task('sass', function () {
 // Starts watcher. Watcher runs gulp sass task on changes
 gulp.task('watch', function () {
     gulp.watch('./sass/**/*.scss', ['sass']);
-    gulp.watch('./css/understrap-child.css', ['cssnano']);
+    gulp.watch('./css/child-theme.css', ['cssnano']);
 });
 
 // Run: 
@@ -61,7 +61,7 @@ gulp.task('scripts', function() {
     basePaths.dev + 'js/owl.carousel.min.js', 
     basePaths.dev + 'js/skip-link-focus-fix.js'
     ])
-    .pipe(concat('theme.min.js'))
+    .pipe(concat('child-theme.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./js/'))
 });
