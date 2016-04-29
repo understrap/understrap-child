@@ -57,8 +57,8 @@ gulp.task('cleancss', function() {
 // Uglifies and concat all JS files into one
 gulp.task('scripts', function() {
   gulp.src([
-    basePaths.dev + 'js/bootstrap4/bootstrap.min.js',  //<--------- Change from /bootstrap3 to /bootstrap4 Watch out! just for testing in the moment!
     basePaths.dev + 'js/owl.carousel.min.js', 
+    basePaths.dev + 'js/bootstrap4/bootstrap.js',  //<--------- Change from /bootstrap3 to /bootstrap4 Watch out! just for testing in the moment!
     basePaths.dev + 'js/skip-link-focus-fix.js'
     ])
     .pipe(concat('child-theme.min.js'))
@@ -88,7 +88,7 @@ gulp.task('copy-assets', function() {
 
 ////////////////// All Bootstrap 4 Assets /////////////////////////
 // Copy all Bootstrap JS files 
-    gulp.src(basePaths.bower + 'bootstrap/js/**/*.js')
+    gulp.src(basePaths.bower + 'bootstrap/dist/js/**/*.js')
        .pipe(gulp.dest(basePaths.dev + '/js/bootstrap4'));
 
 // Copy all Bootstrap SCSS files

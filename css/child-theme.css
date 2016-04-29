@@ -4600,12 +4600,52 @@ img.wp-post-image, article img, figure {
 
 a.skip-link {
   z-index: 1000;
-  margin-bottom: -20px;
-  position: relative;
-  display: block; }
+  position: fixed;
+  top: 0px;
+  right: 0px; }
 
 .jumbotron {
   margin-bottom: 0px; }
+
+.menu-item {
+  float: left;
+  width: auto;
+  display: inline; }
+
+ul.nav.navbar-nav a {
+  display: block;
+  padding-top: .425rem;
+  padding-bottom: .425rem; }
+
+.navbar-toggle {
+  position: relative;
+  float: right;
+  margin-right: 1rem;
+  padding: 9px 10px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent; }
+  .navbar-toggle:focus {
+    outline: 0; }
+  .navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px; }
+  .navbar-toggle .icon-bar + .icon-bar {
+    margin-top: 4px; }
+
+.navbar-dark .navbar-toggle {
+  border: 1px solid #fff; }
+
+.navbar-dark .icon-bar {
+  border-bottom: 1px solid #fff; }
+
+.navbar-dark .dropdown-menu {
+  background-color: rgba(255, 255, 255, 0.5); }
+
+.navbar #main-menu {
+  float: left; }
 
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome

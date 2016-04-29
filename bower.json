@@ -1,6 +1,6 @@
 {
   "name": "understrap-child",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "homepage": "http://understrap.com",
   "authors": [
     "Holger Koenemann <office@holgerkoenemann.de>"
@@ -27,12 +27,12 @@
     "bootstrap-sass": "~3.3.6",
     "fontawesome": "~4.5.0",
     "_s": "https://github.com/Automattic/_s.git",
-    "understrap": "~0.3.8",
+    "understrap": "latest",
     "OwlCarousel2": "~2.0.0-beta.3",
     "bootstrap": "v4.0.0-alpha.2"
   },
   "_source": "https://github.com/holger1411/understrap-child.git",
-  "_target": "~0.1.0",
+  "_target": "~0.1.2",
   "_originalSource": "understrap-child"
 }
 
