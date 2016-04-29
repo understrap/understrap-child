@@ -1,6 +1,6 @@
 {
   "name": "understrap-child",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Basic Child Theme for UnderStrap Theme Framework: https://github.com/holger1411/understrap",
   "main": "index.js",
   "scripts": {
