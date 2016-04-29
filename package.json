@@ -1,6 +1,6 @@
 {
   "name": "understrap-child",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Basic Child Theme for UnderStrap Theme Framework: https://github.com/holger1411/understrap",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/holger1411/understrap-child",
   "dependencies": {
-    "bower": "^1.7.7",
+    "bower": "^1.7.9",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-ignore": "^2.0.1",
