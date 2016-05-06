@@ -4612,11 +4612,6 @@ a.skip-link {
   width: auto;
   display: inline; }
 
-ul.nav.navbar-nav a {
-  display: block;
-  padding-top: .425rem;
-  padding-bottom: .425rem; }
-
 .navbar-toggle {
   position: relative;
   float: right;
@@ -4642,10 +4637,27 @@ ul.nav.navbar-nav a {
   border-bottom: 1px solid #fff; }
 
 .navbar-dark .dropdown-menu {
-  background-color: rgba(255, 255, 255, 0.5); }
+  background-color: #373a3c; }
 
 .navbar #main-menu {
   float: left; }
+
+.navbar-nav .nav-item {
+  float: left; }
+
+.navbar-nav .nav-link {
+  display: block;
+  padding-top: .425rem;
+  padding-bottom: .425rem; }
+  .navbar-nav .nav-link + .nav-link {
+    margin-left: 0rem; }
+
+.navbar-nav .nav-item + .nav-item {
+  margin-left: 0rem; }
+
+.nav-link {
+  margin-left: .425rem;
+  margin-right: .425rem; }
 
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome

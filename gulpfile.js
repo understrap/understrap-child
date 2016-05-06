@@ -85,6 +85,9 @@ gulp.task('watch-bs', ['browser-sync', 'watch', 'cssnano'], function () { });
 gulp.task('scripts', function() {
   gulp.src([
     basePaths.dev + 'js/owl.carousel.min.js', 
+     basePaths.dev + 'js/tether.js', // Must be loaded before BS4
+
+    // Start - All BS4 stuff
     basePaths.dev + 'js/bootstrap4/bootstrap.js',  //<--------- Change from /bootstrap3 to /bootstrap4 Watch out! just for testing in the moment!
     basePaths.dev + 'js/skip-link-focus-fix.js'
     ])
@@ -154,4 +157,11 @@ gulp.task('copy-assets', function() {
 // _s JS files
     gulp.src(basePaths.bower + '_s/js/*.js')
         .pipe(gulp.dest(basePaths.dev + '/js'));
+// Copy Tether JS files
+    gulp.src(basePaths.bower + 'tether/dist/js/*.js')
+        .pipe(gulp.dest(basePaths.dev + '/js'));
+
+// Copy Tether CSS files
+    gulp.src(basePaths.bower + 'tether/dist/css/*.css')
+        .pipe(gulp.dest(basePaths.dev + '/css'));
 });
