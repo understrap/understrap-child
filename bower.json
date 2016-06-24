@@ -25,9 +25,9 @@
   ],
   "dependencies": {
     "bootstrap-sass": "~3.3.6",
-    "fontawesome": "~4.5.0",
+    "fontawesome": "~4.6.3",
     "_s": "https://github.com/Automattic/_s.git",
-    "understrap": "latest",
+    "understrap": "0.4.5",
     "OwlCarousel2": "~2.0.0-beta.3",
     "bootstrap": "v4.0.0-alpha.2",
     "tether": "~1.3.1"

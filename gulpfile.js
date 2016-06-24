@@ -84,37 +84,42 @@ gulp.task('watch-bs', ['browser-sync', 'watch', 'cssnano'], function () { });
 // Uglifies and concat all JS files into one
 gulp.task('scripts', function() {
   gulp.src([
-    basePaths.dev + 'js/owl.carousel.min.js', 
-     basePaths.dev + 'js/tether.js', // Must be loaded before BS4
+    basePaths.dev + 'js/owl.carousel.min.js', // Must be loaded before BS4
+    basePaths.dev + 'js/tether.js', // Must be loaded before BS4
 
     // Start - All BS4 stuff
-    basePaths.dev + 'js/bootstrap4/bootstrap.js',  //<--------- Change from /bootstrap3 to /bootstrap4 Watch out! just for testing in the moment!
+    basePaths.dev + 'js/bootstrap4/bootstrap.js', 
+
+    // End - All BS4 stuff
+
     basePaths.dev + 'js/skip-link-focus-fix.js'
     ])
     .pipe(concat('child-theme.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('./js/'))
+    .pipe(gulp.dest('./js/'));
+
+  gulp.src([
+    basePaths.dev + 'js/owl.carousel.min.js', // Must be loaded before BS4
+    basePaths.dev + 'js/tether.js', // Must be loaded before BS4
+
+    // Start - All BS4 stuff
+    basePaths.dev + 'js/bootstrap4/bootstrap.js', 
+
+    // End - All BS4 stuff
+
+    basePaths.dev + 'js/skip-link-focus-fix.js'
+    ])
+    .pipe(concat('child-theme.js'))
+    .pipe(gulp.dest('./js/'));
 });
 
 // Run: 
 // gulp copy-assets. 
 // Copy all needed dependency assets files from bower_component assets to themes /js, /scss and /fonts folder. Run this task after bower install or bower update
 
-////////////////// All Bootstrap SASS 3 Assets /////////////////////////
+
 // Copy all Bootstrap JS files 
 gulp.task('copy-assets', function() {
-    gulp.src(basePaths.bower + 'bootstrap-sass/assets/javascripts/**/*.js')
-       .pipe(gulp.dest(basePaths.dev + '/js/bootstrap3'));
-
-// Copy all Bootstrap SCSS files
-    gulp.src(basePaths.bower + 'bootstrap-sass/assets/stylesheets/**/*.scss')
-       .pipe(gulp.dest(basePaths.dev + '/sass/bootstrap3'));
-
-// Copy all Bootstrap Fonts
-    gulp.src(basePaths.bower + 'bootstrap-sass/assets/fonts/bootstrap/*.{ttf,woff,woff2,eof,svg}')
-        .pipe(gulp.dest('./fonts'));
-////////////////// End Bootstrap 3 Assets /////////////////////////
-
 
 ////////////////// All Bootstrap 4 Assets /////////////////////////
 // Copy all Bootstrap JS files 
