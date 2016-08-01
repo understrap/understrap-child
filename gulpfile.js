@@ -31,6 +31,7 @@ var merge2 = require('merge2');
 var ignore = require('gulp-ignore');
 var rimraf = require('gulp-rimraf');
 var browserSync = require('browser-sync').create();
+var reload = browserSync.reload;
 
 // Run: 
 // gulp sass
@@ -58,7 +59,8 @@ gulp.task('cssnano', ['cleancss'], function(){
     .pipe(plumber())
     .pipe(rename({suffix: '.min'}))
     .pipe(cssnano({discardComments: {removeAll: true}}))
-    .pipe(gulp.dest('./css/'));
+    .pipe(gulp.dest('./css/'))
+    .pipe(reload({stream: true}));
 }); 
 
 gulp.task('cleancss', function() {
