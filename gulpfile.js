@@ -216,3 +216,9 @@ gulp.task('copy-assets', function() {
     gulp.src(basePaths.node + 'tether/dist/css/*.css')
         .pipe(gulp.dest(basePaths.dev + '/css'));
 });
+
+// Run // gulp dist // Copies the files to the dist folder for distributon 
+gulp.task('dist', function() { 
+    gulp.src(['!sass','!bower_components', '!node_modules','!src','!dist','!bower.json', '!gulpfile.js', '!package.json', '*']) 
+    .pipe(gulp.dest('dist/')) 
+});
