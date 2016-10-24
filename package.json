@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/holger1411/understrap-child",
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.4",
+    "bootstrap": "^4.0.0-alpha.5",
     "font-awesome": "^4.6.3",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
