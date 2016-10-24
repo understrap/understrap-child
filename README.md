@@ -38,12 +38,12 @@ and
 
 So you have one clean CSS file at the end and just one request.
 
-## Developing With NPM, Bower, Gulp, SASS and Browser Sync
+## Developing With NPM, Gulp, SASS and Browser Sync
 
 ### Installing Dependencies
 - Make sure you have installed Node.js, Bower, and Browser-Sync [1] on your computer globally
 - Then open your terminal and browse to the location of your UnderStrap copy
-- Run: `$ npm install` then: `$ bower install` and finally: `$ gulp copy-assets`
+- Run: `$ npm install` then: `$ gulp copy-assets`
 
 ### Running
 To work and compile your Sass files on the fly start:
