@@ -20,7 +20,7 @@ Uses the Enqueue method the load and sort the CSS file the right way instead of 
 
 ## Editing
 Add your own CSS styles to /sass/theme/_child_theme.scss
-ot import you own files into /sass/theme/understrap-child.scss
+or import you own files into /sass/theme/understrap-child.scss
 
 To overwrite Bootstrap or UnderStraps base variables just add your own value to:
 /sass/theme/_child_theme_variables.scss
