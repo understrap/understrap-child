@@ -217,8 +217,10 @@ gulp.task('copy-assets', function() {
         .pipe(gulp.dest(basePaths.dev + '/css'));
 });
 
-// Run // gulp dist // Copies the files to the dist folder for distributon 
-gulp.task('dist', function() { 
-    gulp.src(['!sass','!bower_components', '!node_modules','!src','!dist','!bower.json', '!gulpfile.js', '!package.json', '*']) 
-    .pipe(gulp.dest('dist/')) 
+// Run
+// gulp dist
+// Copies the files to the /dist folder for distributon
+gulp.task('dist', function() {
+    gulp.src(['**/*','!sass','!sass/**','!bower_components','!bower_components/**','!node_modules','!node_modules/**','!src','!src/**','!dist','!bower.json', '!gulpfile.js', '!package.json', '*'])
+    .pipe(gulp.dest('dist/'))
 });
