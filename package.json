@@ -1,6 +1,6 @@
 {
   "name": "understrap-child",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Basic Child Theme for UnderStrap Theme Framework: https://github.com/holger1411/understrap",
   "main": "index.js",
   "scripts": {
@@ -20,11 +20,11 @@
     "bootstrap": "^4.0.0-alpha.5",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-ignore": "^2.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-ignore": "^2.0.2",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
-    "gulp-rimraf": "^0.2.0",
+    "gulp-rimraf": "^0.2.1",
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^2.0.0",
     "gulp-watch": "^4.3.10",
@@ -33,10 +33,15 @@
     "gulp-cssnano": "^2.1.2",
     "gulp-sourcemaps": "^2.2.0",
     "merge2": "^1.0.2",
-    "browser-sync": "^2.17.5",
+    "browser-sync": "^2.18.1",
     "owl.carousel": "^2.2.0",
     "undescores-for-npm": "^1.0.0",
+<<<<<<< Updated upstream
     "understrap": "^0.4.9"
   },
   "devDependencies": {}
+=======
+    "understrap": "^0.5.0"
+  }
+>>>>>>> Stashed changes
 }
