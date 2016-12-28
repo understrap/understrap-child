@@ -129,32 +129,23 @@ gulp.task('watch-bs', ['browser-sync', 'watch', 'cssnano'], function () { });
 // gulp scripts. 
 // Uglifies and concat all JS files into one
 gulp.task('scripts', function() {
-  gulp.src([
-    basePaths.dev + 'js/owl.carousel.min.js', // Must be loaded before BS4
-    basePaths.dev + 'js/tether.js', // Must be loaded before BS4
+    var scripts = [
+        basePaths.dev + 'js/owl.carousel.min.js', // Must be loaded before BS4
+        basePaths.dev + 'js/tether.js', // Must be loaded before BS4
 
-    // Start - All BS4 stuff
-    basePaths.dev + 'js/bootstrap4/bootstrap.js', 
+        // Start - All BS4 stuff
+        basePaths.dev + 'js/bootstrap4/bootstrap.js',
 
-    // End - All BS4 stuff
+        // End - All BS4 stuff
 
-    basePaths.dev + 'js/skip-link-focus-fix.js'
-    ])
+        basePaths.dev + 'js/skip-link-focus-fix.js'
+    ];
+  gulp.src(scripts)
     .pipe(concat('child-theme.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./js/'));
 
-  gulp.src([
-    basePaths.dev + 'js/owl.carousel.min.js', // Must be loaded before BS4
-    basePaths.dev + 'js/tether.js', // Must be loaded before BS4
-
-    // Start - All BS4 stuff
-    basePaths.dev + 'js/bootstrap4/bootstrap.js', 
-
-    // End - All BS4 stuff
-
-    basePaths.dev + 'js/skip-link-focus-fix.js'
-    ])
+  gulp.src(scripts)
     .pipe(concat('child-theme.js'))
     .pipe(gulp.dest('./js/'));
 });
