@@ -33,7 +33,6 @@ var ignore = require('gulp-ignore');
 var rimraf = require('gulp-rimraf');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
-var reload = browserSync.reload;
 
 // Run: 
 // gulp sass + cssnano + rename
@@ -66,8 +65,7 @@ gulp.task('scss-for-dev', function() {
         .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(sass())
         .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
-        .pipe(gulp.dest('./css'))
-        .pipe(reload({stream: true}));
+        .pipe(gulp.dest('./css'));
 });
 
 gulp.task('watch-scss', ['browser-sync'], function () {
@@ -103,8 +101,7 @@ gulp.task('cssnano', ['cleancss'], function(){
     .pipe(rename({suffix: '.min'}))
     .pipe(cssnano({discardComments: {removeAll: true}}))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./css/'))
-    .pipe(reload({stream: true}));
+    .pipe(gulp.dest('./css/'));
 }); 
 
 gulp.task('cleancss', function() {
