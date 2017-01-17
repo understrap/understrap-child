@@ -33,6 +33,7 @@ var ignore = require('gulp-ignore');
 var rimraf = require('gulp-rimraf');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
+var del = require('del');
 
 // Run: 
 // gulp sass + cssnano + rename
@@ -145,6 +146,11 @@ gulp.task('scripts', function() {
   gulp.src(scripts)
     .pipe(concat('child-theme.js'))
     .pipe(gulp.dest('./js/'));
+});
+
+// Deleting any file inside the /src folder
+gulp.task('clean-source', function () {
+  return del(['src/**/*',]);
 });
 
 // Run: 
