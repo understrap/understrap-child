@@ -37,7 +37,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var del = require('del');
 
-// Run: 
+// Run:
 // gulp sass + cssnano + rename
 // Prepare the min.css for production (with 2 pipes to be sure that "child-theme.css" == "child-theme.min.css")
 gulp.task('scss-for-prod', function() {
@@ -48,41 +48,46 @@ gulp.task('scss-for-prod', function() {
 
     var pipe1 = source.pipe(clone())
         .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
+        .pipe(gulp.dest('./css'))
+        .pipe(rename('custom-editor-style.css'))
         .pipe(gulp.dest('./css'));
 
     var pipe2 = source.pipe(clone())
         .pipe(cssnano())
-        .pipe(rename({suffix: '.min'})) 
+        .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./css'));
 
     return merge(pipe1, pipe2);
 });
 
 
-// Run: 
+// Run:
 // gulp sourcemaps + sass + reload(browserSync)
-// Prepare the child-theme.css for the developpment environment
+// Prepare the child-theme.css for the development environment
 gulp.task('scss-for-dev', function() {
     gulp.src('./sass/*.scss')
         .pipe(plumber())
         .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(sass())
         .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
-        .pipe(gulp.dest('./css'));
+        .pipe(gulp.dest('./css'))
 });
 
 gulp.task('watch-scss', ['browser-sync'], function () {
     gulp.watch('./sass/**/*.scss', ['scss-for-dev']);
 });
 
-// Run: 
+// Run:
 // gulp sass
 // Compiles SCSS files in CSS
 gulp.task('sass', function () {
-    gulp.src('./sass/*.scss')
+    var stream = gulp.src('./sass/*.scss')
         .pipe(plumber())
         .pipe(sass())
+        .pipe(gulp.dest('./css'))
+        .pipe(rename('custom-editor-style.css'))
         .pipe(gulp.dest('./css'));
+    return stream;
 });
 
 // Run: 
