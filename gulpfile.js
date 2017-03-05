@@ -37,12 +37,18 @@ var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var del = require('del');
 
+function swallowError(self, error) {
+    console.log(error.toString())
+
+    self.emit('end')
+}
+
 // Run:
 // gulp sass + cssnano + rename
 // Prepare the min.css for production (with 2 pipes to be sure that "child-theme.css" == "child-theme.min.css")
 gulp.task('scss-for-prod', function() {
     var source =  gulp.src('./sass/*.scss')
-        .pipe(plumber())
+        .pipe(plumber({ errorHandler: function (error) { swallowError(this, error); } }))
         .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(sass());
 
@@ -53,6 +59,7 @@ gulp.task('scss-for-prod', function() {
         .pipe(gulp.dest('./css'));
 
     var pipe2 = source.pipe(clone())
+        .pipe(plumber({ errorHandler: function (error) { swallowError(this, error); } }))
         .pipe(cssnano())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./css'));
@@ -66,7 +73,7 @@ gulp.task('scss-for-prod', function() {
 // Prepare the child-theme.css for the development environment
 gulp.task('scss-for-dev', function() {
     gulp.src('./sass/*.scss')
-        .pipe(plumber())
+        .pipe(plumber({ errorHandler: function (error) { swallowError(this, error); } }))
         .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(sass())
         .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
@@ -82,7 +89,7 @@ gulp.task('watch-scss', ['browser-sync'], function () {
 // Compiles SCSS files in CSS
 gulp.task('sass', function () {
     var stream = gulp.src('./sass/*.scss')
-        .pipe(plumber())
+        .pipe(plumber({ errorHandler: function (error) { swallowError(this, error); } }))
         .pipe(sass())
         .pipe(gulp.dest('./css'))
         .pipe(rename('custom-editor-style.css'))
@@ -105,7 +112,7 @@ gulp.task('watch', function () {
 gulp.task('cssnano', ['cleancss'], function(){
   return gulp.src('./css/*.css')
     .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(plumber())
+    .pipe(plumber({ errorHandler: function (error) { swallowError(self, error); } }))
     .pipe(rename({suffix: '.min'}))
     .pipe(cssnano({discardComments: {removeAll: true}}))
     .pipe(sourcemaps.write('./'))
