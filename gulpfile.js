@@ -56,7 +56,6 @@ gulp.task('scss-for-prod', function() {
         .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
         .pipe(gulp.dest('./css'))
         .pipe(rename('custom-editor-style.css'))
-        .pipe(gulp.dest('./css'));
 
     var pipe2 = source.pipe(clone())
         .pipe(plumber({ errorHandler: function (error) { swallowError(this, error); } }))
@@ -93,7 +92,6 @@ gulp.task('sass', function () {
         .pipe(sass())
         .pipe(gulp.dest('./css'))
         .pipe(rename('custom-editor-style.css'))
-        .pipe(gulp.dest('./css'));
     return stream;
 });
 
