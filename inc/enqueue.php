@@ -1,6 +1,6 @@
 <?php
 /**
- * Understrap Chile enqueue scripts
+ * Understrap Child enqueue scripts
  *
  * @package understrap
  */
