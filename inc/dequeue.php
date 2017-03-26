@@ -1,6 +1,6 @@
 <?php
 /**
- * Understrap deenqueue scripts
+ * Understrap Child dequeue scripts
  *
  * @package understrap
  */
