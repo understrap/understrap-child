@@ -1,0 +1,212 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
+body {
+	
+	
+}
+
+#single-wrapper {
+	margin-bottom: 3.0rem;
+}
+
+.site {
+	background-color: white;
+
+}
+.navbar {
+	background-color:transparent;
+	margin-top: 25px;
+}
+
+.navbar-nav {
+	position: absolute;
+	right: 0;
+}
+
+.show .navbar-nav {
+	
+
+}
+
+.bg-inverse {
+	background-color: transparent;
+}
+.navbar-header {
+	text-transform: lowercase;	
+}
+
+ul#main-menu.nav.navbar-nav {
+	padding-left: 0px;
+	text-transform: uppercase;
+	font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+	font-size: 0.8rem;
+	margin-top: 28px;
+}
+
+.navbar-toggler {
+	float: right;
+	margin-top: 1.0rem;
+}
+
+
+.navbar-brand {
+	font-family:'HelveticaNeueW01-65Medi';
+	font-size: 1.75rem;
+	
+// 	color: #ff0000
+      
+}
+
+.navbar.transparent.navbar-inverse .navbar-inner {
+    border-width: 0px;
+    -webkit-box-shadow: 0px 0px;
+    box-shadow: 0px 0px;
+    background-color: rgba(0,0,0,0.0);
+    background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00)));
+    background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+}
+
+
+#hero-slides {
+	padding: 0;
+}
+
+.full-screen {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#wrapper-home {
+	padding: 0;
+}
+
+.article-card, .article-card img, .card , .card-img {
+	padding: 0;
+	border: none;
+	border-radius: 0;
+}
+
+/* CSS used here will be applied after bootstrap.css */
+
+ /* MARKETING CONTENT
+    -------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .span4 {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+
+    /* Featurettes
+    ------------------------- */
+
+    .featurette-divider {
+      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    }
+    .featurette {
+      padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+      overflow: hidden; /* Vertically center images part 2: clear their floats. */
+    }
+    .featurette-image {
+      margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+    }
+
+    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+    .featurette-image.pull-left {
+      margin-right: 40px;
+    }
+    .featurette-image.pull-right {
+      margin-left: 40px;
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+h1.entry-title  {
+	padding-bottom: 4.5rem;
+// Removed top padding of page title	
+	text-align: right;
+	}
+
+.single .entry-title  {
+	text-align: left;
+	}
+
+.entry-content, .lead {
+	font-family:'Open Serif W10 Book';
+}
+
+
+.dropdown-menu {
+	background-color: transparent;
+	border: none;
+	border-radius: 0;
+}
+
+.navbar-collapse {
+	width: 400px!important;
+}
+
+    /* Fixes jumping carousel in Chrome
+    ------------------------- */
+
+.img-circle {
+    border-radius: 50%;
+    display: block;
+}
+
+.card-title {
+	font-family:'HelveticaNeueW02-UltLt';
+}
+
+aside {
+	padding-bottom: 4.0rem;
+	font-family:'Open Serif W10 Book';
+	text-align: right;
+	
+}
+
+aside li {
+	list-style: none;
+}
+
+#searchform label {
+	display: none;
+}
+
+#wrapper-footer {
+	
+	background-color: #4c4c4c;
+	font-family:'Helvetica Neue LT W01_35 Thin';
+	font-size: smaller;
+}
+
+#wrapper-footer h2 {
+	font-family: 'FreightSans Light', sans-serif;
+}
+
+
+.border-thin {
+	
+	border-right: 1px solid #909090;
+}
+
+.site-footer .col-lg-4 {
+	color: white;
+}
+

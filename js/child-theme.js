@@ -5379,3 +5379,39 @@ var Popover = function ($) {
 		}, false );
 	}
 })();
+
+var $item = jQuery('.carousel .carousel-item');
+var $wHeight = jQuery(window).height() - 150;
+
+$item.height($wHeight); 
+$item.addClass('full-screen');
+
+jQuery('.carousel img').each(function() {
+  var $src = jQuery(this).attr('src');
+  var $color = jQuery(this).attr('data-color');
+  jQuery(this).parent().css({
+    'background-image' : 'url(' + $src + ')',
+    'background-color' : $color
+  });
+  jQuery(this).remove();
+});
+
+jQuery(window).on('resize', function (){
+  $wHeight = jQuery(window).height() - 150;
+  $item.height($wHeight);
+});
+
+jQuery('.carousel').carousel({
+  interval: 6000,
+  pause: "false"
+});
+
+jQuery(document).ready(function(){
+      jQuery(window).scroll(function() { // check if scroll event happened
+        if (jQuery(document).scrollTop() > 10) { // check if user scrolled more than 50 from top of the browser window
+          jQuery(".fixed-top").css("background-color", "rgba(109, 109, 109, 0.54)"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
+        } else {
+          jQuery(".fixed-top").css("background-color", "transparent"); // if not, change it back to transparent
+        }
+      });
+    });
