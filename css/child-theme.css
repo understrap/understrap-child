@@ -9264,7 +9264,8 @@ ul#main-menu.nav.navbar-nav {
 
 .navbar-brand {
   font-family: 'HelveticaNeueW01-65Medi';
-  font-size: 1.75rem; }
+  font-size: 1.75rem;
+  color: #00ff5a; }
 
 .navbar.transparent.navbar-inverse .navbar-inner {
   border-width: 0px;
