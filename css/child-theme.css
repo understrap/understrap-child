@@ -9242,9 +9242,8 @@ h1.navbar-brand a:hover {
   background-color: transparent;
   margin-top: 25px; }
 
-.navbar-nav {
-  position: absolute;
-  right: 0; }
+.navbar-collapse {
+  justify-content: flex-end; }
 
 .bg-inverse {
   background-color: transparent; }
@@ -9275,6 +9274,47 @@ ul#main-menu.nav.navbar-nav {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, transparent), color-stop(100%, transparent));
   background-image: -webkit-linear-gradient(270deg, transparent 0%, transparent 100%);
   background-image: linear-gradient(180deg, transparent 0%, transparent 100%); }
+
+.monthind {
+  padding-left: 18px;
+  float: left;
+  margin-top: -4px; }
+
+.month {
+  font-size: 68px;
+  float: left;
+  letter-spacing: -0.030em;
+  margin-top: -10px; }
+
+.yearicon {
+  font-size: 68px;
+  float: left;
+  letter-spacing: -0.100em;
+  padding-left: 2px;
+  margin-top: -6px; }
+
+.counterkeyline {
+  margin-left: 13px;
+  width: 0px;
+  height: 121px;
+  bottom: 25px;
+  position: relative;
+  float: left;
+  border-left: 1px solid white;
+  opacity: 0.5; }
+
+.single .counterkeyline {
+  margin-left: 13px;
+  width: 0px;
+  height: 121px;
+  bottom: 25px;
+  position: relative;
+  float: left;
+  border-left: 1px solid black;
+  opacity: 0.5; }
+
+.monthmotif {
+  position: absolute; }
 
 #hero-slides {
   padding: 0; }
@@ -9350,9 +9390,6 @@ h1.entry-title {
   background-color: transparent;
   border: none;
   border-radius: 0; }
-
-.navbar-collapse {
-  width: 400px !important; }
 
 /* Fixes jumping carousel in Chrome
     ------------------------- */

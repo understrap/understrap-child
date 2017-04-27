@@ -79,4 +79,5 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		</nav><!-- .site-navigation -->
 
-	</div><!-- .wrapper-navbar end -->
+	</div>
+	<?php insert_month_motif(); ?><!-- .wrapper-navbar end -->

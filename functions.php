@@ -127,3 +127,36 @@ function child_theme_setup() {
 }
 add_action( 'after_setup_theme', 'child_theme_setup', 11 );
 
+// Add the Month motif function
+
+function month_motif(){
+	
+if (is_single()){
+?>
+	
+	<div class="monthind">
+		<div class="month"><?php echo the_date('m'); ?></div>
+		<div class="counterkeyline"></div>
+		<div class="yearicon"><?php echo the_time('y');?></div>
+	</div>
+<?php	}
+else
+{
+?>
+	<div class="wrapper-fluid monthmotif">
+	<div class="container monthind">
+		<div class="month"><?php echo date('m'); ?></div>
+		<div class="counterkeyline"></div>
+		<div class="yearicon"><?php echo date('y'); ?></div>
+	</div>
+	</div>
+<?php
+}
+}
+
+function insert_month_motif(){
+	do_action('insert_month_motif');
+}// insert month motif
+
+add_action('insert_month_motif','month_motif');
+
