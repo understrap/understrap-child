@@ -16,7 +16,7 @@ body {
 }
 .navbar {
 	background-color:transparent;
-	margin-top: 25px;
+	padding-top: 25px;
 }
 
 .navbar-collapse {
@@ -55,6 +55,10 @@ ul#main-menu.nav.navbar-nav {
 	font-size: 1.75rem;
 }
 
+.home .navbar-brand {
+	color: white;
+}
+
 .navbar.transparent.navbar-inverse .navbar-inner {
     border-width: 0px;
     -webkit-box-shadow: 0px 0px;
@@ -65,15 +69,27 @@ ul#main-menu.nav.navbar-nav {
     background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
 }
 
-.monthind {padding-left: 18px;float: left;margin-top: -4px;}
-.month{font-size: 68px;float: left;letter-spacing: -0.030em;margin-top: -10px;}
-.yearicon {font-size: 68px;float: left;letter-spacing: -0.100em;padding-left: 2px;margin-top:-6px;}
+#single-wrapper, #page-wrapper {
+	margin-top: 60px;
+}
 
-.counterkeyline {margin-left:13px;width:0px;height:121px;bottom:25px; position: relative;float: left;border-left: 1px solid white;opacity:0.5;}
-.single .counterkeyline {margin-left:13px;width:0px;height:121px;bottom:25px; position: relative;float: left;border-left: 1px solid black ; opacity:0.5;}
+.monthind {padding-left: 18px;float: right;margin-top:40%;color: black;}
+.month{font-size: 116px;float: left;letter-spacing: -0.030em;margin-top: -10px;}
+.yearicon {font-size: 116px;float: left;letter-spacing: -0.100em;padding-left: 2px;margin-top:-6px;}
+.home .monthind {
+	color: white;
+}
+.counterkeyline {margin-left:13px;width:0px;height:200px;bottom:25px; position: relative;float: left;border-left: 1px solid white;opacity:0.5;}
+.single .counterkeyline {margin-left:13px;width:0px;height:200px;bottom:25px; position: relative;float: left;border-left: 1px solid black ; opacity:0.5;}
  .monthmotif {
 	 position: absolute;
  }
+ 
+#month-wrap {
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+}
 
 #hero-slides {
 	padding: 0;

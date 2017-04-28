@@ -33,7 +33,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content',
 		'understrap' ); ?></a>
 
-		<nav class="navbar navbar-toggleable-md fixed-top  navbar-inverse transparent">
+		<nav class="navbar navbar-toggleable-md fixed-top  transparent">
 
 		<?php if ( 'container' == $container ) : ?>
 			<div class="container">
@@ -80,4 +80,4 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</nav><!-- .site-navigation -->
 
 	</div>
-	<?php insert_month_motif(); ?><!-- .wrapper-navbar end -->
+	<!-- .wrapper-navbar end -->

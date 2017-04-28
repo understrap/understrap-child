@@ -29,7 +29,7 @@ $posts_style = 'grid';
 		<div class="row">
 
 			<!-- Do the left sidebar check and opens the primary div -->
-			<?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
+			<?php  get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
 
 			<?php if ( 'masonry' === $posts_style ) : ?>
 

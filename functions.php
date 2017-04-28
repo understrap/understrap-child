@@ -64,7 +64,15 @@ function digidol_gallery_carousel() {
 	<div class="wrapper" id="wrapper-hero">
 	<div class="container-fluid" id="hero-slides">
 		<div id="carouselExampleControls" class="carousel slide" data-interval="false">
-
+		<div class="wrapper" id="month-wrap">
+			<div class="container">
+				<div class="monthind">
+		<div class="month"><?php echo date('m'); ?></div>
+		<div class="counterkeyline"></div>
+		<div class="yearicon"><?php echo date('y');?></div>
+	</div>
+			</div>
+		</div>
 		<div class="carousel-inner" role="listbox">	
 			
 			<?php

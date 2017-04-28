@@ -9240,7 +9240,7 @@ h1.navbar-brand a:hover {
 
 .navbar {
   background-color: transparent;
-  margin-top: 25px; }
+  padding-top: 25px; }
 
 .navbar-collapse {
   justify-content: flex-end; }
@@ -9266,6 +9266,9 @@ ul#main-menu.nav.navbar-nav {
   font-family: 'HelveticaNeueW01-65Medi';
   font-size: 1.75rem; }
 
+.home .navbar-brand {
+  color: white; }
+
 .navbar.transparent.navbar-inverse .navbar-inner {
   border-width: 0px;
   -webkit-box-shadow: 0px 0px;
@@ -9275,28 +9278,35 @@ ul#main-menu.nav.navbar-nav {
   background-image: -webkit-linear-gradient(270deg, transparent 0%, transparent 100%);
   background-image: linear-gradient(180deg, transparent 0%, transparent 100%); }
 
+#single-wrapper, #page-wrapper {
+  margin-top: 60px; }
+
 .monthind {
   padding-left: 18px;
-  float: left;
-  margin-top: -4px; }
+  float: right;
+  margin-top: 40%;
+  color: black; }
 
 .month {
-  font-size: 68px;
+  font-size: 116px;
   float: left;
   letter-spacing: -0.030em;
   margin-top: -10px; }
 
 .yearicon {
-  font-size: 68px;
+  font-size: 116px;
   float: left;
   letter-spacing: -0.100em;
   padding-left: 2px;
   margin-top: -6px; }
 
+.home .monthind {
+  color: white; }
+
 .counterkeyline {
   margin-left: 13px;
   width: 0px;
-  height: 121px;
+  height: 200px;
   bottom: 25px;
   position: relative;
   float: left;
@@ -9306,7 +9316,7 @@ ul#main-menu.nav.navbar-nav {
 .single .counterkeyline {
   margin-left: 13px;
   width: 0px;
-  height: 121px;
+  height: 200px;
   bottom: 25px;
   position: relative;
   float: left;
@@ -9315,6 +9325,11 @@ ul#main-menu.nav.navbar-nav {
 
 .monthmotif {
   position: absolute; }
+
+#month-wrap {
+  position: absolute;
+  width: 100%;
+  z-index: 1; }
 
 #hero-slides {
   padding: 0; }
