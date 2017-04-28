@@ -36,6 +36,7 @@ var merge = require('gulp-merge');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var del = require('del');
+var cleanCSS = require('gulp-clean-css');
 
 function swallowError(self, error) {
     console.log(error.toString())
@@ -59,7 +60,7 @@ gulp.task('scss-for-prod', function() {
 
     var pipe2 = source.pipe(clone())
         .pipe(plumber({ errorHandler: function (error) { swallowError(this, error); } }))
-        .pipe(cssnano())
+        .pipe(minify-css())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./css'));
 
@@ -100,7 +101,7 @@ gulp.task('sass', function () {
 // Starts watcher. Watcher runs gulp sass task on changes
 gulp.task('watch', function () {
     gulp.watch('./sass/**/*.scss', ['sass']);
-    gulp.watch('./css/child-theme.css', ['cssnano']);
+    gulp.watch('./css/child-theme.css', ['minify-css']);
     gulp.watch([basePaths.dev + 'js/**/*.js','js/**/*.js','!js/child-theme.js','!js/child-theme.min.js'], ['scripts']);
 });
 
@@ -116,6 +117,14 @@ gulp.task('cssnano', function(){
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./css/'));
 }); 
+
+gulp.task('minify-css', function() {
+    return gulp.src('./css/*.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(plumber())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('./css/'));
+});
 
 gulp.task('cleancss', function() {
   return gulp.src('./css/*.min.css', { read: false }) // much faster 
@@ -133,7 +142,7 @@ gulp.task('browser-sync', function() {
 // Run: 
 // gulp watch-bs
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
-gulp.task('watch-bs', ['browser-sync', 'watch', 'cssnano'], function () { });
+gulp.task('watch-bs', ['browser-sync', 'watch', 'minify-css'], function () { });
 
 // Run: 
 // gulp scripts. 
