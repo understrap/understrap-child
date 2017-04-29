@@ -29,6 +29,7 @@ var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var merge2 = require('merge2');
+var imagemin = require('gulp-imagemin');
 var ignore = require('gulp-ignore');
 var rimraf = require('gulp-rimraf');
 var clone = require('gulp-clone');
@@ -36,6 +37,7 @@ var merge = require('gulp-merge');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var del = require('del');
+var cleanCSS = require('gulp-clean-css');
 
 function swallowError(self, error) {
     console.log(error.toString())
@@ -102,8 +104,17 @@ gulp.task('sass', function () {
 // Starts watcher. Watcher runs gulp sass task on changes
 gulp.task('watch', function () {
     gulp.watch('./sass/**/*.scss', ['sass']);
-    gulp.watch('./css/child-theme.css', ['cssnano']);
+    gulp.watch('./css/child-theme.css', ['minify-css']);
     gulp.watch([basePaths.dev + 'js/**/*.js','js/**/*.js','!js/child-theme.js','!js/child-theme.min.js'], ['scripts']);
+});
+
+// Run:
+// gulp imagemin
+// Running image optimizing task
+gulp.task('imagemin', function(){
+    gulp.src('img/**')
+    .pipe(imagemin())
+    .pipe(gulp.dest('img'))
 });
 
 // Run: 
@@ -118,6 +129,14 @@ gulp.task('cssnano', ['cleancss'], function(){
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./css/'));
 }); 
+
+gulp.task('minify-css', function() {
+  return gulp.src('./css/theme.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(plumber())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('./css/'));
+});
 
 gulp.task('cleancss', function() {
   return gulp.src('./css/*.min.css', { read: false }) // much faster 
@@ -135,7 +154,7 @@ gulp.task('browser-sync', function() {
 // Run: 
 // gulp watch-bs
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
-gulp.task('watch-bs', ['browser-sync', 'watch', 'cssnano'], function () { });
+gulp.task('watch-bs', ['browser-sync', 'watch', 'minify-css'], function () { });
 
 // Run: 
 // gulp scripts. 
@@ -235,7 +254,7 @@ gulp.task('clean-dist', function () {
 // gulp dist-product
 // Copies the files to the /dist folder for distributon
 gulp.task('dist-product', ['clean-dist-product'], function() {
-    gulp.src(['**/*','!bower_components','!bower_components/**','!node_modules','!node_modules/**','!src','!src/**','!dist','!dist/**', '*'])
+    gulp.src(['**/*','!bower_components','!bower_components/**','!node_modules','!node_modules/**','!dist','!dist/**', '*'])
     .pipe(gulp.dest('dist-product/'))
 });
 
