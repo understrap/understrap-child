@@ -9264,16 +9264,13 @@ ul#main-menu.nav.navbar-nav {
 
 .navbar-brand {
   font-family: 'HelveticaNeueW01-65Medi';
-  font-size: 1.75rem;
-  color: white; }
-
-.navbar-brand {
-  font-family: 'HelveticaNeueW01-65Medi';
-  font-size: 1.75rem;
-  color: grey; }
+  font-size: 1.75rem; }
 
 .home .navbar-brand {
   color: white; }
+
+.navbar-brand {
+  color: black; }
 
 .navbar.transparent.navbar-inverse .navbar-inner {
   border-width: 0px;
@@ -9283,6 +9280,12 @@ ul#main-menu.nav.navbar-nav {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, transparent), color-stop(100%, transparent));
   background-image: -webkit-linear-gradient(270deg, transparent 0%, transparent 100%);
   background-image: linear-gradient(180deg, transparent 0%, transparent 100%); }
+
+.home .navbar-nav a {
+  color: white; }
+
+.navbar-nav a {
+  color: black; }
 
 #single-wrapper, #page-wrapper {
   margin-top: 60px; }
