@@ -426,7 +426,7 @@ output {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: inherit;
+  font-family: "HelveticaNeueW02-UltLt";
   font-weight: 500;
   line-height: 1.1;
   color: inherit; }
@@ -9294,7 +9294,8 @@ ul#main-menu.nav.navbar-nav {
   padding-left: 18px;
   float: right;
   margin-top: 40%;
-  color: black; }
+  color: black;
+  margin-bottom: 32px; }
 
 .month {
   font-size: 116px;
@@ -9407,9 +9408,6 @@ h1.entry-title {
 .single .entry-title {
   text-align: left; }
 
-.entry-content, .lead {
-  font-family: 'Open Serif W10 Book'; }
-
 .dropdown-menu {
   background-color: transparent;
   border: none;
@@ -9426,7 +9424,7 @@ h1.entry-title {
 
 aside {
   padding-bottom: 4.0rem;
-  font-family: 'Open Serif W10 Book';
+  font-family: 'HelveticaNeueW02-45Ligh';
   text-align: right; }
 
 aside li {
