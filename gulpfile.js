@@ -89,7 +89,7 @@ gulp.task('watch-scss', ['browser-sync'], function () {
 // Run:
 // gulp sass
 // Compiles SCSS files in CSS
-gulp.task('sass', function () {
+gulp.task('sass',['minify-css'], function () {
     var stream = gulp.src('./sass/*.scss')
         .pipe(plumber({ errorHandler: function (error) { swallowError(this, error); } }))
         .pipe(sass())
@@ -131,7 +131,7 @@ gulp.task('cssnano', ['cleancss'], function(){
 }); 
 
 gulp.task('minify-css', function() {
-  return gulp.src('./css/theme.css')
+  return gulp.src('./css/child-theme.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(plumber())
     .pipe(rename({suffix: '.min'}))
