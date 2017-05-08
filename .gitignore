@@ -11,3 +11,5 @@ understrap.zip
 dist
 
 dist-product
+
+npm-debug.log
