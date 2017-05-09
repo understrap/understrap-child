@@ -26,14 +26,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 <body <?php body_class(); ?>>
 
 <div class="hfeed site" id="page">
-<?php digidol_hero();?>
+	<?php if ( is_front_page()  ) :
+	 digidol_hero();
+	 endif;?>
 	<!-- ******************* The Navbar Area ******************* -->
 	<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
 
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content',
 		'understrap' ); ?></a>
 
-		<nav class="navbar navbar-toggleable-md fixed-top transparent">
+		<nav class="navbar  <?php if ( is_front_page()  ) : echo 'navbar-inverse sticky-top'; else : echo 'navbar-light';  endif; ?>  navbar-toggleable-md transparent">
 
 		<?php if ( 'container' == $container ) : ?>
 			<div class="container">
@@ -81,3 +83,5 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	</div>
 	<!-- .wrapper-navbar end -->
+	
+<a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="fa fa-chevron-up"></span></a>

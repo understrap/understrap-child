@@ -14,6 +14,13 @@ body {
 .navbar {
 	background-color:transparent;
 	padding-top: 25px;
+	z-index: 1033;
+}
+
+.sticky-top {
+	position: absolute;
+	left: 0;
+	right: 0;
 }
 
 .navbar-collapse {
@@ -86,7 +93,7 @@ ul#main-menu.nav.navbar-nav {
 
 
 #single-wrapper, #page-wrapper {
-	margin-top: 60px;
+//	margin-top: 60px;
 }
 
 .monthind {padding-left: 18px;float: right;margin-top:40%;color: black;margin-bottom: 32px;}
@@ -109,6 +116,10 @@ ul#main-menu.nav.navbar-nav {
 
 #hero-slides {
 	padding: 0;
+}
+
+#wrapper-hero {
+//	margin-top: -83px;
 }
 
 .full-screen {
@@ -246,3 +257,16 @@ aside li {
 	color: white;
 }
 
+.back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display:none;
+    z-index: 1033;
+}
+
+
+.entry-content {
+	text-align: justify;
+}
