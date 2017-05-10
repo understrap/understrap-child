@@ -13,7 +13,7 @@ body {
 }
 .navbar {
 	background-color:transparent;
-	padding-top: 25px;
+	padding-top: 45px;
 	z-index: 1033;
 }
 
@@ -28,6 +28,16 @@ body {
 	
 
 }
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1.0)' stroke-width='1' stroke-linecap='square' stroke-miterlimit='10' d='M4 6h24 M4 11h24 M4 16h24'/%3E%3C/svg%3E"); }
+
+
+.navbar-inverse .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1.0)' stroke-width='1' stroke-linecap='square' stroke-miterlimit='10' d='M4 6h24 M4 11h24 M4 16h24'/%3E%3C/svg%3E"); }
+  
+
+
 .show .navbar-nav {
 	
 
@@ -51,12 +61,16 @@ ul#main-menu.nav.navbar-nav {
 .navbar-toggler {
 	float: right;
 	margin-top: 1.0rem;
+	border: none;
+	font-size: 2.0rem;
 }
-
+button:focus {outline:0;}
 
 .navbar-brand {
 	font-family:'HelveticaNeueW01-65Medi';
-	font-size: 1.75rem;
+	font-size: 1.7rem;
+	letter-spacing: -0.02em;
+	padding-top: .40rem;
 }
 
 .home .navbar-brand {
@@ -91,22 +105,54 @@ ul#main-menu.nav.navbar-nav {
 	color: black;
 }
 
+.admin-bar .sticky-top {
+  top: 46px;
+}
+@media screen and (min-width: 783px) {
+  .admin-bar .sticky-top {
+    top: 32px;
+  }
+}
+
 
 #single-wrapper, #page-wrapper {
 //	margin-top: 60px;
 }
 
-.monthind {padding-left: 18px;float: right;margin-top:40%;color: black;margin-bottom: 32px;}
+.monthind {padding-left: 18px;float: right;margin-top:20%;color: black;margin-bottom: 32px;}
 .month{font-size: 116px;float: left;letter-spacing: -0.030em;margin-top: -10px;}
 .yearicon {font-size: 116px;float: left;letter-spacing: -0.100em;padding-left: 2px;margin-top:-6px;}
 .home .monthind {
 	color: white;
 }
+
+.keyline {display: inline-block; width:9px;height:37px;border-left: 1px solid black ;opacity:0.5;}
+.home .keyline {border-left: 1px solid white ;opacity:0.5;}
+
 .counterkeyline {margin-left:13px;width:0px;height:200px;bottom:25px; position: relative;float: left;border-left: 1px solid white;opacity:0.5;}
 .single .counterkeyline {margin-left:13px;width:0px;height:200px;bottom:25px; position: relative;float: left;border-left: 1px solid black ; opacity:0.5;}
  .monthmotif {
 	 position: absolute;
  }
+ 
+ .article-no {position: relative;padding-right: 9px;}
+ .home {
+	 .article-no , .navmnth, .navyr, .nav-point, .subarticle  {
+		 color: white;
+	 }
+ }
+ .navmnth{font-size: 27px;letter-spacing: -0.18em;padding-left: 2px;font-family:'HelveticaNeueW02-UltLt';}
+.navyr{font-size: 27px;letter-spacing: -0.08em; padding-right: 9px; font-family:'HelveticaNeueW01-65Medi';}
+.nav-point{font-size: 27px;letter-spacing: -6.18em;font-family:'HelveticaNeueW01-45Ligh';}
+
+.subarticle {
+letter-spacing: -0.02em;
+line-height: 1em;
+font-size: 25px;
+font-family:"HelveticaNeueW02-UltLt";
+}
+
+.sub-article {padding-left: 4px;width: 280px;}
  
 #month-wrap {
 	position: absolute;
@@ -189,7 +235,7 @@ ul#main-menu.nav.navbar-nav {
 h1.entry-title  {
 	padding-bottom: 4.5rem;
 // Removed top padding of page title	
-	text-align: right;
+//	text-align: right;
 	}
 
 .single .entry-title  {
@@ -217,9 +263,22 @@ h1.entry-title  {
     display: block;
 }
 
-.card-title {
+.card-title, .post-incr , .card-title .zero, .card-title .point  {
 	font-family:'HelveticaNeueW02-UltLt';
+	color: rgba(255, 255, 255, 0.69)
 }
+.card-title .post-incr {
+	font-family:'HelveticaNeueW01-65Medi';
+}
+
+.card-title .zero {
+	letter-spacing: -0.09em;
+}
+
+.card-title .point {
+	letter-spacing: -0.07em;
+}
+
 
 aside {
 	padding-bottom: 4.0rem;
@@ -264,6 +323,7 @@ aside li {
     right: 20px;
     display:none;
     z-index: 1033;
+    background-color: rgba(68, 68, 68, 0.76);
 }
 
 

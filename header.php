@@ -35,7 +35,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content',
 		'understrap' ); ?></a>
 
-		<nav class="navbar  <?php if ( is_front_page()  ) : echo 'navbar-inverse sticky-top'; else : echo 'navbar-light';  endif; ?>  navbar-toggleable-md transparent">
+		<nav class="navbar  <?php if ( is_front_page()  ) : echo 'navbar-inverse sticky-top	'; else : echo 'navbar-light';  endif; ?>  transparent">
 
 		<?php if ( 'container' == $container ) : ?>
 			<div class="container">
@@ -61,7 +61,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 					
 					<?php } else {
 						the_custom_logo();
-					} ?><!-- end custom logo -->
+					} 
+					digidol_site_title();
+					?><!-- end custom logo -->
 
 				<!-- The WordPress Menu goes here -->
 				<?php wp_nav_menu(
@@ -84,4 +86,4 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</div>
 	<!-- .wrapper-navbar end -->
 	
-<a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="fa fa-chevron-up"></span></a>
+<a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Return to top" data-toggle="tooltip" data-placement="left"><span class="fa fa-chevron-up"></span></a>

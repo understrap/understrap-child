@@ -40,6 +40,28 @@ function get_wp_gallery_ids($post_content) {
 }
 
 
+function title_header (){
+	
+
+	?>
+	<span class="keyline"></span>
+		    		<span class="navmnth">0</span>
+		    		<span class="nav-point">.</span>
+		    		<span id="article-number" class="navyr">62</span>
+					<span class="keyline"></span>
+		    		<span class="sub-article">
+		    			<span class="subarticle"><?php the_title(); ?></span><span class="sub-article-wrap"><span class="sub-subarticle sub"></br></span></span>
+		    		</span>
+		 <?php
+}
+
+function digidol_site_title() {
+    do_action('digidol_site_title');
+} // end digidol_site_title
+
+add_action('digidol_site_title','title_header');
+
+
 function digidol_hero() {
     do_action('digidol_hero');
 } // end digidol_hero
@@ -66,7 +88,7 @@ function digidol_gallery_carousel() {
 		<div id="carouselExampleControls" class="carousel slide" data-interval="false">
 		<div class="wrapper" id="month-wrap">
 			<div class="container">
-				<div class="monthind">
+				<div class="monthind hidden-md-down">
 		<div class="month"><?php echo date('m'); ?></div>
 		<div class="counterkeyline"></div>
 		<div class="yearicon"><?php echo date('y');?></div>
@@ -168,3 +190,24 @@ function insert_month_motif(){
 
 add_action('insert_month_motif','month_motif');
 
+function updateNumbers() {
+/* numbering the published posts: preparation: create an array with the ID in sequence of publication date, /
+/ save the number in custom field 'incr_number' of post with ID /
+/ to show in post (within the loop) use <?php echo get_post_meta($post->ID,'incr_number',true); ?>
+/ alchymyth 2010 */
+global $wpdb;
+$querystr = "SELECT $wpdb->posts.* FROM $wpdb->posts WHERE $wpdb->posts.post_status = 'publish' AND $wpdb->posts.post_type = 'post' ";
+$pageposts = $wpdb->get_results($querystr, OBJECT);
+$counts = 0 ;
+if ($pageposts):
+foreach ($pageposts as $post):
+setup_postdata($post);
+$counts++;
+add_post_meta($post->ID, 'incr_number', $counts, true);
+update_post_meta($post->ID, 'incr_number', $counts);
+endforeach;
+endif;
+}
+add_action ( 'publish_post', 'updateNumbers' );
+add_action ( 'deleted_post', 'updateNumbers' );
+add_action ( 'edit_post', 'updateNumbers' );
