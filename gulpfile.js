@@ -112,7 +112,7 @@ gulp.task('watch', function () {
 // gulp imagemin
 // Running image optimizing task
 gulp.task('imagemin', function(){
-    gulp.src('img/**')
+    gulp.src('img/src/**')
     .pipe(imagemin())
     .pipe(gulp.dest('img'))
 });
@@ -140,7 +140,7 @@ gulp.task('minify-css', function() {
 
 gulp.task('cleancss', function() {
   return gulp.src('./css/*.min.css', { read: false }) // much faster 
-    .pipe(ignore('theme.css'))
+    .pipe(ignore('child-theme.css'))
     .pipe(rimraf());
 });
 
