@@ -9272,7 +9272,7 @@ ul#main-menu.nav.navbar-nav {
 
 .navbar-toggler {
   float: right;
-  margin-top: 1.0rem;
+  margin-top: 0.54rem;
   border: none;
   font-size: 2.0rem; }
 
@@ -9318,7 +9318,8 @@ button:focus {
   float: right;
   margin-top: 20%;
   color: black;
-  margin-bottom: 32px; }
+  margin-bottom: 32px;
+  padding-right: 15px; }
 
 .month {
   font-size: 116px;
@@ -9331,7 +9332,8 @@ button:focus {
   float: left;
   letter-spacing: -0.100em;
   padding-left: 2px;
-  margin-top: -6px; }
+  margin-top: -6px;
+  padding-right: 0.5rem; }
 
 .home .monthind {
   color: white; }
@@ -9424,6 +9426,12 @@ button:focus {
   padding: 0;
   border: none;
   border-radius: 0; }
+
+article {
+  padding-bottom: 30px; }
+
+.comments-area {
+  padding-top: 30px; }
 
 /* CSS used here will be applied after bootstrap.css */
 /* MARKETING CONTENT
@@ -9532,6 +9540,3 @@ aside li {
   display: none;
   z-index: 1033;
   background-color: rgba(68, 68, 68, 0.76); }
-
-.entry-content {
-  text-align: justify; }
