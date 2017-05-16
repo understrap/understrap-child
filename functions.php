@@ -42,15 +42,15 @@ function get_wp_gallery_ids($post_content) {
 
 function title_header (){
 	
-
+$thepostcounter = get_post_meta(get_the_ID(),'incr_number',true);
 	?>
 	<span class="keyline"></span>
 		    		<span class="navmnth">0</span>
 		    		<span class="nav-point">.</span>
-		    		<span id="article-number" class="navyr">62</span>
+		    		<span id="article-number" class="navyr"><?php if ($thepostcounter) { echo $thepostcounter;} else { echo '00';}?></span>
 					<span class="keyline"></span>
 		    		<span class="sub-article">
-		    			<span class="subarticle"><?php the_title(); ?></span><span class="sub-article-wrap"><span class="sub-subarticle sub"></br></span></span>
+		    			<span id="post-title" class="subarticle"><?php the_title(); ?></span><span class="sub-article-wrap"><span class="sub-subarticle sub"></br></span></span>
 		    		</span>
 		 <?php
 }
@@ -67,6 +67,7 @@ function digidol_hero() {
 } // end digidol_hero
 // my gallery function, add options to turn on or off caption. // add option to turn on cover text page fed from the post_content.
 function digidol_gallery_carousel() {
+/*
 	global $post;
 	$the_content =  $post->post_content;
 	$the_content = preg_replace("~(?:\[/?)[^/\]]+/?\]~s", '', $the_content);  # strip shortcodes, keep shortcode content
@@ -80,6 +81,11 @@ function digidol_gallery_carousel() {
 	preg_match('/\[gallery.*ids=.(.*).\]/', $post->post_content, $ids);
 	if ($ids) {
 	$attachments = explode(",", $ids[1]);
+*/
+	
+	$args = array('post_type' => 'slideshow', 'numberposts' => -1); 
+			$attachments = get_posts($args);
+			
 	?>
 	
 	
@@ -102,17 +108,20 @@ function digidol_gallery_carousel() {
 		$loopcount = 1;		
 	if ($attachments) {
 		foreach ( $attachments as $attachment ) {
-	
-		$imagethumbnail = wp_get_attachment_image_src($attachment, 'full');
-		$imag_alt = get_post_meta($attachment, '_wp_attachment_image_alt', true);
 		
+		$imagethumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($attachment->ID ), 'full');
+		$imag_alt = get_post_meta($attachment, '_wp_attachment_image_alt', true);
+		$post_id = $attachment;
+		$article = get_post_meta($attachment->ID,'article',true);
+		$incrnumber = get_post_meta($article,'incr_number',true);
 		?>
 	
 				
-					<div class="carousel-item <?php if ($loopcount == 1) { echo 'active'; }; ?>">			
+					<div class="carousel-item <?php if ($loopcount == 1) { echo 'active'; }; ?>" data-id=<?php echo $loopcount ?>>			
 						
 							<img src="<?php echo $imagethumbnail[0]; ?>" alt="<?php echo $imag_alt;?>" />
-							
+							<div id="postincr-<?php echo $loopcount ;?>" class="invisible incr_num"><?php echo $incrnumber;   ?></div>
+							<div id="slideposttitle" class="invisible slideposttitle"><?php echo get_the_title( $attachment ); ?></div>
 						
 					</div>		
 					
@@ -131,7 +140,7 @@ function digidol_gallery_carousel() {
 						<?php
 	
 	}
-}
+
 
 add_action('digidol_hero','digidol_gallery_carousel');
 
@@ -145,6 +154,7 @@ function child_theme_setup() {
 	add_image_size( 'folio-image', 1110 );
 	add_image_size( 'grid-image', 890,500, true );
 	add_image_size('archive-thumb',208,116, true);
+	add_image_size('featured_preview', 55, 55, true);
 	
 	
 	// Register the three useful image sizes for use in Add Media modal
@@ -212,36 +222,41 @@ add_action ( 'publish_post', 'updateNumbers' );
 add_action ( 'deleted_post', 'updateNumbers' );
 add_action ( 'edit_post', 'updateNumbers' );
 
+//adding custom function to show thumbnails on slide admin page
 
+// GET FEATURED IMAGE
+function ST4_get_featured_image($post_ID) {
+    $post_thumbnail_id = get_post_thumbnail_id($post_ID);
+    if ($post_thumbnail_id) {
+        $post_thumbnail_img = wp_get_attachment_image_src($post_thumbnail_id, 'featured_preview');
+        return $post_thumbnail_img[0];
+    }
+}
+// ADD NEW COLUMN
+function ST4_columns_head_only_slideshow($defaults) {
+    $defaults['featured_image'] = 'Featured Image';
+    return $defaults;
+}
 
-	function understrap_post_nav() {
-		// Don't print empty markup if there's nowhere to navigate.
-		$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
-		$next     = get_adjacent_post( false, '', false );
+// SHOW THE FEATURED IMAGE
+function ST4_columns_content_only_slideshow($column_name, $post_ID) {
+    if ($column_name == 'featured_image') {
+	   
+        $post_featured_image = ST4_get_featured_image($post_ID);
+        if ($post_featured_image) {
+            echo '<img src="' . $post_featured_image . '" />';
+        }
+        else {
+            // NO FEATURED IMAGE, SHOW THE DEFAULT ONE
+            echo '<img src="' . get_bloginfo( 'template_url' ) . '/images/default.jpg" />';
+        }
+    }
 
-		if ( ! $next && ! $previous ) {
-			return;
-		}
-		?>
+  
+}
 
-		<div class="row">
-			<div class="col-md-12">
-				<nav class="navigation post-navigation">
-					<h2 class="sr-only"><?php _e( 'Post navigation', 'understrap' ); ?></h2>
-					<div class="nav-links">
-						<?php
-
-							if ( get_previous_post_link() ) {
-								previous_post_link( '<span class="nav-previous float-left">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'understrap' ) );
-							}
-							if ( get_next_post_link() ) {
-								next_post_link( '<span class="nav-next float-right">%link</span>',     _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'understrap' ) );
-							}
-						?>
-					</div><!-- .nav-links -->
-				</nav><!-- .navigation -->
-			</div>
-		</div>
-		<?php
-	}
-
+// ONLY MOVIE CUSTOM TYPE POSTS
+add_filter('manage_slideshow_posts_columns', 'ST4_columns_head_only_slideshow', 10);
+add_action('manage_slideshow_posts_custom_column', 'ST4_columns_content_only_slideshow', 10, 2);
+ 
+// CREATE TWO FUNCTIONS TO HANDLE THE COLUMN

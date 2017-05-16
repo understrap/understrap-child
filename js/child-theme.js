@@ -5407,14 +5407,16 @@ jQuery('.carousel').carousel({
 });
 
 jQuery(document).ready(function(){
-      jQuery(window).scroll(function() { // check if scroll event happened
-        if (jQuery(document).scrollTop() > 10) { // check if user scrolled more than 50 from top of the browser window
-          jQuery(".fixed-top").css("background-color", "rgba(109, 109, 109, 0.54)"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
-        } else {
-          jQuery(".fixed-top").css("background-color", "transparent"); // if not, change it back to transparent
-        }
-      });
-    });
+	if( jQuery('body.home').length ){
+      var $elem = jQuery('#carouselExampleControls');
+      var $activeslide = $elem.find('.active'); 
+    var $incrnum = $activeslide.find('.incr_num'); 
+    var $posttitle = $activeslide.find('.slideposttitle'); 
+    jQuery('#article-number').text($incrnum.text());
+    jQuery('#post-title').text($posttitle.text());
+}
+      
+          });
     
 jQuery(document).ready(function(){
      jQuery(window).scroll(function () {
@@ -5435,4 +5437,16 @@ jQuery(document).ready(function(){
         
         jQuery('#back-to-top').tooltip('show');
 
+});
+
+jQuery('#carouselExampleControls').bind('slid.bs.carousel', function (e) {
+    var $elem = jQuery(this);
+    var $activeslide = $elem.find('.active'); 
+    var $incrnum = $activeslide.find('.incr_num'); 
+    var $posttitle = $activeslide.find('.slideposttitle'); 
+    
+    
+    jQuery('#article-number').text($incrnum.text());
+    jQuery('#post-title').text($posttitle.text());
+    
 });
