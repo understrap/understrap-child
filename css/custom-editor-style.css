@@ -4627,17 +4627,10 @@ button.close {
 .carousel-item {
   position: relative;
   display: none;
-  width: 100%; }
-  @media (-webkit-transform-3d) {
-    .carousel-item {
-      transition: transform 0.6s ease-in-out;
-      backface-visibility: hidden;
-      perspective: 1000px; } }
-  @supports (transform: translate3d(0, 0, 0)) {
-    .carousel-item {
-      transition: transform 0.6s ease-in-out;
-      backface-visibility: hidden;
-      perspective: 1000px; } }
+  width: 100%;
+  transition: transform 0.5s ease;
+  backface-visibility: hidden;
+  perspective: 1000px; }
 
 .carousel-item.active,
 .carousel-item-next,
@@ -4649,27 +4642,17 @@ button.close {
   position: absolute;
   top: 0; }
 
-@media (-webkit-transform-3d) {
-  .carousel-item-next.carousel-item-left,
-  .carousel-item-prev.carousel-item-right {
-    transform: translate3d(0, 0, 0); }
-  .carousel-item-next,
-  .active.carousel-item-right {
-    transform: translate3d(100%, 0, 0); }
-  .carousel-item-prev,
-  .active.carousel-item-left {
-    transform: translate3d(-100%, 0, 0); } }
+.carousel-item-next.carousel-item-left,
+.carousel-item-prev.carousel-item-right {
+  transform: translate3d(0, 0, 0); }
 
-@supports (transform: translate3d(0, 0, 0)) {
-  .carousel-item-next.carousel-item-left,
-  .carousel-item-prev.carousel-item-right {
-    transform: translate3d(0, 0, 0); }
-  .carousel-item-next,
-  .active.carousel-item-right {
-    transform: translate3d(100%, 0, 0); }
-  .carousel-item-prev,
-  .active.carousel-item-left {
-    transform: translate3d(-100%, 0, 0); } }
+.carousel-item-next,
+.active.carousel-item-right {
+  transform: translate3d(100%, 0, 0); }
+
+.carousel-item-prev,
+.active.carousel-item-left {
+  transform: translate3d(-100%, 0, 0); }
 
 .carousel-control-prev,
 .carousel-control-next {
@@ -4731,7 +4714,6 @@ button.close {
     margin-right: 3px;
     margin-left: 3px;
     text-indent: -999px;
-    cursor: pointer;
     background-color: rgba(255, 255, 255, 0.5); }
     .carousel-indicators li::before {
       position: absolute;
@@ -9520,7 +9502,7 @@ aside li {
 
 #wrapper-footer {
   background-color: #4c4c4c;
-  font-family: 'Helvetica Neue LT W01_35 Thin';
+  font-family: 'HelveticaNeueW02-UltLt';
   font-size: smaller; }
 
 #wrapper-footer h2 {
@@ -9540,3 +9522,11 @@ aside li {
   display: none;
   z-index: 1033;
   background-color: rgba(68, 68, 68, 0.76); }
+
+#wrapper-footer-full {
+  background-color: #4c4c4c;
+  color: white; }
+
+.footer-bottom {
+  border-top: rgba(255, 255, 255, 0.1) solid 1px;
+  padding-top: 50px; }

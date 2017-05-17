@@ -1,4 +1,5 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
 body {
 	
 	}
@@ -262,7 +263,6 @@ h1.entry-title  {
 }
 
 
-
     /* Fixes jumping carousel in Chrome
     ------------------------- */
 
@@ -306,7 +306,7 @@ aside li {
 #wrapper-footer {
 	
 	background-color: #4c4c4c;
-	font-family:'Helvetica Neue LT W01_35 Thin';
+	font-family:'HelveticaNeueW02-UltLt';
 	font-size: smaller;
 }
 
@@ -334,4 +334,13 @@ aside li {
     background-color: rgba(68, 68, 68, 0.76);
 }
 
+#wrapper-footer-full {
+	background-color: #4c4c4c;
+	color: white;
+}
+
+.footer-bottom {
+	border-top: rgba(255, 255, 255, 0.1) solid 1px;
+	padding-top: 50px;
+}
 

@@ -17,7 +17,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<div class="<?php echo esc_html( $container ); ?>">
 
-		<div class="row">
+		<div class="row footer-bottom">
 
 			<div class="col-md-12">
 

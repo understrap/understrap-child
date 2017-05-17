@@ -5401,10 +5401,7 @@ jQuery(window).on('resize', function (){
   $item.height($wHeight);
 });
 
-jQuery('.carousel').carousel({
-  interval: 6000,
-  pause: "false"
-});
+
 
 jQuery(document).ready(function(){
 	if( jQuery('body.home').length ){
@@ -5417,6 +5414,7 @@ jQuery(document).ready(function(){
 }
       
           });
+ 
     
 jQuery(document).ready(function(){
      jQuery(window).scroll(function () {

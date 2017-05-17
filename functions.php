@@ -91,7 +91,7 @@ function digidol_gallery_carousel() {
 	
 	<div class="wrapper" id="wrapper-hero">
 	<div class="container-fluid" id="hero-slides">
-		<div id="carouselExampleControls" class="carousel slide" data-interval="false">
+		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="5000">
 		<div class="wrapper" id="month-wrap">
 			<div class="container">
 				<div class="monthind hidden-md-down">
@@ -109,7 +109,7 @@ function digidol_gallery_carousel() {
 	if ($attachments) {
 		foreach ( $attachments as $attachment ) {
 		
-		$imagethumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($attachment->ID ), 'full');
+		$imagethumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($attachment->ID ), 'homepage');
 		$imag_alt = get_post_meta($attachment, '_wp_attachment_image_alt', true);
 		$post_id = $attachment;
 		$article = get_post_meta($attachment->ID,'article',true);
@@ -152,6 +152,7 @@ function child_theme_setup() {
 		
 	// Add other useful image sizes for use through Add Media modal
 	add_image_size( 'folio-image', 1110 );
+	add_image_size( 'homepage', 1500 );
 	add_image_size( 'grid-image', 890,500, true );
 	add_image_size('archive-thumb',208,116, true);
 	add_image_size('featured_preview', 55, 55, true);
