@@ -11,7 +11,7 @@
 
 	<?php echo get_the_post_thumbnail( $post->ID, 'folio-image', array( 'class' => 'pb-3' )); ?>
 	
-	
+	<div class="post-gallery-link float-right"><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i></a></div>
 	<header class="entry-header">
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
