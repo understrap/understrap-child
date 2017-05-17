@@ -9214,6 +9214,9 @@ h1.navbar-brand a:hover {
 .gallery-caption {
   display: block; }
 
+body {
+  background-color: #4c4c4c; }
+
 #single-wrapper {
   margin-bottom: 3.0rem; }
 
