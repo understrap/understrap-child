@@ -260,3 +260,108 @@ add_filter('manage_slideshow_posts_columns', 'ST4_columns_head_only_slideshow', 
 add_action('manage_slideshow_posts_custom_column', 'ST4_columns_content_only_slideshow', 10, 2);
  
 // CREATE TWO FUNCTIONS TO HANDLE THE COLUMN
+
+function cptui_register_my_cpts_slideshow() {
+
+	/**
+	 * Post Type: slides.
+	 */
+
+	$labels = array(
+		"name" => __( 'slides', 'understrap-child' ),
+		"singular_name" => __( 'slide', 'understrap-child' ),
+	);
+
+	$args = array(
+		"label" => __( 'slides', 'understrap-child' ),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => false,
+		"rest_base" => "",
+		"has_archive" => false,
+		"show_in_menu" => true,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"rewrite" => array( "slug" => "slideshow", "with_front" => true ),
+		"query_var" => true,
+		"supports" => array( "title", "editor", "thumbnail" ),
+	);
+
+	register_post_type( "slideshow", $args );
+}
+
+add_action( 'init', 'cptui_register_my_cpts_slideshow' );
+
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_slideshow',
+		'title' => 'Slideshow',
+		'fields' => array (
+			array (
+				'key' => 'field_591b521d6d73b',
+				'label' => 'Article',
+				'name' => 'article',
+				'type' => 'post_object',
+				'required' => 1,
+				'post_type' => array (
+					0 => 'post',
+				),
+				'taxonomy' => array (
+					0 => 'all',
+				),
+				'allow_null' => 0,
+				'multiple' => 0,
+			),
+			array (
+				'key' => 'field_591b52836d73c',
+				'label' => 'Post Home Page title',
+				'name' => 'post_home_page_title',
+				'type' => 'text',
+				'required' => 1,
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_591b52b46d73d',
+				'label' => '',
+				'name' => '',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'slideshow',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
+
