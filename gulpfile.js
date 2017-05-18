@@ -58,11 +58,10 @@ gulp.task('scss-for-prod', function() {
         .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
         .pipe(gulp.dest('./css'))
         .pipe(rename('custom-editor-style.css'))
-        .pipe(gulp.dest('./css'));
 
     var pipe2 = source.pipe(clone())
         .pipe(plumber({ errorHandler: function (error) { swallowError(this, error); } }))
-        .pipe(cssnano())
+        .pipe(minify-css())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./css'));
 
@@ -95,7 +94,6 @@ gulp.task('sass',['minify-css'], function () {
         .pipe(sass())
         .pipe(gulp.dest('./css'))
         .pipe(rename('custom-editor-style.css'))
-        .pipe(gulp.dest('./css'));
     return stream;
 });
 
@@ -120,7 +118,7 @@ gulp.task('imagemin', function(){
 // Run:
 // gulp nanocss
 // Minifies CSS files
-gulp.task('cssnano', ['cleancss'], function(){
+gulp.task('cssnano', function(){
   return gulp.src('./css/*.css')
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(plumber({ errorHandler: function (error) { swallowError(self, error); } }))
@@ -132,6 +130,14 @@ gulp.task('cssnano', ['cleancss'], function(){
 
 gulp.task('minify-css', function() {
   return gulp.src('./css/child-theme.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(plumber())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('./css/'));
+});
+
+gulp.task('minify-css', function() {
+    return gulp.src('./css/*.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(plumber())
     .pipe(rename({suffix: '.min'}))
