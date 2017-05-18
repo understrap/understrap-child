@@ -41,7 +41,7 @@ So you have one clean CSS file at the end and just one request.
 ## Developing With NPM, Gulp, SASS and Browser Sync
 
 ### Installing Dependencies
-- Make sure you have installed Node.js, Bower, and Browser-Sync [1] on your computer globally
+- Make sure you have installed Node.js, Gulp, and Browser-Sync [1] on your computer globally
 - Then open your terminal and browse to the location of your UnderStrap copy
 - Run: `$ npm install` then: `$ gulp copy-assets`
 
