@@ -38,6 +38,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var del = require('del');
 var cleanCSS = require('gulp-clean-css');
+var gulpSequence = require('gulp-sequence')
 
 function swallowError(self, error) {
     console.log(error.toString())
@@ -89,13 +90,17 @@ gulp.task('watch-scss', ['browser-sync'], function () {
 // Run:
 // gulp sass
 // Compiles SCSS files in CSS
-gulp.task('sass',['minify-css'], function () {
+gulp.task('sass', function () {
     var stream = gulp.src('./sass/*.scss')
-        .pipe(plumber({ errorHandler: function (error) { swallowError(this, error); } }))
+        .pipe(plumber({
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
         .pipe(sass())
         .pipe(gulp.dest('./css'))
         .pipe(rename('custom-editor-style.css'))
-        .pipe(gulp.dest('./css'));
     return stream;
 });
 
@@ -103,8 +108,7 @@ gulp.task('sass',['minify-css'], function () {
 // gulp watch
 // Starts watcher. Watcher runs gulp sass task on changes
 gulp.task('watch', function () {
-    gulp.watch('./sass/**/*.scss', ['sass']);
-    gulp.watch('./css/child-theme.css', ['minify-css']);
+    gulp.watch('./sass/**/*.scss', ['styles']);
     gulp.watch([basePaths.dev + 'js/**/*.js','js/**/*.js','!js/child-theme.js','!js/child-theme.min.js'], ['scripts']);
 });
 
@@ -132,9 +136,16 @@ gulp.task('cssnano', ['cleancss'], function(){
 
 gulp.task('minify-css', function() {
   return gulp.src('./css/child-theme.css')
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(plumber())
+  .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(cleanCSS({compatibility: '*'}))
+    .pipe(plumber({
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
     .pipe(rename({suffix: '.min'}))
+     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./css/'));
 });
 
@@ -143,6 +154,8 @@ gulp.task('cleancss', function() {
     .pipe(ignore('child-theme.css'))
     .pipe(rimraf());
 });
+
+gulp.task('styles', gulpSequence('sass', 'minify-css'))
 
 // Run:
 // gulp browser-sync
@@ -154,7 +167,7 @@ gulp.task('browser-sync', function() {
 // Run:
 // gulp watch-bs
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
-gulp.task('watch-bs', ['browser-sync', 'watch', 'minify-css'], function () { });
+gulp.task('watch-bs', ['browser-sync', 'watch', 'scripts'], function () { });
 
 // Run:
 // gulp scripts.
