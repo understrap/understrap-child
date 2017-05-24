@@ -9418,6 +9418,9 @@ button:focus {
 .comments-area {
   padding-top: 30px; }
 
+main {
+  padding-bottom: 35px; }
+
 /* CSS used here will be applied after bootstrap.css */
 /* MARKETING CONTENT
     -------------------------------------------------- */
@@ -9533,3 +9536,6 @@ aside li {
 .footer-bottom {
   border-top: rgba(255, 255, 255, 0.1) solid 1px;
   padding-top: 50px; }
+
+.mce-content-body {
+  background-color: white; }

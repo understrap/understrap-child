@@ -193,6 +193,10 @@ font-family:"HelveticaNeueW02-UltLt";
 	padding-top: 30px;
 }
 
+
+main {
+	padding-bottom: 35px;
+}
 /* CSS used here will be applied after bootstrap.css */
 
  /* MARKETING CONTENT
@@ -344,3 +348,7 @@ aside li {
 	padding-top: 50px;
 }
 
+.mce-content-body {
+	
+background-color: white;
+}
