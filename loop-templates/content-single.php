@@ -4,14 +4,16 @@
  *
  * @package understrap
  */
-
+global $galleryId;
+$post_id = $post->ID;
+$galleryId = get_post_meta($post_id, 'viewbook', true);
 ?>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 
 	<?php echo get_the_post_thumbnail( $post->ID, 'folio-image', array( 'class' => 'pb-3' )); ?>
 	
-	<div class="post-gallery-link float-right"><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i></a></div>
+	<div class="post-gallery-link float-right"> <?php $len=strlen($galleryId); if ($len > 1) { ?> <a href="<?php echo $galleryId; ?>"><i class="fa fa-picture-o" aria-hidden="true"></i></a><?php }?></div>
 	<header class="entry-header">
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
