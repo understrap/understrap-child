@@ -14,7 +14,7 @@ body {
 }
 .navbar {
 	background-color:transparent;
-	padding-top: 45px;
+
 	z-index: 1033;
 }
 
@@ -106,14 +106,12 @@ button:focus {outline:0;}
 	color: black;
 }
 
-.admin-bar .sticky-top {
-  top: 46px;
-}
-@media screen and (min-width: 783px) {
-  .admin-bar .sticky-top {
-    top: 32px;
-  }
-}
+.sticky-top {
+	  position: absolute;
+	  background-color: black;	  
+	  }
+
+
 
 
 #single-wrapper, #page-wrapper {
@@ -166,9 +164,11 @@ font-family:"HelveticaNeueW02-UltLt";
 }
 
 #wrapper-hero {
-//	margin-top: -83px;
+	margin-top: 74px;
 }
-
+.subarticle, .keyline , .navmnth, .nav-point, .navyr {
+	display: none;
+}
 .full-screen {
   background-size: cover;
   background-position: center;
@@ -194,9 +194,7 @@ font-family:"HelveticaNeueW02-UltLt";
 }
 
 
-main {
-	padding-bottom: 35px;
-}
+
 /* CSS used here will be applied after bootstrap.css */
 
  /* MARKETING CONTENT
@@ -352,3 +350,31 @@ aside li {
 	
 background-color: white;
 }
+
+@media screen and (min-width: 783px) {
+  .admin-bar .sticky-top {
+    top: 32px;
+  }
+  .sticky-top {
+	  position: absolute;
+	  background-color: transparent;	  }
+
+	  .subarticle, .keyline, .navmnth, .nav-point, .navyr  {
+	display: inline-block;
+}
+		.navbar {
+		padding-top: 45px;
+		}
+		
+		#wrapper-hero {
+		margin-top: 0px;
+		}
+
+		#hero-slides {
+		display: inherit;
+		}
+
+		.navbar-brand {
+		font-size: 2.0rem;
+		}
+		}
