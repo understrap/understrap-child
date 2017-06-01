@@ -5433,7 +5433,7 @@ jQuery(document).ready(function(){
             return false;
         });
         
-        jQuery('#back-to-top').tooltip('show');
+      
 
 });
 
