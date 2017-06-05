@@ -5396,9 +5396,25 @@ jQuery('.carousel img').each(function() {
   jQuery(this).remove();
 });
 
+var $article = jQuery('.home .site-main .card');
+$article.height($wHeight); 
+$article.addClass('full-screen');
+
+jQuery('.home .site-main img').each(function() {
+  var $src = jQuery(this).attr('src');
+  var $color = jQuery(this).attr('data-color');
+  jQuery(this).parent().css({
+    'background-image' : 'url(' + $src + ')',
+    'background-color' : $color
+  });
+  jQuery(this).remove();
+});
+
+
 jQuery(window).on('resize', function (){
   $wHeight = jQuery(window).height() - 150;
   $item.height($wHeight);
+  $article.height($wHeight); 
 });
 
 

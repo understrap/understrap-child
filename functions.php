@@ -62,6 +62,28 @@ function digidol_site_title() {
 add_action('digidol_site_title','title_header');
 
 
+// this is the function to only output the post number
+
+
+function title_post_number (){
+	
+$thepostcounter = get_post_meta(get_the_ID(),'incr_number',true);
+	?>
+	<span class="keyline"></span>
+		    		<span class="navmnth">0</span>
+		    		<span class="nav-point">.</span>
+		    		<span id="article-number" class="navyr"><?php if ($thepostcounter) { echo $thepostcounter;} else { echo '00';}?></span>
+							 <?php
+}
+
+function digidol_site_title_post_only() {
+    do_action('digidol_site_title_post_only');
+} // end digidol_site_title
+
+add_action('digidol_site_title_post_only','title_post_number');
+
+
+
 function digidol_hero() {
     do_action('digidol_hero');
 } // end digidol_hero

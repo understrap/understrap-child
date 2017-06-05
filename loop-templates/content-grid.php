@@ -9,15 +9,15 @@ $col = 4;
 ?>
 
 
-	<div class="col-md-2 col-xl-2 article-card">
+	<div class="col-md-12 col-xl-12 article-card">
 
-
-		<div class="card card-inverse ">
 		<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-			<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+		<div class="card card-inverse ">
+		
+			
 				<?php $alt = get_post_meta( get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true ); ?>
 				<img class="card-img "
-				     src="<?php echo esc_html( get_the_post_thumbnail_url( $post->ID, 'grid-image' ) ) ?>" alt="<?php echo esc_html( $alt ); ?>">
+				     src="<?php echo esc_html( get_the_post_thumbnail_url( $post->ID, 'homepage' ) ) ?>" alt="<?php echo esc_html( $alt ); ?>">
 
 				<div class="card-img-overlay">
 
@@ -33,11 +33,11 @@ $col = 4;
 
 				</div>
 
-			</article>
+			
 
-			</a>
+			
 		</div>
-
+		</a>
 
 	</div>
 
