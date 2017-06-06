@@ -5381,7 +5381,7 @@ var Popover = function ($) {
 })();
 
 var $item = jQuery('.carousel .carousel-item');
-var $wHeight = jQuery(window).height() - 150;
+var $wHeight = (jQuery(window).width() / 1500) * 844;
 
 $item.height($wHeight); 
 $item.addClass('full-screen');
@@ -5396,23 +5396,23 @@ jQuery('.carousel img').each(function() {
   jQuery(this).remove();
 });
 
+
+
 var $article = jQuery('.home .site-main .card');
 $article.height($wHeight); 
 $article.addClass('full-screen');
 
 jQuery('.home .site-main img').each(function() {
   var $src = jQuery(this).attr('src');
-  var $color = jQuery(this).attr('data-color');
   jQuery(this).parent().css({
-    'background-image' : 'url(' + $src + ')',
-    'background-color' : $color
+    'background-image' : 'url(' + $src + ')'
   });
   jQuery(this).remove();
 });
 
 
 jQuery(window).on('resize', function (){
-  $wHeight = jQuery(window).height() - 150;
+  var $wHeight = (jQuery(window).width() / 1500) * 844;
   $item.height($wHeight);
   $article.height($wHeight); 
 });
@@ -5431,7 +5431,7 @@ jQuery(document).ready(function(){
       
           });
  
-    
+ 
 jQuery(document).ready(function(){
      jQuery(window).scroll(function () {
             if (jQuery(this).scrollTop() > 50) {
@@ -5449,7 +5449,6 @@ jQuery(document).ready(function(){
             return false;
         });
         
-      
 
 });
 

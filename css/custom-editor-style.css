@@ -9406,7 +9406,7 @@ button:focus {
   background-position: center;
   background-repeat: no-repeat; }
 
-#wrapper-home {
+.home #wrapper-index {
   padding: 0; }
 
 .article-card, .article-card img, .card, .card-img {

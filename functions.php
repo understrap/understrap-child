@@ -168,6 +168,15 @@ add_action('digidol_hero','digidol_gallery_carousel');
 
 
 function child_theme_setup() {
+	
+	
+	add_theme_support( 'infinite-scroll', array(
+    'container' => 'main',
+    'render'    => 'digidol_infinite_scroll_render',
+    'footer' => 'page',
+    'posts_per_page' => '16'
+) );
+
 
 	// Make sure featured images are enabled
 	
@@ -191,6 +200,18 @@ function child_theme_setup() {
 add_action( 'after_setup_theme', 'child_theme_setup', 11 );
 
 // Add the Month motif function
+function digidol_infinite_scroll_render() {
+	if ( is_front_page() && is_home() ) :
+    while ( have_posts() ) {
+		the_post();
+		if ( is_search() ) :
+			get_template_part( 'loop-templates/content', 'search' );
+		else :
+			get_template_part( 'loop-templates/content', 'grid' );
+		endif;
+	}
+	endif;
+}
 
 function month_motif(){
 	
