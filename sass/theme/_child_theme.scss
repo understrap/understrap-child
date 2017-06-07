@@ -14,7 +14,7 @@ body {
 }
 .navbar {
 	background-color:transparent;
-
+	display: block;
 	z-index: 1033;
 }
 
@@ -72,6 +72,7 @@ button:focus {outline:0;}
 	font-size: 1.7rem;
 	letter-spacing: -0.02em;
 	padding-top: .40rem;
+	margin-left: 0;
 }
 
 .home .navbar-brand {
@@ -392,6 +393,7 @@ background-color: white;
 }
 		.navbar {
 		padding-top: 45px;
+		display: flex;
 		
 		}
 		.home .navbar {

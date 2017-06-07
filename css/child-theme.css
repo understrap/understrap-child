@@ -9225,6 +9225,7 @@ body {
 
 .navbar {
   background-color: transparent;
+  display: block;
   z-index: 1033; }
 
 .sticky-top {
@@ -9267,7 +9268,8 @@ button:focus {
   font-family: 'HelveticaNeueW01-65Medi';
   font-size: 1.7rem;
   letter-spacing: -0.02em;
-  padding-top: .40rem; }
+  padding-top: .40rem;
+  margin-left: 0; }
 
 .home .navbar-brand {
   color: white; }
@@ -9567,7 +9569,8 @@ aside li {
   .navbar .subarticle, .keyline, .navmnth, .nav-point, .navyr {
     display: inline-block; }
   .navbar {
-    padding-top: 45px; }
+    padding-top: 45px;
+    display: flex; }
   .home .navbar {
     background-color: rgba(0, 0, 0, 0.43); }
   #wrapper-hero {
