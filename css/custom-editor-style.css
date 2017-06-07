@@ -9582,4 +9582,8 @@ aside li {
   .card-title {
     font-size: 100px;
     margin-left: 65%;
+    margin-top: 26%; }
+  .archive .card-title {
+    font-size: 40px;
+    margin-left: 65%;
     margin-top: 26%; } }

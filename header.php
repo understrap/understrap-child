@@ -27,7 +27,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="hfeed site" id="page">
 	<?php if ( is_front_page()  ) :
-	 digidol_hero();
+	 //digidol_hero();
 	 endif;?>
 	<!-- ******************* The Navbar Area ******************* -->
 	<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
