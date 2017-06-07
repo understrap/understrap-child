@@ -9410,6 +9410,9 @@ button:focus {
   font-size: 15px;
   color: white; }
 
+.card-img-overlay .sub-article-wrap {
+  margin-left: 0; }
+
 .full-screen {
   background-size: cover;
   background-position: center;
