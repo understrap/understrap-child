@@ -9496,9 +9496,11 @@ h1.entry-title {
   border-radius: 50%;
   display: block; }
 
+.card-title {
+  font-size: 60px; }
+
 .card-title, .post-incr, .card-title .zero, .card-title .point {
-  font-family: 'HelveticaNeueW02-UltLt';
-  color: rgba(255, 255, 255, 0.69); }
+  font-family: 'HelveticaNeueW02-UltLt'; }
 
 .card-title .post-incr {
   font-family: 'HelveticaNeueW01-65Medi'; }
@@ -9508,6 +9510,11 @@ h1.entry-title {
 
 .card-title .point {
   letter-spacing: -0.07em; }
+
+.card-title {
+  font-size: 60px;
+  margin-left: 65%;
+  margin-top: 20%; }
 
 aside {
   padding-bottom: 4.0rem;
@@ -9560,7 +9567,7 @@ aside li {
   .sticky-top {
     position: absolute;
     background-color: transparent; }
-  .subarticle, .keyline, .navmnth, .nav-point, .navyr {
+  .navbar .subarticle, .keyline, .navmnth, .nav-point, .navyr {
     display: inline-block; }
   .navbar {
     padding-top: 45px; }
@@ -9571,4 +9578,8 @@ aside li {
   #hero-slides {
     display: inherit; }
   .navbar-brand {
-    font-size: 2.0rem; } }
+    font-size: 2.0rem; }
+  .card-title {
+    font-size: 100px;
+    margin-left: 65%;
+    margin-top: 26%; } }

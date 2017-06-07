@@ -139,7 +139,9 @@ button:focus {outline:0;}
  }
  
  .article-no {position: relative;padding-right: 9px;}
+ 
  .home {
+	 
 	 .article-no , .navmnth, .navyr, .nav-point, .subarticle  {
 		 color: white;
 	 }
@@ -291,10 +293,12 @@ h1.entry-title  {
     border-radius: 50%;
     display: block;
 }
-
+.card-title {
+	font-size:60px;
+}
 .card-title, .post-incr , .card-title .zero, .card-title .point  {
 	font-family:'HelveticaNeueW02-UltLt';
-	color: rgba(255, 255, 255, 0.69)
+	
 }
 .card-title .post-incr {
 	font-family:'HelveticaNeueW01-65Medi';
@@ -306,6 +310,11 @@ h1.entry-title  {
 
 .card-title .point {
 	letter-spacing: -0.07em;
+}
+.card-title {
+	font-size:60px;
+	margin-left: 65%;
+	margin-top: 20%;
 }
 
 
@@ -378,7 +387,7 @@ background-color: white;
 	  position: absolute;
 	  background-color: transparent;	  }
 
-	  .subarticle, .keyline, .navmnth, .nav-point, .navyr  {
+	  .navbar .subarticle, .keyline, .navmnth, .nav-point, .navyr  {
 	display: inline-block;
 }
 		.navbar {
@@ -400,4 +409,9 @@ background-color: white;
 		.navbar-brand {
 		font-size: 2.0rem;
 		}
+		.card-title {
+	font-size:100px;
+	margin-left: 65%;
+	margin-top: 26%;
+}
 		}

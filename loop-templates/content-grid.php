@@ -9,10 +9,10 @@ $col = 4;
 ?>
 
 
-	<div class="col-md-12 col-xl-12 article-card">
+	<div class="container-fluid article-card">
 
 		<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-		<div class="card card-inverse ">
+		<div class="row card card-inverse ">
 		
 			
 				<?php $alt = get_post_meta( get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true ); ?>

@@ -23,10 +23,10 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 <div class="wrapper" id="wrapper-index">
 
-	<div class="<?php if ( is_front_page() && is_home() ) : echo "container-fluid"; endif; echo esc_html( $container ); ?>" id="content" tabindex="-1">
+	<div class="<?php if ( is_front_page() && is_home() ) : echo "container-fluid"; else : echo esc_html( $container ); endif  ?>" id="content" tabindex="-1">
 
-		<div class="row">
-<div class="col-md-12 content-area" id="primary">
+		
+			<div class="content-area" id="primary">
 			<!-- Do the left sidebar check and opens the primary div -->
 			
 
@@ -66,7 +66,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 		<!-- Do the right sidebar check -->
 		
 
-	</div><!-- .row -->
+	<!-- .row -->
 
 </div><!-- Container end -->
 

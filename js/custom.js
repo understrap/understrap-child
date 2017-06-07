@@ -1,3 +1,14 @@
+
+
+
+jQuery('#navbarNavDropdown').on('hidden.bs.collapse', function () {
+  jQuery('.navbar').removeClass('bg-inverse');
+});
+
+jQuery('#navbarNavDropdown').on('show.bs.collapse', function () {
+  jQuery('.navbar').addClass('bg-inverse');
+});
+
 var $item = jQuery('.carousel .carousel-item');
 var $wHeight = (jQuery(window).width() / 1500) * 844;
 
@@ -38,6 +49,40 @@ jQuery(window).on('resize', function (){
 
 
 jQuery(document).ready(function(){
+	
+	var didScroll = false;
+	
+	jQuery(window).scroll(function() {
+    didScroll = true;
+});
+ 
+setInterval(function() {
+	
+    if ( didScroll ) {
+	    
+        didScroll = false;
+        
+	      jQuery('.article-card').each(function(){
+	        var itemOffset = Math.abs(jQuery(this).offset().top)-150;
+	        var itemHeight = Math.abs(jQuery(this).outerHeight());
+	        var height = jQuery(window).scrollTop();
+	        if (itemOffset < height && height < (itemOffset+itemHeight)) {
+		      $articletext =  jQuery(this).find('.subarticle');
+		      $incrnum = jQuery(this).find('.post-incr'); 
+	          console.log($articletext.text());
+	          console.log(itemOffset);
+	          console.log(height);
+	          console.log(itemOffset+itemHeight);
+	          jQuery('#post-title').text($articletext.text());
+	          jQuery('#article-number').text($incrnum.text());
+	        }
+    	});    
+    }
+    
+}, 250);
+	
+
+
 	if( jQuery('body.home').length ){
       var $elem = jQuery('#carouselExampleControls');
       var $activeslide = $elem.find('.active'); 
@@ -47,10 +92,10 @@ jQuery(document).ready(function(){
     jQuery('#post-title').text($posttitle.text());
 }
       
-          });
+      
  
  
-jQuery(document).ready(function(){
+
      jQuery(window).scroll(function () {
             if (jQuery(this).scrollTop() > 50) {
                 jQuery('#back-to-top').fadeIn();
@@ -70,6 +115,7 @@ jQuery(document).ready(function(){
 
 });
 
+/*
 jQuery('#carouselExampleControls').bind('slid.bs.carousel', function (e) {
     var $elem = jQuery(this);
     var $activeslide = $elem.find('.active'); 
@@ -81,3 +127,4 @@ jQuery('#carouselExampleControls').bind('slid.bs.carousel', function (e) {
     jQuery('#post-title').text($posttitle.text());
     
 });
+*/
