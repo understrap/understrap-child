@@ -22,13 +22,14 @@ $col = 4;
 				<div class="card-img-overlay">
 
 					<header class="entry-header">
+						<div class="container">
  						<h4 class="card-title"><span class="zero">0</span><span class="point">.</span><span class="post-incr"><?php echo esc_html( get_post_meta($post->ID,'incr_number',true));  ?></span></h4> 
 
 						<?php if ( 'post' === get_post_type() ) : ?>
 
 							
 						<?php endif; ?>
-
+						</div>
 					</header>
 
 				</div>

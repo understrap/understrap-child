@@ -43,6 +43,7 @@ function get_wp_gallery_ids($post_content) {
 function title_header (){
 	
 $thepostcounter = get_post_meta(get_the_ID(),'incr_number',true);
+$thesubheader = get_post_meta(get_the_ID(),'infobartitle',true);
 	?>
 	<span class="keyline"></span>
 		    		<span class="navmnth">0</span>
@@ -50,7 +51,7 @@ $thepostcounter = get_post_meta(get_the_ID(),'incr_number',true);
 		    		<span id="article-number" class="navyr"><?php if ($thepostcounter) { echo $thepostcounter;} else { echo '00';}?></span>
 					<span class="keyline"></span>
 		    		<span class="sub-article">
-		    			<span id="post-title" class="subarticle"><?php the_title(); ?></span><span class="sub-article-wrap"><span class="sub-subarticle sub"></br></span></span>
+		    			<span id="post-title" class="subarticle"><?php the_title(); ?></span><span class="sub-article-wrap"><?php echo $thesubheader; ?><span class="sub-subarticle sub"></br></span></span>
 		    		</span>
 		 <?php
 }

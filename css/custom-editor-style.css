@@ -9275,6 +9275,9 @@ button:focus {
 .navbar-brand {
   color: black; }
 
+.navbar-toggler {
+  padding-right: 0; }
+
 .navbar.transparent.navbar-inverse .navbar-inner {
   border-width: 0px;
   -webkit-box-shadow: 0px 0px;
@@ -9299,8 +9302,7 @@ button:focus {
   float: right;
   margin-top: 20%;
   color: black;
-  margin-bottom: 32px;
-  padding-right: 15px; }
+  margin-bottom: 32px; }
 
 .month {
   font-size: 116px;
@@ -9377,7 +9379,7 @@ button:focus {
   letter-spacing: -6.18em;
   font-family: 'HelveticaNeueW01-45Ligh'; }
 
-.subarticle {
+.subarticle, .sub-article-wrap {
   letter-spacing: -0.02em;
   line-height: 1em;
   font-size: 25px;
@@ -9401,6 +9403,13 @@ button:focus {
 .subarticle, .keyline, .navmnth, .nav-point, .navyr {
   display: none; }
 
+.sub-article-wrap {
+  display: flex;
+  margin-left: 266px;
+  margin-top: -4px;
+  font-size: 15px;
+  color: white; }
+
 .full-screen {
   background-size: cover;
   background-position: center;
@@ -9419,6 +9428,9 @@ button:focus {
 
 .comments-area {
   padding-top: 30px; }
+
+.pagination {
+  padding-top: 15px; }
 
 /* CSS used here will be applied after bootstrap.css */
 /* MARKETING CONTENT
@@ -9549,6 +9561,8 @@ aside li {
     display: inline-block; }
   .navbar {
     padding-top: 45px; }
+  .home .navbar {
+    background-color: rgba(0, 0, 0, 0.43); }
   #wrapper-hero {
     margin-top: 0px; }
   #hero-slides {
