@@ -268,9 +268,12 @@ font-family:"HelveticaNeueW02-UltLt";
     }
 
 h1.entry-title  {
-	padding-bottom: 4.5rem;
+	//padding-bottom: 4.5rem;
 // Removed top padding of page title	
 //	text-align: right;
+	}
+	h3.subheading {
+		padding-bottom: 3.5rem;
 	}
 
 .single .entry-title  {

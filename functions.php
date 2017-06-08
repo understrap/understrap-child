@@ -427,3 +427,9 @@ if(function_exists("register_field_group"))
 	));
 }
 
+// Filter to add class to blockquote
+
+function blockquote_class($content){
+    return preg_replace('/<blockquote([^>]+)?>/', '<blockquote$1 class="blockquote">', $content, 1);
+}
+add_filter('the_content', 'blockquote_class');
