@@ -142,7 +142,9 @@ button:focus {outline:0;}
  .article-no {position: relative;padding-right: 9px;}
  
  .home {
-	 
+	 .menu-pane {
+		 background-color: #292b2c!important;
+	 }
 	 .article-no , .navmnth, .navyr, .nav-point, .subarticle  {
 		 color: white;
 	 }

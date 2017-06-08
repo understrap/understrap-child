@@ -2,11 +2,11 @@
 
 
 jQuery('#navbarNavDropdown').on('hidden.bs.collapse', function () {
-  jQuery('.navbar').removeClass('bg-inverse');
+  jQuery('.navbar').removeClass('menu-pane');
 });
 
 jQuery('#navbarNavDropdown').on('show.bs.collapse', function () {
-  jQuery('.navbar').addClass('bg-inverse');
+  jQuery('.navbar').addClass('menu-pane');
 });
 
 var $item = jQuery('.carousel .carousel-item');
@@ -80,9 +80,11 @@ setInterval(function() {
     }
     
 }, 250);
+
 	
 
 
+/*
 	if( jQuery('body.home').length ){
       var $elem = jQuery('#carouselExampleControls');
       var $activeslide = $elem.find('.active'); 
@@ -91,6 +93,7 @@ setInterval(function() {
     jQuery('#article-number').text($incrnum.text());
     jQuery('#post-title').text($posttitle.text());
 }
+*/
       
       
  

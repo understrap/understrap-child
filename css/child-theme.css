@@ -9361,6 +9361,9 @@ button:focus {
   position: relative;
   padding-right: 9px; }
 
+.home .menu-pane {
+  background-color: #292b2c !important; }
+
 .home .article-no, .home .navmnth, .home .navyr, .home .nav-point, .home .subarticle {
   color: white; }
 
