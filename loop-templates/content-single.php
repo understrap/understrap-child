@@ -11,10 +11,10 @@ $galleryId = get_post_meta($post_id, 'viewbook', true);
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'folio-image', array( 'class' => 'pb-3' )); ?>
+	<?php echo get_the_post_thumbnail( $post->ID, 'folio-image'); ?>
 	
 	<div class="post-gallery-link float-right"> <?php $len=strlen($galleryId); if ($len > 1) { ?> <a href="<?php echo $galleryId; ?>"><i class="fa fa-picture-o" aria-hidden="true"></i></a><?php }?></div>
-	<header class="entry-header">
+	<header class="entry-header pt-3">
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<h3 class='subheading'><?php echo get_post_meta($post_id, 'subheading', true); ?></h3>
