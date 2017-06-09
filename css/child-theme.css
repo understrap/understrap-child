@@ -9572,7 +9572,7 @@ aside li {
   background-color: white; }
 
 .simple-social-icons ul li {
-  padding-left: 1px !important; }
+  margin-left: 1px !important; }
 
 @media screen and (min-width: 783px) {
   .admin-bar .sticky-top {
