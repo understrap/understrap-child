@@ -16,6 +16,7 @@ body {
 	background-color:transparent;
 	display: block;
 	z-index: 1033;
+	padding: 0;
 }
 
 .sticky-top {
@@ -390,7 +391,10 @@ aside li {
 	
 background-color: white;
 }
-
+.simple-social-icons ul li {
+	padding-left: 1px!important;
+	
+}
 @media screen and (min-width: 783px) {
   .admin-bar .sticky-top {
     top: 32px;
