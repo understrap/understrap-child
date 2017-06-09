@@ -9503,7 +9503,9 @@ button:focus {
 
 .card-title {
   font-size: 60px;
-  color: rgba(255, 255, 255, 0.5) !important; }
+  color: rgba(255, 255, 255, 0.5) !important;
+  position: absolute;
+  right: 40px; }
 
 .card-title, .post-incr, .card-title .zero, .card-title .point {
   font-family: 'Helvetica Neue LT W01_35 Thin'; }
@@ -9597,7 +9599,9 @@ aside li {
   .card-title {
     font-size: 190px;
     margin-left: 65%;
-    margin-top: 26%; }
+    margin-top: 26%;
+    position: relative;
+    right: auto; }
   .archive .card-title {
     font-size: 40px;
     margin-left: 65%;
