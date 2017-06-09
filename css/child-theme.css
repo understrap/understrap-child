@@ -9505,7 +9505,7 @@ button:focus {
   font-size: 60px;
   color: rgba(255, 255, 255, 0.5) !important;
   position: absolute;
-  right: 40px; }
+  right: 0; }
 
 .card-title, .post-incr, .card-title .zero, .card-title .point {
   font-family: 'Helvetica Neue LT W01_35 Thin'; }
