@@ -9227,7 +9227,7 @@ body {
   background-color: transparent;
   display: block;
   z-index: 1033;
-  padding: 0; }
+  padding: 0.5rem 0px 0px 0px; }
 
 .sticky-top {
   position: absolute;
@@ -9523,6 +9523,7 @@ button:focus {
   margin-top: 20%; }
 
 .card-title.widget-post-number {
+  font-size: 121px;
   margin: 0;
   color: rgba(0, 0, 0, 0.2) !important; }
 
