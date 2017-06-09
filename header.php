@@ -64,8 +64,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					} 
 					if ( is_front_page()  ) :
 					digidol_site_title(1);
-					else :
-					digidol_site_title_post_only();
+					
 					endif;
 					?><!-- end custom logo -->
 
