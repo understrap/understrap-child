@@ -19,7 +19,7 @@ $col = 4;
 					 $videourl = get_the_post_video_url();
 					  $alt = get_post_meta( get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true ); ?>
 				<?php if ($videourl): ?>
-						<div class="featured-video-plus post-thumbnail fvp-responsive fvp-vimeo fvp-center"><iframe src="<?php echo get_the_post_video_url( $post_id );?>&background=1&mute=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+						<div class="featured-video-plus post-thumbnail fvp-responsive fvp-vimeo fvp-center"><iframe src="<?php echo get_the_post_video_url( $post_id );?>&background=0&mute=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
 						
 							
 						<?php else :
