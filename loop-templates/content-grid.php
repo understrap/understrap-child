@@ -15,10 +15,20 @@ $col = 4;
 		<div class="row card card-inverse ">
 		
 			
-				<?php $alt = get_post_meta( get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true ); ?>
+				<?php
+					 $videourl = get_the_post_video_url();
+					  $alt = get_post_meta( get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true ); ?>
+				<?php if ($videourl): ?>
+						<div class="featured-video-plus post-thumbnail fvp-responsive fvp-vimeo fvp-center"><iframe src="<?php echo get_the_post_video_url( $post_id );?>&background=1&mute=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+						
+							
+						<?php else :
+							
+						?>
+
 				<img class="card-img "
 				     src="<?php echo esc_html( get_the_post_thumbnail_url( $post->ID, 'homepage' ) ) ?>" alt="<?php echo esc_html( $alt ); ?>">
-
+					 <?php endif;?> 
 				<div class="card-img-overlay">
 
 					<header class="entry-header">

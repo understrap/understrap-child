@@ -154,12 +154,22 @@ function digidol_gallery_carousel() {
 		$post_id = $attachment;
 		$article = get_post_meta($attachment->ID,'article',true);
 		$incrnumber = get_post_meta($article,'incr_number',true);
+		
+		 $videourl = get_the_post_video_url( $article );
+		 
 		?>
 	
 				
 					<div class="carousel-item <?php if ($loopcount == 1) { echo 'active'; }; ?>" data-id=<?php echo $loopcount ?>>			
-						
+						<?php if ($videourl): 
+							echo $videourl;
+						?>
+							<video id="big-video-vid_html5_api" class="vjs-tech" preload="auto" data-setup="{}" webkit-playsinline="" style="position: absolute; width: 2113.78px; height: 1189px;" autoplay="" src="<?php echo $videourl; ?>"></video>
+						<?php else :
+							echo $videourl;
+						?>
 							<img src="<?php echo $imagethumbnail[0]; ?>" alt="<?php echo $imag_alt;?>" />
+							<?php endif; ?>
 							<div id="postincr-<?php echo $loopcount ;?>" class="invisible incr_num"><?php echo $incrnumber;   ?></div>
 							<div id="slideposttitle" class="invisible slideposttitle"><?php echo get_the_title( $attachment ); ?></div>
 						
