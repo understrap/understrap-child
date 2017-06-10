@@ -18,8 +18,15 @@ $col = 4;
 				<?php
 					 $videourl = get_the_post_video_url();
 					  $alt = get_post_meta( get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true ); ?>
-				<?php if ($videourl): ?>
-						<div class="featured-video-plus post-thumbnail fvp-responsive fvp-vimeo fvp-center"><iframe src="<?php echo get_the_post_video_url( $post_id );?>&background=1&mute=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+				<?php if ($videourl): 
+					$vimeourl = get_post_meta($post->ID, 'vimeo', true);
+				?>
+				
+				<div class="featured-video-plus post-thumbnail fvp-responsive fvp-vimeo fvp-center">
+						<video width= "100%" autoplay loop muted playsinline>
+  <source src="<?php echo $vimeourl;?>">
+  </video></div>
+						
 						
 							
 						<?php else :
