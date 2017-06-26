@@ -9416,9 +9416,6 @@ button:focus {
 .card-img-overlay .sub-article-wrap {
   margin-left: 0; }
 
-.card-img-overlay {
-  background-color: black; }
-
 .full-screen {
   background-size: cover;
   background-position: center;
@@ -9503,6 +9500,9 @@ button:focus {
 .img-circle {
   border-radius: 50%;
   display: block; }
+
+.card {
+  background-color: black; }
 
 .card-title {
   font-size: 60px;

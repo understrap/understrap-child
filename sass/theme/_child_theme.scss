@@ -193,10 +193,6 @@ font-family:'Helvetica Neue LT W01_35 Thin';
 	
 }
 
-.card-img-overlay {
-
-background-color: black; 
-}
 
 .full-screen {
   background-size: cover;
@@ -308,6 +304,9 @@ h1.entry-title  {
 .img-circle {
     border-radius: 50%;
     display: block;
+}
+.card {
+	background-color: black;
 }
 .card-title {
 	font-size:60px;
