@@ -9414,7 +9414,8 @@ button:focus {
   color: white; }
 
 .card-img-overlay .sub-article-wrap {
-  margin-left: 0; }
+  margin-left: 0;
+  background-color: black; }
 
 .full-screen {
   background-size: cover;
