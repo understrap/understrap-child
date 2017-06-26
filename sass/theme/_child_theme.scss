@@ -190,8 +190,14 @@ font-family:'Helvetica Neue LT W01_35 Thin';
 }
 .card-img-overlay .sub-article-wrap {
 	margin-left: 0;
-	background-color: black;
+	
 }
+
+.card-img-overlay {
+
+background-color: black; 
+}
+
 .full-screen {
   background-size: cover;
   background-position: center;
