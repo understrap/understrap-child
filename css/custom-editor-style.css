@@ -9540,6 +9540,9 @@ aside {
 aside li {
   list-style: none; }
 
+.widget-area {
+  padding-top: 30px; }
+
 #searchform label {
   display: none; }
 
@@ -9624,4 +9627,6 @@ aside li {
   .archive .card-title {
     font-size: 40px;
     margin-left: 65%;
-    margin-top: 26%; } }
+    margin-top: 26%; }
+  .widget-area {
+    padding-top: 0; } }
