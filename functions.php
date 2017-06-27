@@ -443,3 +443,16 @@ function blockquote_class($content){
     return preg_replace('/<blockquote([^>]+)?>/', '<blockquote$1 class="blockquote">', $content, 1);
 }
 add_filter('the_content', 'blockquote_class');
+
+
+
+
+if ( function_exists('register_sidebar') )
+  register_sidebar(array(
+    'name' => 'Dropdown Menu Widget',
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+	'after_widget'  => '</aside>',
+    'before_title' => '<h3>',
+    'after_title' => '</h3>',
+  )
+);

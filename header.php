@@ -69,17 +69,19 @@ $container = get_theme_mod( 'understrap_container_type' );
 					?><!-- end custom logo -->
 
 				<!-- The WordPress Menu goes here -->
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
 				<?php wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
-						'container_class' => 'collapse navbar-collapse',
-						'container_id'    => 'navbarNavDropdown',
 						'menu_class'      => 'navbar-nav',
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
 						'walker'          => new WP_Bootstrap_Navwalker(),
 					)
 				); ?>
+				<div class="social-bar "><?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Dropdown Menu Widget") ) : ?>
+<?php endif;?>
+</div></div>
 			<?php if ( 'container' == $container ) : ?>
 			</div><!-- .container -->
 			<?php endif; ?>
