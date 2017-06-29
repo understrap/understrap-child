@@ -5451,17 +5451,55 @@ setInterval(function() {
 	        if (itemOffset < height && height < (itemOffset+itemHeight)) {
 		      $articletext =  jQuery(this).find('.subarticle');
 		      $incrnum = jQuery(this).find('.post-incr'); 
-	          console.log($articletext.text());
-	          console.log(itemOffset);
-	          console.log(height);
-	          console.log(itemOffset+itemHeight);
+	          //console.log($articletext.text());
+	          //console.log("itemoffset: "+itemOffset);
+	          //console.log("height: "+height);
+	          //console.log("itemoffset+itemHeight: "+ (itemOffset+itemHeight));
 	          jQuery('#post-title').text($articletext.text());
 	          jQuery('#article-number').text($incrnum.text());
+ 
 	        }
+	        
     	});    
     }
     
 }, 250);
+
+
+// video playback
+
+var videos = document.getElementsByTagName("video"),
+fraction = 0.8;
+function checkScroll() {
+
+    for(var i = 0; i < videos.length; i++) {
+
+
+        var video = videos[i];
+
+        var x = video.offsetLeft, y = video.offsetHeight, w = video.offsetWidth, h = video.offsetHeight, r = x + w, //right
+// .e.offsetParent.offsetParent.offsetParent.scrollHeight
+        	$grandf = video.offsetParent.offsetParent.offsetParent.offsetTop;
+            b = y + h;
+			console.log("ID: " + videos[i].id + "OffsetTop: " + y + "Grandfather: " + $grandf);
+			console.log("Bottom: " + b + " Height" + h);
+			console.log("Page Offset: " + window.pageYOffset);
+			
+			console.log("Calc: " + ($grandf-(h/2)) + " -- " + ($grandf+(h/2)));
+			
+			
+            if (window.pageYOffset  < ($grandf+(h/2)) &&  window.pageYOffset  > ($grandf-(h/2))) {
+                video.play();
+            } else {
+                video.pause();
+            }
+
+    }
+
+}
+
+window.addEventListener('scroll', checkScroll, false);
+window.addEventListener('resize', checkScroll, false);
 
 	
 

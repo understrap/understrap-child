@@ -23,7 +23,7 @@ $col = 4;
 				?>
 				
 				<div class="featured-video-plus post-thumbnail fvp-responsive fvp-vimeo fvp-center">
-						<video width= "100%" autoplay loop muted playsinline>
+						<video id="<?php echo "vid-" . $post->ID;?>" width= "100%" muted playsinline>
   <source src="<?php echo $vimeourl;?>">
   </video></div>
 						
