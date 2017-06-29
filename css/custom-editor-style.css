@@ -6780,15 +6780,13 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 .screen-reader-text {
   font-size: inherit; }
 
-.alignleft {
-  display: inline;
-  float: left;
-  margin-right: 1.5em; }
-
 .alignright {
-  display: inline;
   float: right;
-  margin-left: 1.5em; }
+  padding-left: 10px; }
+
+.alignleft {
+  float: left;
+  padding-right: 10px; }
 
 .aligncenter {
   margin: 0px auto; }

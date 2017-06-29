@@ -4,10 +4,10 @@ Basic Child Theme for UnderStrap Theme Framework: https://github.com/holger1411/
 ## How it works
 It shares with the parent theme all PHP files and adds its own functions.php on top of the UnderStrap parent themes functions.php.
 
-IT DIT NOT LOAD THE PARENT THEMES CSS FILE(S)!
-Instead it uses the UnderStrap Parent Theme as dependency via Bower and compiles its own CSS file from it.
+IT DID NOT LOAD THE PARENT THEMES CSS FILE(S)!
+Instead it uses the UnderStrap Parent Theme as dependency via npm and compiles its own CSS file from it.
 
-Uses the Enqueue method the load and sort the CSS file the right way instead of the old @import methode
+Uses the Enqueue method the load and sort the CSS file the right way instead of the old @import method.
 
 ## Installation
 1. Install the parent theme UnderStrap first: https://github.com/holger1411/understrap
@@ -20,7 +20,7 @@ Uses the Enqueue method the load and sort the CSS file the right way instead of 
 
 ## Editing
 Add your own CSS styles to /sass/theme/_child_theme.scss
-ot import you own files into /sass/theme/understrap-child.scss
+or import you own files into /sass/theme/understrap-child.scss
 
 To overwrite Bootstrap or UnderStraps base variables just add your own value to:
 /sass/theme/_child_theme_variables.scss
@@ -38,12 +38,12 @@ and
 
 So you have one clean CSS file at the end and just one request.
 
-## Developing With NPM, Bower, Gulp, SASS and Browser Sync
+## Developing With NPM, Gulp, SASS and Browser Sync
 
 ### Installing Dependencies
-- Make sure you have installed Node.js, Bower, and Browser-Sync [1] on your computer globally
+- Make sure you have installed Node.js, Gulp, and Browser-Sync [1] on your computer globally
 - Then open your terminal and browse to the location of your UnderStrap copy
-- Run: `$ npm install` then: `$ bower install` and finally: `$ gulp copy-assets`
+- Run: `$ npm install` then: `$ gulp copy-assets`
 
 ### Running
 To work and compile your Sass files on the fly start:

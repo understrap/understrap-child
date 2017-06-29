@@ -1,24 +1,15 @@
-.brackets.json
-.idea/.name
-
-.idea/compiler.xml
-
-.idea/copyright/profiles_settings.xml
-
-.idea/encodings.xml
-
-*.xml
-
-*.iml
-
-.idea/watcherTasks.xml
-
-.idea/watcherTasks.xml
-
 .sass-cache
 
 bower_components
 
 node_modules
 
-src/sass/bootstrap-sass/bootstrap/_panels (1).scss
+src
+
+understrap.zip
+
+dist
+
+dist-product
+
+npm-debug.log
