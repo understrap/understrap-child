@@ -9,6 +9,7 @@ var basePaths = {
 // automatically reloads the page when files changed
 var browserSyncWatchFiles = [
     './css/*.min.css',
+    './css/*.css', // for the scss-for-dev task
     './js/*.min.js',
     './*.php'
 ];
@@ -74,6 +75,10 @@ gulp.task('scss-for-prod', function() {
 // Run:
 // gulp sourcemaps + sass + reload(browserSync)
 // Prepare the child-theme.css for the development environment
+// So you will have to use this line in function.php :
+// wp_enqueue_style( 'child-understrap-styles', get_stylesheet_directory_uri() . '/css/child-theme.css', array(), $the_theme->get( 'Version' ) );
+// instead of
+// wp_enqueue_style( 'child-understrap-styles', get_stylesheet_directory_uri() . '/css/child-theme.min.css', array(), $the_theme->get( 'Version' ) );
 gulp.task('scss-for-dev', function() {
     gulp.src('./sass/*.scss')
         .pipe(plumber({ errorHandler: function (error) { swallowError(this, error); } }))
