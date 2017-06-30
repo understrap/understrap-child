@@ -23,7 +23,7 @@ $col = 4;
 				?>
 				
 				<div class="featured-video-plus post-thumbnail fvp-responsive fvp-vimeo fvp-center">
-						<video id="<?php echo "vid-" . $post->ID;?>" width= "100%" muted playsinline>
+						<video id="<?php echo "vid-" . $post->ID;?>" width= "100%" poster=<?php echo esc_html( get_the_post_thumbnail_url( $post->ID, 'homepage' ) ); ?> muted playsinline>
   <source src="<?php echo $vimeourl;?>">
   </video></div>
 						
