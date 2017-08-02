@@ -1,15 +1,13 @@
 // 'include-media' plugging into Bootstrap 4's Grid Breakpoints map
+
 // Amend to allow desktop first
-
-//$breakpoints: $grid-breakpoints;
-
-$grid-breakpoints: (
-        xs: 480px,
-        sm: 576px,
-        md: 768px,
-        lg: 992px,
-        xl: 1200px
-) !default;
+//$grid-breakpoints: (
+//        xs: 480px,
+//        sm: 576px,
+//        md: 768px,
+//        lg: 992px,
+//        xl: 1200px
+//) !default;
 
 $breakpoints: $grid-breakpoints;
 
