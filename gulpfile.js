@@ -2,7 +2,8 @@
 var basePaths = {
     bower: './bower_components/',
     node: './node_modules/',
-    dev: './src/'
+    dev: './src/',
+    assets: './sass/assets/'
 };
 
 // browser-sync watched files
@@ -242,6 +243,10 @@ gulp.task('copy-assets', function() {
     gulp.src(basePaths.node + 'undescores-for-npm/js/*.js')
         .pipe(gulp.dest(basePaths.dev + '/js'));
 
+// include media scss
+    gulp.src(basePaths.node + 'include-media/dist/*.scss')
+        .pipe(gulp.dest(basePaths.dev + '/sass/include-media'))
+        .pipe(gulp.dest(basePaths.assets));
 
 // Copy Tether JS files
     gulp.src(basePaths.node + 'tether/dist/js/*.js')

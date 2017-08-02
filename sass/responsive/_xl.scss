@@ -1,0 +1,19 @@
+// Below 75em (1200px)
+//
+@include media("<=xl") {
+}
+
+// Between 62em (992px) and 75em (1200px)
+//
+@include media(">lg", "<xl") {
+}
+
+// Above 75em (1200px)
+//
+@include media(">xl") {
+}
+
+// Retine declarations, even with other breakpoints
+//
+@include media("retina2x", ">xl") {
+}

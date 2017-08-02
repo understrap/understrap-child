@@ -7,5 +7,9 @@
 @import "assets/font-awesome"; // <------- Font Awesome Icon font
 @import "assets/underscores"; // <------- Underscores media styles
 
+// Responsive
+@import "assets/include-media"; // <--------- Include Media // Added via gulp copy-assets
+@import "responsive/all";  // <--------- Responsive Styling // Breakpoints set in all.scss
+
 // Any additional imported files //
 @import "theme/child_theme";  // <--------- Add your styles into this file
