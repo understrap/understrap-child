@@ -1,6 +1,6 @@
 // Defining base pathes
 var basePaths = {
-    bower: './bower_components/',
+    js: './js/',
     node: './node_modules/',
     dev: './src/'
 };
@@ -174,7 +174,6 @@ gulp.task('watch-bs', ['browser-sync', 'watch', 'scripts'], function () { });
 // Uglifies and concat all JS files into one
 gulp.task('scripts', function() {
     var scripts = [
-        basePaths.dev + 'js/tether.js', // Must be loaded before BS4
 
         // Start - All BS4 stuff
         basePaths.dev + 'js/bootstrap4/bootstrap.js',
@@ -243,13 +242,12 @@ gulp.task('copy-assets', function() {
         .pipe(gulp.dest(basePaths.dev + '/js'));
 
 
-// Copy Tether JS files
-    gulp.src(basePaths.node + 'tether/dist/js/*.js')
-        .pipe(gulp.dest(basePaths.dev + '/js'));
+// Copy Popper JS files
+    gulp.src(basePaths.node + 'popper.js/dist/umd/popper.min.js')
+        .pipe(gulp.dest(basePaths.js));
 
-// Copy Tether CSS files
-    gulp.src(basePaths.node + 'tether/dist/css/*.css')
-        .pipe(gulp.dest(basePaths.dev + '/css'));
+    gulp.src(basePaths.node + 'popper.js/dist/umd/popper.js')
+        .pipe(gulp.dest(basePaths.js));
 });
 
 // Run
