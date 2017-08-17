@@ -50,7 +50,7 @@
     "popper.js": "^1.11.1",
     "run-sequence": "^2.0.0",
     "undescores-for-npm": "^1.0.0",
-    "understrap": "^0.6.4"
+    "understrap": "^0.6.5"
   }
     
 }
