@@ -10,14 +10,13 @@
     "type": "git",
     "url": "https://github.com/holger1411/understrap-child.git"
   },
-    "keywords": [
+  "keywords": [
     "wordpress",
     "theme",
     "framework",
     "bootstrap",
     "underscores"
   ],
-
   "author": "Holger Koenemann",
   "license": "GPL-2.0",
   "bugs": {
@@ -49,8 +48,11 @@
     "merge2": "^1.1.0",
     "popper.js": "^1.11.1",
     "run-sequence": "^2.0.0",
-    "undescores-for-npm": "^1.0.0",
-    "understrap": "^0.6.5"
+    "understrap": "^0.6.5",
+    "undescores-for-npm": "^1.0.0"
+  },
+  "devDependencies": {
+    "gulp-if": "^2.0.2",
+    "gulp-notify": "^3.0.0"
   }
-    
 }
