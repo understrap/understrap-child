@@ -237,9 +237,13 @@ gulp.task('copy-assets', function() {
     gulp.src(basePaths.node + 'undescores-for-npm/sass/**/*.scss')
         .pipe(gulp.dest(basePaths.dev + '/sass/underscores'));
 
-// _s JS files
+// _s JS files into /src/js
     gulp.src(basePaths.node + 'undescores-for-npm/js/*.js')
         .pipe(gulp.dest(basePaths.dev + '/js'));
+
+// _s JS files into /js
+    gulp.src(basePaths.node + 'undescores-for-npm/js/*.js')
+        .pipe(gulp.dest(basePaths.js));
 
 
 // Copy Popper JS files
