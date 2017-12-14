@@ -1,6 +1,6 @@
 {
   "name": "understrap-child",
-  "version": "0.3.9",
+  "version": "0.3.10",
   "description": "Basic Child Theme for UnderStrap Theme Framework: https://github.com/holger1411/understrap",
   "main": "index.js",
   "scripts": {
@@ -50,7 +50,7 @@
     "popper.js": "^1.12.6",
     "run-sequence": "^2.2.0",
     "undescores-for-npm": "^1.0.0",
-    "understrap": "^0.6.9"
+    "understrap": "^0.6.12"
   }
     
 }
