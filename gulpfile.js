@@ -212,12 +212,12 @@ gulp.task('copy-assets', function() {
 
 ////////////////// All Bootstrap 4 Assets /////////////////////////
 // Copy all Bootstrap JS files
-    //gulp.src(basePaths.node + 'bootstrap/dist/js/**/*.js')
-    //   .pipe(gulp.dest(basePaths.dev + '/js/bootstrap4'));
+    gulp.src(basePaths.node + 'bootstrap/dist/js/**/*.js')
+       .pipe(gulp.dest(basePaths.dev + '/js/bootstrap4'));
 
 // Copy all Bootstrap SCSS files
-    //gulp.src(basePaths.node + 'bootstrap/scss/**/*.scss')
-    //   .pipe(gulp.dest(basePaths.dev + '/sass/bootstrap4'));
+    gulp.src(basePaths.node + 'bootstrap/scss/**/*.scss')
+       .pipe(gulp.dest(basePaths.dev + '/sass/bootstrap4'));
 ////////////////// End Bootstrap 4 Assets /////////////////////////
 
 // Copy all UnderStrap SCSS files
