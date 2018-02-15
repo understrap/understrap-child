@@ -38,7 +38,9 @@ var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var del = require('del');
 var cleanCSS = require('gulp-clean-css');
-var gulpSequence = require('gulp-sequence')
+var gulpSequence = require('gulp-sequence');
+var autoprefixer = require('gulp-autoprefixer')
+
 
 function swallowError(self, error) {
     console.log(error.toString())
@@ -99,6 +101,7 @@ gulp.task('sass', function () {
             }
         }))
         .pipe(sass())
+        .pipe(autoprefixer('last 2 versions'))
         .pipe(gulp.dest('./css'))
         .pipe(rename('custom-editor-style.css'))
     return stream;
