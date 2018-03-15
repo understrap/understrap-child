@@ -238,11 +238,12 @@ gulp.task( 'copy-assets', function() {
         .pipe( gulp.dest( paths.js + paths.vendor ) );
     gulp.src( paths.node + 'popper.js/dist/umd/popper.js' )
         .pipe( gulp.dest( paths.js + paths.vendor ) );
-    return stream;
 
 // UnderStrap SCSS files
     gulp.src( paths.node + 'understrap/sass/**/*.scss' )
-        .pipe( gulp.dest( paths.dev + '/sass/understrap' ) );
+        .pipe( gulp.dest( paths.dev + '/sass/understrap' ) );    
+
+    return stream;
 });
 
 // Deleting the files distributed by the copy-assets task
