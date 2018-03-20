@@ -95,7 +95,7 @@ gulp.task( 'sass', function() {
 // Starts watcher. Watcher runs gulp sass task on changes
 gulp.task( 'watch', function() {
     gulp.watch( paths.sass + '/**/*.scss', ['styles'] );
-    gulp.watch( [paths.dev + '/js/**/*.js', 'js/**/*.js', '!js/theme.js', '!js/theme.min.js'], ['scripts'] );
+    gulp.watch( [paths.dev + '/js/**/*.js', 'js/**/*.js', '!js/child-theme.js', '!js/child-theme.min.js'], ['scripts'] );
 
     //Inside the watch task.
     gulp.watch( paths.imgsrc + '/**', ['imagemin-watch'] );
