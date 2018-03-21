@@ -93,7 +93,7 @@ gulp.task( 'sass', function() {
 // Run:
 // gulp watch
 // Starts watcher. Watcher runs gulp sass task on changes
-gulp.task( 'watch', function() {
+gulp.task( 'watch', ['scripts', 'styles'], function() {
     gulp.watch( paths.sass + '/**/*.scss', ['styles'] );
     gulp.watch( [paths.dev + '/js/**/*.js', 'js/**/*.js', '!js/child-theme.js', '!js/child-theme.min.js'], ['scripts'] );
 
@@ -163,7 +163,7 @@ gulp.task( 'browser-sync', function() {
 // Run:
 // gulp watch-bs
 // Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
-gulp.task( 'watch-bs', ['browser-sync', 'watch', 'scripts'], function() { 
+gulp.task( 'watch-bs', ['browser-sync', 'watch'], function() { 
 } );
 
 // Run: 
