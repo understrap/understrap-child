@@ -26,6 +26,12 @@ var cfg = require( './gulpconfig.json' );
 var paths = cfg.paths;
 
 // Run:
+// gulp build
+// Build scripts and styles
+gulp.task( 'build', ['scripts', 'styles'], function() { 
+} );
+
+// Run:
 // gulp sass + cssnano + rename
 // Prepare the min.css for production (with 2 pipes to be sure that "theme.css" == "theme.min.css")
 gulp.task( 'scss-for-prod', function() {
@@ -93,7 +99,7 @@ gulp.task( 'sass', function() {
 // Run:
 // gulp watch
 // Starts watcher. Watcher runs gulp sass task on changes
-gulp.task( 'watch', ['scripts', 'styles'], function() {
+gulp.task( 'watch', ['build'], function() {
     gulp.watch( paths.sass + '/**/*.scss', ['styles'] );
     gulp.watch( [paths.dev + '/js/**/*.js', 'js/**/*.js', '!js/child-theme.js', '!js/child-theme.min.js'], ['scripts'] );
 

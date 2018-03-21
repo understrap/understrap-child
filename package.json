@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "gulp copy-assets",
-    "init": "npm install && npm run postinstall && gulp styles && gulp scripts",
+    "init": "npm install && npm run postinstall && gulp build",
     "watch": "gulp watch",
     "watch-bs": "gulp watch-bs",
     "start": "npm run watch"
