@@ -13,3 +13,7 @@ dist-product
 npm-debug.log
 
 /vendor/
+
+/css/
+
+/js/child-theme.min.js
