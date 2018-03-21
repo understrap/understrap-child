@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": 
+    [
+        {
+            "label": "Run init",
+            "type": "shell",
+            "command": "npm run init",
+            "presentation": {
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Run watch",
+            "type": "shell",
+            "command": "npm start",
+            "presentation": {
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "Run watch-bs",
+            "type": "shell",
+            "command": "npm run watch-bs",
+            "presentation": {
+                "panel": "dedicated"
+            }
+        }
+    ]
+}
