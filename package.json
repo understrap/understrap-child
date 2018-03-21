@@ -14,14 +14,13 @@
     "type": "git",
     "url": "https://github.com/holger1411/understrap-child.git"
   },
-    "keywords": [
+  "keywords": [
     "wordpress",
     "theme",
     "framework",
     "bootstrap",
     "underscores"
   ],
-
   "author": "Holger Koenemann",
   "license": "GPL-2.0",
   "bugs": {
