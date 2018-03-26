@@ -52,11 +52,12 @@ To work and compile your Sass files on the fly start:
 
 Or, to run with Browser-Sync:
 
-- First change the browser-sync options to reflect your environment in the file `/gulpfile.json` in the beginning of the file:
+- First change the browser-sync options to reflect your environment in the file `/gulpconfig.json` in the beginning of the file:
 ```javascript
-var browserSyncOptions = {
-    proxy: "localhost/theme_test/", // <----- CHANGE HERE
-    notify: false
+  "browserSyncOptions" : {
+    "proxy": "localhost/wordpress/",
+    "notify": false
+  }
 };
 ```
 - then run: `$ gulp watch-bs`
