@@ -3,10 +3,11 @@
 // set debug version
 if (true == WP_DEBUG) {
 	$date = new DateTime();
-	$ver_num = $date->getTimestamp();
+	define('THEME_VERSION_NUM', $date->getTimestamp() );
 } else {
-	$ver_num = wp_get_theme()->get( 'Version' );
+	define('THEME_VERSION_NUM', wp_get_theme()->get( 'Version' ));
 }
+
 
 
 function understrap_remove_scripts() {
