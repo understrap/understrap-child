@@ -110,6 +110,15 @@ gulp.task( 'imagemin', function() {
     .pipe( gulp.dest( paths.img ) );
 });
 
+/**
+ * Ensures the 'imagemin' task is complete before reloading browsers
+ * @verbose
+ */
+gulp.task( 'imagemin-watch', gulp.series( 'imagemin', function( ) {
+  browserSync.reload();
+
+}));
+
 // Run:
 // gulp cssnano
 // Minifies CSS files
