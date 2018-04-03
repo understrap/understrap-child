@@ -114,10 +114,10 @@ gulp.task( 'imagemin', function() {
  * Ensures the 'imagemin' task is complete before reloading browsers
  * @verbose
  */
-gulp.task( 'imagemin-watch', gulp.series( 'imagemin', function( ) {
+gulp.task( 'imagemin-watch', ['imagemin'], function( ) {
   browserSync.reload();
 
-}));
+});
 
 // Run:
 // gulp cssnano
