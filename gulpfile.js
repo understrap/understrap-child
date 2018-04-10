@@ -25,10 +25,6 @@ var autoprefixer = require( 'gulp-autoprefixer' );
 var cfg = require( './gulpconfig.json' );
 var paths = cfg.paths;
 
-gulp.task( 'watch-scss', ['browser-sync'], function() {
-    gulp.watch( paths.sass + '/**/*.scss', ['scss-for-dev'] );
-});
-
 // Run:
 // gulp sass
 // Compiles SCSS files in CSS
