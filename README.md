@@ -9,7 +9,7 @@ Understrap Child Theme shares with the parent theme all PHP files and adds its o
 Understrap Child Theme uses the Enqueue method to load and sort the CSS file the right way instead of the old @import method.
 
 ## Installation
-1. Install the parent theme UnderStrap first: `https://github.com/holger1411/understrap`
+1. Install the parent theme UnderStrap first: `https://github.com/understrap/understrap`
    - IMPORTANT: If you download UnderStrap from GitHub make sure you rename the "understrap-master.zip" file to "understrap.zip" or you might have problems using this child theme!
 1. Upload the understrap-child folder to your wp-content/themes directory
 1. Go into your WP admin backend 
