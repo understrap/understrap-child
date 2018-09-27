@@ -30,6 +30,7 @@ var paths = cfg.paths;
 // Compiles SCSS files in CSS
 gulp.task( 'sass', function() {
     var stream = gulp.src( paths.sass + '/*.scss' )
+        .pipe( sourcemaps.init( { loadMaps: true } ) )
         .pipe( plumber( {
             errorHandler: function( err ) {
                 console.log( err );
@@ -38,6 +39,7 @@ gulp.task( 'sass', function() {
         } ) )
         .pipe( sass( { errLogToConsole: true } ) )
         .pipe( autoprefixer( 'last 2 versions' ) )
+        .pipe( sourcemaps.write( './' ) )
         .pipe( gulp.dest( paths.css ) )
         .pipe( rename( 'custom-editor-style.css' ) );
     return stream;
