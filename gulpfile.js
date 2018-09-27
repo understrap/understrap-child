@@ -29,7 +29,7 @@ var paths = cfg.paths;
 // gulp sass
 // Compiles SCSS files in CSS
 gulp.task( 'sass', function() {
-    var stream = gulp.src( paths.sass + '/*.scss' )
+    var stream = gulp.src( paths.sass + '/**/*.scss' )
         .pipe( plumber( {
             errorHandler: function( err ) {
                 console.log( err );
