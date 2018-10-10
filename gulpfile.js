@@ -164,7 +164,7 @@ gulp.task('clean-source', function () {
 
 // Run:
 // gulp copy-assets.
-// Copy all needed dependency assets files from bower_component assets to themes /js, /scss and /fonts folder. Run this task after bower install or bower update
+// Copy all needed dependency assets files from node_modules assets to themes /js, /scss and /fonts folder. Run this task after bower install or bower update
 
 ////////////////// All Bootstrap SASS  Assets /////////////////////////
 gulp.task( 'copy-assets', function() {
