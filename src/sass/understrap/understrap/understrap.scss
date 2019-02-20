@@ -24,7 +24,7 @@
 
 .wp-caption-text { font-size: inherit; }
 
-.screen-reader-text { font-size: inherit; }
+.screen-reader-text { @extend .sr-only; }
 
 .alignleft {
   display: inline;
@@ -38,15 +38,10 @@
   margin-left: 1.5em;
 }
 
-.aligncenter { margin: 0px auto; }
+.aligncenter { @extend .mx-auto; }
 
 // Post design
 .entry-footer span { padding-right: 10px; }
-
-//Woocommerce product gallery slider width fix
-figure.woocommerce-product-gallery__wrapper { 
-  max-width: inherit !important; 
-}
 
 // Limit featured image size to 100%
 img.wp-post-image,
@@ -121,3 +116,5 @@ a.skip-link {
       color: $navbar-dark-active-color;
     }
 }
+
+.navbar h1 { font-weight: $font-weight-normal; }
