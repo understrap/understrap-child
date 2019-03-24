@@ -9224,29 +9224,15 @@ a.skip-link {
 .navbar h1 {
   font-weight: 400; }
 
-/*
-* Use existing Bootstrap 4 classes and
-* variables to extend - override CF7 style
-*
-* Useful CF7 classes:
-* .wpcf7 the wrapper element
-* .wpcf7-form
-* .wpcf7-form-control
-* .wpcf7-text
-* .wpcf7-email
-* .wpcf7-textarea
-* .wpcf7-submit
-*/
-.wpcf7 {
-  max-width: 600px;
-  margin: 0 auto !important; }
-  .wpcf7 .wpcf7-form label {
-    width: 100%; }
-  .wpcf7 .wpcf7-not-valid-tip {
-    color: #dc3545; }
-  .wpcf7 .wpcf7-validation-errors {
-    color: #dc3545;
-    border: 1px solid #e9ecef; }
+.woocommerce-input-wrapper {
+  width: 100%; }
+
+figure.woocommerce-product-gallery__wrapper {
+  max-width: inherit !important; }
+
+@media (min-width: 768px) {
+  #coupon_code.input-text {
+    width: 110px !important; } }
 
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -11582,5 +11568,29 @@ a.skip-link {
 
 .gallery-caption {
   display: block; }
+
+/*
+* Use existing Bootstrap 4 classes and
+* variables to extend - override CF7 style
+*
+* Useful CF7 classes:
+* .wpcf7 the wrapper element
+* .wpcf7-form
+* .wpcf7-form-control
+* .wpcf7-text
+* .wpcf7-email
+* .wpcf7-textarea
+* .wpcf7-submit
+*/
+.wpcf7 {
+  max-width: 600px;
+  margin: 0 auto !important; }
+  .wpcf7 .wpcf7-form label {
+    width: 100%; }
+  .wpcf7 .wpcf7-not-valid-tip {
+    color: #dc3545; }
+  .wpcf7 .wpcf7-validation-errors {
+    color: #dc3545;
+    border: 1px solid #e9ecef; }
 
 /*# sourceMappingURL=child-theme.css.map */
