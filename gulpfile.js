@@ -243,3 +243,8 @@ gulp.task( 'dist-product', ['clean-dist-product'], function() {
 gulp.task( 'clean-dist-product', function() {
   return del( [paths.distprod + '/**'] );
 } );
+
+// Deleting any file inside the /dist-product folder
+gulp.task( 'compile', function( callback ) {
+    gulpSequence( 'styles', 'scripts', 'dist' )( callback );
+} );
