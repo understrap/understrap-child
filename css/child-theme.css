@@ -84,7 +84,8 @@ abbr[data-original-title] {
           text-decoration: underline dotted;
   cursor: help;
   border-bottom: 0;
-  text-decoration-skip-ink: none; }
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none; }
 
 address {
   margin-bottom: 1rem;
@@ -1706,6 +1707,26 @@ pre {
   .wpcf7 input[type=submit]::-webkit-input-placeholder,
   .wpcf7 select::-webkit-input-placeholder,
   .wpcf7 textarea::-webkit-input-placeholder, .wpcf7 .wpcf7-validation-errors::-webkit-input-placeholder {
+    color: #6c757d;
+    opacity: 1; }
+  .form-control:-ms-input-placeholder, .wpcf7 input[type=text]:-ms-input-placeholder,
+  .wpcf7 input[type=search]:-ms-input-placeholder,
+  .wpcf7 input[type=url]:-ms-input-placeholder,
+  .wpcf7 input[type=tel]:-ms-input-placeholder,
+  .wpcf7 input[type=number]:-ms-input-placeholder,
+  .wpcf7 input[type=range]:-ms-input-placeholder,
+  .wpcf7 input[type=date]:-ms-input-placeholder,
+  .wpcf7 input[type=month]:-ms-input-placeholder,
+  .wpcf7 input[type=week]:-ms-input-placeholder,
+  .wpcf7 input[type=time]:-ms-input-placeholder,
+  .wpcf7 input[type=datetime]:-ms-input-placeholder,
+  .wpcf7 input[type=datetime-local]:-ms-input-placeholder,
+  .wpcf7 input[type=color]:-ms-input-placeholder,
+  .wpcf7 input[type=email]:-ms-input-placeholder,
+  .wpcf7 input[type=file]:-ms-input-placeholder,
+  .wpcf7 input[type=submit]:-ms-input-placeholder,
+  .wpcf7 select:-ms-input-placeholder,
+  .wpcf7 textarea:-ms-input-placeholder, .wpcf7 .wpcf7-validation-errors:-ms-input-placeholder {
     color: #6c757d;
     opacity: 1; }
   .form-control::-ms-input-placeholder, .wpcf7 input[type=text]::-ms-input-placeholder,
