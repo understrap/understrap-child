@@ -87,7 +87,7 @@ gulp.task( 'cssnano', function() {
 });
 
 gulp.task( 'minifycss', function() {
-  return gulp.src( `${paths.css}/child-theme.css}`, { allowEmpty: true } )
+  return gulp.src( `${paths.css}/child-theme.css`, { allowEmpty: true } )
   .pipe( sourcemaps.init( { loadMaps: true } ) )
     .pipe( cleanCSS( { compatibility: '*' } ) )
     .pipe( plumber( {
