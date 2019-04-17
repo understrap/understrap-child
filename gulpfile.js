@@ -87,7 +87,7 @@ gulp.task( 'cssnano', function() {
 });
 
 gulp.task( 'minifycss', function() {
-  return gulp.src( `${paths.css}/child-theme.css}`, { allowEmpty: true } )
+  return gulp.src( paths.css + '/child-theme.css' )
   .pipe( sourcemaps.init( { loadMaps: true } ) )
     .pipe( cleanCSS( { compatibility: '*' } ) )
     .pipe( plumber( {
@@ -219,7 +219,7 @@ gulp.task( 'dist', gulp.series('clean-dist', function copyToDistFolder() {
     ignoreFiles = [ '!readme.txt', '!readme.md', '!package.json', '!package-lock.json', '!gulpfile.js', '!gulpconfig.json', '!CHANGELOG.md', '!.travis.yml', '!jshintignore',  '!codesniffer.ruleset.xml' ];
 
     console.log({ ignorePaths, ignoreFiles })
-    
+
   return gulp.src( ['**/*', ...ignorePaths, ...ignoreFiles,  '*'], { 'buffer': false } )
   .pipe( replace( '/js/jquery.slim.min.js', `/js${paths.vendor}/jquery.slim.min.js`, { 'skipBinary': true } ) )
   .pipe( replace( '/js/popper.min.js', `/js${paths.vendor}/popper.min.js`, { 'skipBinary': true } ) )
