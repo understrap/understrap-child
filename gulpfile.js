@@ -165,6 +165,7 @@ gulp.task('scripts', function() {
 
   return gulp
     .src(scripts, { allowEmpty: true })
+    .pipe(babel())
     .pipe(concat('child-theme.js'))
     .pipe(gulp.dest(paths.js));
 });
