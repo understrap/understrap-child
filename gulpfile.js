@@ -181,11 +181,11 @@ gulp.task( 'copy-assets', function() {
 
 
 // _s SCSS files
-    gulp.src( `${paths.node}undescores-for-npm/sass/media/*.scss` )
+    gulp.src( `${paths.node}underscores-for-npm/sass/media/*.scss` )
         .pipe( gulp.dest( `${paths.dev}/sass/underscores` ) );
 
 // _s JS files into /src/js
-    gulp.src( `${paths.node}undescores-for-npm/js/skip-link-focus-fix.js` )
+    gulp.src( `${paths.node}underscores-for-npm/js/skip-link-focus-fix.js` )
         .pipe( gulp.dest( `${paths.dev}/js` ) );
 
 // Copy Popper JS files
