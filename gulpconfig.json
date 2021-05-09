@@ -1,6 +1,6 @@
 {
   "browserSyncOptions" : {
-    "proxy": "localhost/wordpress/",
+    "proxy": "localhost/flyingducks/",
     "notify": false
   },
   "browserSyncWatchFiles" : [
