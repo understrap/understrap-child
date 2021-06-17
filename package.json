@@ -43,6 +43,6 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
     "postcss": "^8.2.9",
-    "understrap": "git://github.com/understrap/understrap"
+    "understrap": "^0.9.6"
   }
 }
