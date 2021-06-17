@@ -241,6 +241,11 @@ gulp.task( 'copy-assets', function( done ) {
 		.src( paths.node + '/font-awesome/scss/*.scss' )
 		.pipe( gulp.dest( paths.dev + '/sass/fontawesome' )	);
 
+	// Copy all Understrap SCSS files
+	gulp
+		.src( paths.node + '/understrap/scss/*.scss' )
+		.pipe( gulp.dest( paths.dev + '/sass/understrap' )	);
+
 	done();
 } );
 
