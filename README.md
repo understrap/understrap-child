@@ -9,7 +9,7 @@ Understrap Child Theme shares with the parent theme all PHP files and adds its o
 Understrap Child Theme uses the Enqueue method to load and sort the CSS file the right way instead of the old @import method.
 
 ## Installation
-1. Install the parent theme UnderStrap first: `https://github.com/understrap/understrap`
+1. Install the parent theme UnderStrap first: `https://github.com/understrap/understrap` or `https://wordpress.org/themes/understrap/`
    - IMPORTANT: If you download UnderStrap from GitHub make sure you rename the "understrap-master.zip" file to "understrap.zip" or you might have problems using this child theme!
 1. Upload the understrap-child folder to your wp-content/themes directory
 1. Go into your WP admin backend 
@@ -32,6 +32,8 @@ It will be outputted into:
 
 So you have one clean CSS file at the end and just one request.
 
+Add your own JS files to `src/js/` to have them bundled into child-theme.js.
+
 ## Developing With NPM, Gulp, SASS and Browser Sync
 
 ### Installing Dependencies
@@ -49,8 +51,9 @@ Or, to run with Browser-Sync:
 - First change the browser-sync options to reflect your environment in the file `/gulpconfig.json` in the beginning of the file:
 ```javascript
   "browserSyncOptions" : {
-    "proxy": "localhost/wordpress/",
-    "notify": false
+    "proxy": "localhost/",
+    "notify": false,
+	"files": ["./css/*.min.css", "./js/*.min.js", "./**/*.php"]
   }
 };
 ```
