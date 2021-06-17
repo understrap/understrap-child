@@ -1,21 +1,18 @@
 {
   "browserSyncOptions" : {
-    "proxy": "localhost/wordpress/",
-    "notify": false
+    "proxy": "localhost/",
+    "notify": false,
+	"files": ["./css/*.min.css", "./js/*.min.js", "./**/*.php"]
   },
-  "browserSyncWatchFiles" : [
-    "./css/*.min.css",
-    "./js/*.min.js",
-    "./**/*.php"
-  ],
   "paths" : {
     "js": "./js",
     "css": "./css",
+	"fonts": "./fonts",
     "img": "./img",
-		"imgsrc": "./src/img",
+	"imgsrc": "./src/img",
     "sass": "./sass",
     "node": "./node_modules/",
-    "bower": "./bower_components/",
+	"composer": "./vendor",
     "dev": "./src",
     "dist": "./dist",
     "distprod": "./dist-product",
