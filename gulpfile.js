@@ -139,8 +139,8 @@ gulp.task( 'watch', function() {
 		[
 			paths.dev + '/js/**/*.js',
 			'js/**/*.js',
-			'!js/theme.js',
-			'!js/theme.min.js',
+			'!js/child-theme.js',
+			'!js/child-theme.min.js',
 		],
 		gulp.series( 'scripts' )
 	);
