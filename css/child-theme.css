@@ -14615,34 +14615,6 @@ figure.woocommerce-product-gallery__wrapper {
   display: block;
 }
 
-/*
-* Use existing Bootstrap 4 classes and
-* variables to extend - override CF7 style
-*
-* Useful CF7 classes:
-* .wpcf7 the wrapper element
-* .wpcf7-form
-* .wpcf7-form-control
-* .wpcf7-text
-* .wpcf7-email
-* .wpcf7-textarea
-* .wpcf7-submit
-*/
-.wpcf7 {
-  max-width: 600px;
-  margin: 0 auto !important;
-}
-.wpcf7 .wpcf7-form label {
-  width: 100%;
-}
-.wpcf7 .wpcf7-not-valid-tip {
-  color: #dc3545;
-}
-.wpcf7 .wpcf7-validation-errors {
-  color: #dc3545;
-  border: 1px solid #e9ecef;
-}
-
 .has-blue-color,
 .has-blue-color:visited {
   color: #007bff;
@@ -14954,6 +14926,16 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
     max-width: 96vw;
     width: 100vw;
   }
+}
+
+.wp-block-buttons .wp-block-button .wp-block-button__link {
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+}
+.wp-block-buttons .wp-block-button:not(.is-style-outline) .wp-block-button__link {
+  border: 1px solid transparent;
 }
 
 /*
