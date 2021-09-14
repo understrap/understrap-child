@@ -9,6 +9,7 @@
 defined( 'ABSPATH' ) || exit;
 
 
+
 /**
  * Removes the parent themes stylesheet and scripts from inc/enqueue.php
  */
@@ -20,6 +21,7 @@ function understrap_remove_scripts() {
 	wp_deregister_script( 'understrap-scripts' );
 }
 add_action( 'wp_enqueue_scripts', 'understrap_remove_scripts', 20 );
+
 
 
 /**
@@ -47,3 +49,16 @@ function add_child_theme_textdomain() {
 	load_child_theme_textdomain( 'understrap-child', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
+
+
+
+/**
+ * Overrides the theme_mod to default to Bootstrap 5
+ *
+ * @param string $current_mod
+ * @return string
+ */
+function understrap_default_bootstrap_version( $current_mod ) {
+	return 'bootstrap5';
+}
+add_filter( 'theme_mod_understrap_bootstrap_version', 'understrap_default_bootstrap_version', 20 );
