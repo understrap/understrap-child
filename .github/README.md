@@ -32,7 +32,7 @@ It will be outputted into:
 
 So you have one clean CSS file at the end and just one request.
 
-Add your own JS files to `/src/js/` to have them bundled into `/js/child-theme.js` and `/js/child-theme.min.js`.
+Add your own JS to `/src/js/custom-javascript.js` to have it bundled into `/js/child-theme.js` and `/js/child-theme.min.js`.
 
 ## Developing With NPM, postCSS, Rollup, SASS and BrowserSync
 
@@ -79,3 +79,9 @@ then run:
 npm run watch
 ```
 
+
+## Bootstrap 4 Support
+
+This child theme uses Bootstrap 5 and requires Understrap Parent Theme 1.1 or greater for best functionality. It does not create JS or CSS files that work with Bootstrap 4 markup. In fact, in the `functions.php` file, this child theme overrides the parent theme's customizer settings.
+
+If you want to build a child theme with Bootstrap 4, please use [the 1.0.0 child theme release](https://github.com/understrap/understrap-child/releases/tag/v1.0.0) as it was the last version built to support Bootstrap 4.
