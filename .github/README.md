@@ -32,7 +32,7 @@ It will be outputted into:
 
 So you have one clean CSS file at the end and just one request.
 
-Add your own JS files to `/src/js/` to have them bundled into `/js/child-theme.js` and `/js/child-theme.min.js`.
+Add your own JS to `/src/js/custom-javascript.js` to have it bundled into `/js/child-theme.js` and `/js/child-theme.min.js`. If you'd like to add additional files, you'll need to add the filenames to the Rollup.js config file: `/src/build/rollup.config.js`.
 
 ## Developing With NPM, postCSS, Rollup, SASS and BrowserSync
 
