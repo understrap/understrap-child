@@ -76,6 +76,6 @@ module.exports = {
 then run: 
 
 ```bash
-npm run watch
+npm run watch-bs
 ```
 
