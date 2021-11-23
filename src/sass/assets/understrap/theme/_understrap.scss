@@ -44,6 +44,11 @@ body {
 	@extend .sr-only;
 }
 
+// Accessibility requirement for color contrast.
+h2.sr-only {
+	background-color: transparent;
+}
+
 .alignleft {
 	display: inline;
 	float: left;
@@ -90,11 +95,6 @@ a.skip-link {
 	right: 0px;
 }
 
-// Reset Jumbotron default margin
-.jumbotron {
-	margin-bottom: 0px;
-}
-
 // Dropdown translation
 .navbar-dark .navbar-nav .dropdown-menu .nav-link {
 	display: block;
@@ -108,7 +108,8 @@ a.skip-link {
 	background: none; // For `<button>`s
 	border: 0; // For `<button>`s
 
-	@include hover-focus {
+	&:hover,
+	&:focus {
 		color: $dropdown-link-hover-color !important;
 		text-decoration: none;
 		background-color: $dropdown-link-hover-bg;
@@ -136,7 +137,8 @@ a.skip-link {
 .navbar-light .navbar-brand a {
 	color: $navbar-light-active-color;
 
-	@include hover-focus {
+	&:hover,
+	&:focus {
 		color: $navbar-light-active-color;
 	}
 }
@@ -144,7 +146,8 @@ a.skip-link {
 .navbar-dark .navbar-brand a {
 	color: $navbar-dark-active-color;
 
-	@include hover-focus {
+	&:hover,
+	&:focus {
 		color: $navbar-dark-active-color;
 	}
 }
@@ -171,4 +174,20 @@ a.skip-link {
 }
 .gallery-caption {
 	display: block;
+}
+
+// Accessibility requirement for content links
+.entry-content p a {
+	text-decoration: underline;
+}
+
+//Accessibility requirement for color contrast
+.woocommerce div.product p.price,
+.woocommerce div.product span.price,
+.woocommerce div.product .stock,
+.woocommerce ul.products li.product .price,
+#add_payment_method .cart-collaterals .cart_totals .discount td,
+.woocommerce-cart .cart-collaterals .cart_totals .discount td,
+.woocommerce-checkout .cart-collaterals .cart_totals .discount td {
+	color: $green;
 }
