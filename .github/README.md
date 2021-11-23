@@ -44,7 +44,7 @@ Some basics about the files that come with Understrap:
 - The theme itself uses the `/style.css` file only to identify the theme inside of WordPress. The file is not loaded by the theme and does not include any styles.
 - The `/css/child-theme.css` and its minified little brother `/css/child-theme.min.css` file(s) provides all styles. It is composed of different SCSS sets and one variable file, all imported at `/src/sass/child-theme.scss`
 - Your design goes into: `/src/sass/child-theme`.
-  - Override Bootstrap by addind your variables to the `/src/sass/theme/_child_theme_variables.scss`
+  - Override Bootstrap by adding your variables to the `/src/sass/theme/_child_theme_variables.scss`
   - Add your custom styles to the `/src/sass/theme/_child_theme.scss` file
   - Or add other .scss files into it and `@import` it into `/src/sass/theme/_child_theme.scss`.
 
