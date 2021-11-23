@@ -45,6 +45,7 @@
     "@rollup/plugin-commonjs": "^20.0.0",
     "@rollup/plugin-multi-entry": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.0.4",
+    "@rollup/plugin-replace": "^3.0.0",
     "autoprefixer": "^10.3.2",
     "bootstrap": "^5.1.1",
     "browser-sync": "^2.27.5",
@@ -61,6 +62,7 @@
     "postcss-understrap-palette-generator": "git+https://github.com/bacoords/postcss-understrap-palette-generator.git",
     "rollup": "^2.56.2",
     "sass": "^1.38.1",
+    "terser": "^5.10.0",
     "understrap": "github:understrap/understrap#develop"
   }
 }
