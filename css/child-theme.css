@@ -12356,8 +12356,16 @@ body {
   font-size: inherit;
 }
 
-h2.sr-only, .sr-only.h2, h2.screen-reader-text, .h2.screen-reader-text {
-  background-color: transparent;
+.screen-reader-text {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
 
 .alignleft {
@@ -15531,7 +15539,7 @@ figure.woocommerce-product-gallery__wrapper {
   content: "\f2e0";
 }
 
-.sr-only, .screen-reader-text {
+.sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
