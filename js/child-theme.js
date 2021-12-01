@@ -35,7 +35,7 @@
 	var eventHandler = {exports: {}};
 
 	/*!
-	  * Bootstrap event-handler.js v5.1.1 (https://getbootstrap.com/)
+	  * Bootstrap event-handler.js v5.1.3 (https://getbootstrap.com/)
 	  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -43,10 +43,10 @@
 	(function (module, exports) {
 	(function (global, factory) {
 	  module.exports = factory() ;
-	}(commonjsGlobal, (function () {
+	})(commonjsGlobal, (function () {
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): util/index.js
+	   * Bootstrap (v5.1.3): util/index.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -65,7 +65,7 @@
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): dom/event-handler.js
+	   * Bootstrap (v5.1.3): dom/event-handler.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -353,7 +353,7 @@
 
 	  return EventHandler;
 
-	})));
+	}));
 
 	}(eventHandler));
 
@@ -362,7 +362,7 @@
 	var data = {exports: {}};
 
 	/*!
-	  * Bootstrap data.js v5.1.1 (https://getbootstrap.com/)
+	  * Bootstrap data.js v5.1.3 (https://getbootstrap.com/)
 	  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -370,10 +370,10 @@
 	(function (module, exports) {
 	(function (global, factory) {
 	  module.exports = factory() ;
-	}(commonjsGlobal, (function () {
+	})(commonjsGlobal, (function () {
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): dom/data.js
+	   * Bootstrap (v5.1.3): dom/data.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -384,7 +384,7 @@
 	   * ------------------------------------------------------------------------
 	   */
 	  const elementMap = new Map();
-	  var data = {
+	  const data = {
 	    set(element, key, instance) {
 	      if (!elementMap.has(element)) {
 	        elementMap.set(element, new Map());
@@ -427,12 +427,12 @@
 
 	  return data;
 
-	})));
+	}));
 
 	}(data));
 
 	/*!
-	  * Bootstrap base-component.js v5.1.1 (https://getbootstrap.com/)
+	  * Bootstrap base-component.js v5.1.3 (https://getbootstrap.com/)
 	  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -440,15 +440,15 @@
 	(function (module, exports) {
 	(function (global, factory) {
 	  module.exports = factory(data.exports, eventHandler.exports) ;
-	}(commonjsGlobal, (function (Data, EventHandler) {
-	  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+	})(commonjsGlobal, (function (Data, EventHandler) {
+	  const _interopDefaultLegacy = e => e && typeof e === 'object' && 'default' in e ? e : { default: e };
 
-	  var Data__default = /*#__PURE__*/_interopDefaultLegacy(Data);
-	  var EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
+	  const Data__default = /*#__PURE__*/_interopDefaultLegacy(Data);
+	  const EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): util/index.js
+	   * Bootstrap (v5.1.3): util/index.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -545,7 +545,7 @@
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): base-component.js
+	   * Bootstrap (v5.1.3): base-component.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -555,7 +555,7 @@
 	   * ------------------------------------------------------------------------
 	   */
 
-	  const VERSION = '5.1.1';
+	  const VERSION = '5.1.3';
 
 	  class BaseComponent {
 	    constructor(element) {
@@ -566,12 +566,12 @@
 	      }
 
 	      this._element = element;
-	      Data__default['default'].set(this._element, this.constructor.DATA_KEY, this);
+	      Data__default.default.set(this._element, this.constructor.DATA_KEY, this);
 	    }
 
 	    dispose() {
-	      Data__default['default'].remove(this._element, this.constructor.DATA_KEY);
-	      EventHandler__default['default'].off(this._element, this.constructor.EVENT_KEY);
+	      Data__default.default.remove(this._element, this.constructor.DATA_KEY);
+	      EventHandler__default.default.off(this._element, this.constructor.EVENT_KEY);
 	      Object.getOwnPropertyNames(this).forEach(propertyName => {
 	        this[propertyName] = null;
 	      });
@@ -584,7 +584,7 @@
 
 
 	    static getInstance(element) {
-	      return Data__default['default'].get(getElement(element), this.DATA_KEY);
+	      return Data__default.default.get(getElement(element), this.DATA_KEY);
 	    }
 
 	    static getOrCreateInstance(element, config = {}) {
@@ -611,12 +611,12 @@
 
 	  return BaseComponent;
 
-	})));
+	}));
 
 	}(baseComponent));
 
 	/*!
-	  * Bootstrap alert.js v5.1.1 (https://getbootstrap.com/)
+	  * Bootstrap alert.js v5.1.3 (https://getbootstrap.com/)
 	  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -624,15 +624,15 @@
 	(function (module, exports) {
 	(function (global, factory) {
 	  module.exports = factory(eventHandler.exports, baseComponent.exports) ;
-	}(commonjsGlobal, (function (EventHandler, BaseComponent) {
-	  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+	})(commonjsGlobal, (function (EventHandler, BaseComponent) {
+	  const _interopDefaultLegacy = e => e && typeof e === 'object' && 'default' in e ? e : { default: e };
 
-	  var EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
-	  var BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
+	  const EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
+	  const BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): util/index.js
+	   * Bootstrap (v5.1.3): util/index.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -732,7 +732,7 @@
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): util/component-functions.js
+	   * Bootstrap (v5.1.3): util/component-functions.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -740,7 +740,7 @@
 	  const enableDismissTrigger = (component, method = 'hide') => {
 	    const clickEvent = `click.dismiss${component.EVENT_KEY}`;
 	    const name = component.NAME;
-	    EventHandler__default['default'].on(document, clickEvent, `[data-bs-dismiss="${name}"]`, function (event) {
+	    EventHandler__default.default.on(document, clickEvent, `[data-bs-dismiss="${name}"]`, function (event) {
 	      if (['A', 'AREA'].includes(this.tagName)) {
 	        event.preventDefault();
 	      }
@@ -758,7 +758,7 @@
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): alert.js
+	   * Bootstrap (v5.1.3): alert.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -781,7 +781,7 @@
 	   * ------------------------------------------------------------------------
 	   */
 
-	  class Alert extends BaseComponent__default['default'] {
+	  class Alert extends BaseComponent__default.default {
 	    // Getters
 	    static get NAME() {
 	      return NAME;
@@ -789,7 +789,7 @@
 
 
 	    close() {
-	      const closeEvent = EventHandler__default['default'].trigger(this._element, EVENT_CLOSE);
+	      const closeEvent = EventHandler__default.default.trigger(this._element, EVENT_CLOSE);
 
 	      if (closeEvent.defaultPrevented) {
 	        return;
@@ -806,7 +806,7 @@
 	    _destroyElement() {
 	      this._element.remove();
 
-	      EventHandler__default['default'].trigger(this._element, EVENT_CLOSED);
+	      EventHandler__default.default.trigger(this._element, EVENT_CLOSED);
 	      this.dispose();
 	    } // Static
 
@@ -847,7 +847,7 @@
 
 	  return Alert;
 
-	})));
+	}));
 
 	}(alert$1));
 
@@ -856,7 +856,7 @@
 	var button$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap button.js v5.1.1 (https://getbootstrap.com/)
+	  * Bootstrap button.js v5.1.3 (https://getbootstrap.com/)
 	  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -864,15 +864,15 @@
 	(function (module, exports) {
 	(function (global, factory) {
 	  module.exports = factory(eventHandler.exports, baseComponent.exports) ;
-	}(commonjsGlobal, (function (EventHandler, BaseComponent) {
-	  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+	})(commonjsGlobal, (function (EventHandler, BaseComponent) {
+	  const _interopDefaultLegacy = e => e && typeof e === 'object' && 'default' in e ? e : { default: e };
 
-	  var EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
-	  var BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
+	  const EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
+	  const BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): util/index.js
+	   * Bootstrap (v5.1.3): util/index.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -927,7 +927,7 @@
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): button.js
+	   * Bootstrap (v5.1.3): button.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -950,7 +950,7 @@
 	   * ------------------------------------------------------------------------
 	   */
 
-	  class Button extends BaseComponent__default['default'] {
+	  class Button extends BaseComponent__default.default {
 	    // Getters
 	    static get NAME() {
 	      return NAME;
@@ -981,7 +981,7 @@
 	   */
 
 
-	  EventHandler__default['default'].on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, event => {
+	  EventHandler__default.default.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, event => {
 	    event.preventDefault();
 	    const button = event.target.closest(SELECTOR_DATA_TOGGLE);
 	    const data = Button.getOrCreateInstance(button);
@@ -998,7 +998,7 @@
 
 	  return Button;
 
-	})));
+	}));
 
 	}(button$1));
 
@@ -1009,7 +1009,7 @@
 	var manipulator = {exports: {}};
 
 	/*!
-	  * Bootstrap manipulator.js v5.1.1 (https://getbootstrap.com/)
+	  * Bootstrap manipulator.js v5.1.3 (https://getbootstrap.com/)
 	  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1017,10 +1017,10 @@
 	(function (module, exports) {
 	(function (global, factory) {
 	  module.exports = factory() ;
-	}(commonjsGlobal, (function () {
+	})(commonjsGlobal, (function () {
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): dom/manipulator.js
+	   * Bootstrap (v5.1.3): dom/manipulator.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -1094,14 +1094,14 @@
 
 	  return Manipulator;
 
-	})));
+	}));
 
 	}(manipulator));
 
 	var selectorEngine = {exports: {}};
 
 	/*!
-	  * Bootstrap selector-engine.js v5.1.1 (https://getbootstrap.com/)
+	  * Bootstrap selector-engine.js v5.1.3 (https://getbootstrap.com/)
 	  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1109,10 +1109,10 @@
 	(function (module, exports) {
 	(function (global, factory) {
 	  module.exports = factory() ;
-	}(commonjsGlobal, (function () {
+	})(commonjsGlobal, (function () {
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): util/index.js
+	   * Bootstrap (v5.1.3): util/index.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -1155,7 +1155,7 @@
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): dom/selector-engine.js
+	   * Bootstrap (v5.1.3): dom/selector-engine.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -1225,12 +1225,12 @@
 
 	  return SelectorEngine;
 
-	})));
+	}));
 
 	}(selectorEngine));
 
 	/*!
-	  * Bootstrap carousel.js v5.1.1 (https://getbootstrap.com/)
+	  * Bootstrap carousel.js v5.1.3 (https://getbootstrap.com/)
 	  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1238,17 +1238,17 @@
 	(function (module, exports) {
 	(function (global, factory) {
 	  module.exports = factory(eventHandler.exports, manipulator.exports, selectorEngine.exports, baseComponent.exports) ;
-	}(commonjsGlobal, (function (EventHandler, Manipulator, SelectorEngine, BaseComponent) {
-	  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+	})(commonjsGlobal, (function (EventHandler, Manipulator, SelectorEngine, BaseComponent) {
+	  const _interopDefaultLegacy = e => e && typeof e === 'object' && 'default' in e ? e : { default: e };
 
-	  var EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
-	  var Manipulator__default = /*#__PURE__*/_interopDefaultLegacy(Manipulator);
-	  var SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
-	  var BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
+	  const EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
+	  const Manipulator__default = /*#__PURE__*/_interopDefaultLegacy(Manipulator);
+	  const SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
+	  const BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): util/index.js
+	   * Bootstrap (v5.1.3): util/index.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -1420,7 +1420,7 @@
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): carousel.js
+	   * Bootstrap (v5.1.3): carousel.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -1501,7 +1501,7 @@
 	   * ------------------------------------------------------------------------
 	   */
 
-	  class Carousel extends BaseComponent__default['default'] {
+	  class Carousel extends BaseComponent__default.default {
 	    constructor(element, config) {
 	      super(element);
 	      this._items = null;
@@ -1513,7 +1513,7 @@
 	      this.touchStartX = 0;
 	      this.touchDeltaX = 0;
 	      this._config = this._getConfig(config);
-	      this._indicatorsElement = SelectorEngine__default['default'].findOne(SELECTOR_INDICATORS, this._element);
+	      this._indicatorsElement = SelectorEngine__default.default.findOne(SELECTOR_INDICATORS, this._element);
 	      this._touchSupported = 'ontouchstart' in document.documentElement || navigator.maxTouchPoints > 0;
 	      this._pointerEvent = Boolean(window.PointerEvent);
 
@@ -1551,7 +1551,7 @@
 	        this._isPaused = true;
 	      }
 
-	      if (SelectorEngine__default['default'].findOne(SELECTOR_NEXT_PREV, this._element)) {
+	      if (SelectorEngine__default.default.findOne(SELECTOR_NEXT_PREV, this._element)) {
 	        triggerTransitionEnd(this._element);
 	        this.cycle(true);
 	      }
@@ -1578,7 +1578,7 @@
 	    }
 
 	    to(index) {
-	      this._activeElement = SelectorEngine__default['default'].findOne(SELECTOR_ACTIVE_ITEM, this._element);
+	      this._activeElement = SelectorEngine__default.default.findOne(SELECTOR_ACTIVE_ITEM, this._element);
 
 	      const activeIndex = this._getItemIndex(this._activeElement);
 
@@ -1587,7 +1587,7 @@
 	      }
 
 	      if (this._isSliding) {
-	        EventHandler__default['default'].one(this._element, EVENT_SLID, () => this.to(index));
+	        EventHandler__default.default.one(this._element, EVENT_SLID, () => this.to(index));
 	        return;
 	      }
 
@@ -1605,7 +1605,7 @@
 
 	    _getConfig(config) {
 	      config = { ...Default,
-	        ...Manipulator__default['default'].getDataAttributes(this._element),
+	        ...Manipulator__default.default.getDataAttributes(this._element),
 	        ...(typeof config === 'object' ? config : {})
 	      };
 	      typeCheckConfig(NAME, config, DefaultType);
@@ -1631,12 +1631,12 @@
 
 	    _addEventListeners() {
 	      if (this._config.keyboard) {
-	        EventHandler__default['default'].on(this._element, EVENT_KEYDOWN, event => this._keydown(event));
+	        EventHandler__default.default.on(this._element, EVENT_KEYDOWN, event => this._keydown(event));
 	      }
 
 	      if (this._config.pause === 'hover') {
-	        EventHandler__default['default'].on(this._element, EVENT_MOUSEENTER, event => this.pause(event));
-	        EventHandler__default['default'].on(this._element, EVENT_MOUSELEAVE, event => this.cycle(event));
+	        EventHandler__default.default.on(this._element, EVENT_MOUSEENTER, event => this.pause(event));
+	        EventHandler__default.default.on(this._element, EVENT_MOUSELEAVE, event => this.cycle(event));
 	      }
 
 	      if (this._config.touch && this._touchSupported) {
@@ -1687,19 +1687,19 @@
 	        }
 	      };
 
-	      SelectorEngine__default['default'].find(SELECTOR_ITEM_IMG, this._element).forEach(itemImg => {
-	        EventHandler__default['default'].on(itemImg, EVENT_DRAG_START, e => e.preventDefault());
+	      SelectorEngine__default.default.find(SELECTOR_ITEM_IMG, this._element).forEach(itemImg => {
+	        EventHandler__default.default.on(itemImg, EVENT_DRAG_START, event => event.preventDefault());
 	      });
 
 	      if (this._pointerEvent) {
-	        EventHandler__default['default'].on(this._element, EVENT_POINTERDOWN, event => start(event));
-	        EventHandler__default['default'].on(this._element, EVENT_POINTERUP, event => end(event));
+	        EventHandler__default.default.on(this._element, EVENT_POINTERDOWN, event => start(event));
+	        EventHandler__default.default.on(this._element, EVENT_POINTERUP, event => end(event));
 
 	        this._element.classList.add(CLASS_NAME_POINTER_EVENT);
 	      } else {
-	        EventHandler__default['default'].on(this._element, EVENT_TOUCHSTART, event => start(event));
-	        EventHandler__default['default'].on(this._element, EVENT_TOUCHMOVE, event => move(event));
-	        EventHandler__default['default'].on(this._element, EVENT_TOUCHEND, event => end(event));
+	        EventHandler__default.default.on(this._element, EVENT_TOUCHSTART, event => start(event));
+	        EventHandler__default.default.on(this._element, EVENT_TOUCHMOVE, event => move(event));
+	        EventHandler__default.default.on(this._element, EVENT_TOUCHEND, event => end(event));
 	      }
 	    }
 
@@ -1718,7 +1718,7 @@
 	    }
 
 	    _getItemIndex(element) {
-	      this._items = element && element.parentNode ? SelectorEngine__default['default'].find(SELECTOR_ITEM, element.parentNode) : [];
+	      this._items = element && element.parentNode ? SelectorEngine__default.default.find(SELECTOR_ITEM, element.parentNode) : [];
 	      return this._items.indexOf(element);
 	    }
 
@@ -1730,9 +1730,9 @@
 	    _triggerSlideEvent(relatedTarget, eventDirectionName) {
 	      const targetIndex = this._getItemIndex(relatedTarget);
 
-	      const fromIndex = this._getItemIndex(SelectorEngine__default['default'].findOne(SELECTOR_ACTIVE_ITEM, this._element));
+	      const fromIndex = this._getItemIndex(SelectorEngine__default.default.findOne(SELECTOR_ACTIVE_ITEM, this._element));
 
-	      return EventHandler__default['default'].trigger(this._element, EVENT_SLIDE, {
+	      return EventHandler__default.default.trigger(this._element, EVENT_SLIDE, {
 	        relatedTarget,
 	        direction: eventDirectionName,
 	        from: fromIndex,
@@ -1742,10 +1742,10 @@
 
 	    _setActiveIndicatorElement(element) {
 	      if (this._indicatorsElement) {
-	        const activeIndicator = SelectorEngine__default['default'].findOne(SELECTOR_ACTIVE, this._indicatorsElement);
+	        const activeIndicator = SelectorEngine__default.default.findOne(SELECTOR_ACTIVE, this._indicatorsElement);
 	        activeIndicator.classList.remove(CLASS_NAME_ACTIVE);
 	        activeIndicator.removeAttribute('aria-current');
-	        const indicators = SelectorEngine__default['default'].find(SELECTOR_INDICATOR, this._indicatorsElement);
+	        const indicators = SelectorEngine__default.default.find(SELECTOR_INDICATOR, this._indicatorsElement);
 
 	        for (let i = 0; i < indicators.length; i++) {
 	          if (Number.parseInt(indicators[i].getAttribute('data-bs-slide-to'), 10) === this._getItemIndex(element)) {
@@ -1758,7 +1758,7 @@
 	    }
 
 	    _updateInterval() {
-	      const element = this._activeElement || SelectorEngine__default['default'].findOne(SELECTOR_ACTIVE_ITEM, this._element);
+	      const element = this._activeElement || SelectorEngine__default.default.findOne(SELECTOR_ACTIVE_ITEM, this._element);
 
 	      if (!element) {
 	        return;
@@ -1777,7 +1777,7 @@
 	    _slide(directionOrOrder, element) {
 	      const order = this._directionToOrder(directionOrOrder);
 
-	      const activeElement = SelectorEngine__default['default'].findOne(SELECTOR_ACTIVE_ITEM, this._element);
+	      const activeElement = SelectorEngine__default.default.findOne(SELECTOR_ACTIVE_ITEM, this._element);
 
 	      const activeElementIndex = this._getItemIndex(activeElement);
 
@@ -1823,7 +1823,7 @@
 	      this._activeElement = nextElement;
 
 	      const triggerSlidEvent = () => {
-	        EventHandler__default['default'].trigger(this._element, EVENT_SLID, {
+	        EventHandler__default.default.trigger(this._element, EVENT_SLID, {
 	          relatedTarget: nextElement,
 	          direction: eventDirectionName,
 	          from: activeElementIndex,
@@ -1924,8 +1924,8 @@
 	        return;
 	      }
 
-	      const config = { ...Manipulator__default['default'].getDataAttributes(target),
-	        ...Manipulator__default['default'].getDataAttributes(this)
+	      const config = { ...Manipulator__default.default.getDataAttributes(target),
+	        ...Manipulator__default.default.getDataAttributes(this)
 	      };
 	      const slideIndex = this.getAttribute('data-bs-slide-to');
 
@@ -1950,9 +1950,9 @@
 	   */
 
 
-	  EventHandler__default['default'].on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_SLIDE, Carousel.dataApiClickHandler);
-	  EventHandler__default['default'].on(window, EVENT_LOAD_DATA_API, () => {
-	    const carousels = SelectorEngine__default['default'].find(SELECTOR_DATA_RIDE);
+	  EventHandler__default.default.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_SLIDE, Carousel.dataApiClickHandler);
+	  EventHandler__default.default.on(window, EVENT_LOAD_DATA_API, () => {
+	    const carousels = SelectorEngine__default.default.find(SELECTOR_DATA_RIDE);
 
 	    for (let i = 0, len = carousels.length; i < len; i++) {
 	      Carousel.carouselInterface(carousels[i], Carousel.getInstance(carousels[i]));
@@ -1969,7 +1969,7 @@
 
 	  return Carousel;
 
-	})));
+	}));
 
 	}(carousel$1));
 
@@ -1978,7 +1978,7 @@
 	var collapse$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap collapse.js v5.1.1 (https://getbootstrap.com/)
+	  * Bootstrap collapse.js v5.1.3 (https://getbootstrap.com/)
 	  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -1986,18 +1986,18 @@
 	(function (module, exports) {
 	(function (global, factory) {
 	  module.exports = factory(data.exports, eventHandler.exports, manipulator.exports, selectorEngine.exports, baseComponent.exports) ;
-	}(commonjsGlobal, (function (Data, EventHandler, Manipulator, SelectorEngine, BaseComponent) {
-	  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+	})(commonjsGlobal, (function (Data, EventHandler, Manipulator, SelectorEngine, BaseComponent) {
+	  const _interopDefaultLegacy = e => e && typeof e === 'object' && 'default' in e ? e : { default: e };
 
-	  var Data__default = /*#__PURE__*/_interopDefaultLegacy(Data);
-	  var EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
-	  var Manipulator__default = /*#__PURE__*/_interopDefaultLegacy(Manipulator);
-	  var SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
-	  var BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
+	  const Data__default = /*#__PURE__*/_interopDefaultLegacy(Data);
+	  const EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
+	  const Manipulator__default = /*#__PURE__*/_interopDefaultLegacy(Manipulator);
+	  const SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
+	  const BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): util/index.js
+	   * Bootstrap (v5.1.3): util/index.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -2150,7 +2150,7 @@
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): collapse.js
+	   * Bootstrap (v5.1.3): collapse.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -2181,6 +2181,7 @@
 	  const CLASS_NAME_COLLAPSE = 'collapse';
 	  const CLASS_NAME_COLLAPSING = 'collapsing';
 	  const CLASS_NAME_COLLAPSED = 'collapsed';
+	  const CLASS_NAME_DEEPER_CHILDREN = `:scope .${CLASS_NAME_COLLAPSE} .${CLASS_NAME_COLLAPSE}`;
 	  const CLASS_NAME_HORIZONTAL = 'collapse-horizontal';
 	  const WIDTH = 'width';
 	  const HEIGHT = 'height';
@@ -2192,18 +2193,18 @@
 	   * ------------------------------------------------------------------------
 	   */
 
-	  class Collapse extends BaseComponent__default['default'] {
+	  class Collapse extends BaseComponent__default.default {
 	    constructor(element, config) {
 	      super(element);
 	      this._isTransitioning = false;
 	      this._config = this._getConfig(config);
 	      this._triggerArray = [];
-	      const toggleList = SelectorEngine__default['default'].find(SELECTOR_DATA_TOGGLE);
+	      const toggleList = SelectorEngine__default.default.find(SELECTOR_DATA_TOGGLE);
 
 	      for (let i = 0, len = toggleList.length; i < len; i++) {
 	        const elem = toggleList[i];
 	        const selector = getSelectorFromElement(elem);
-	        const filterElement = SelectorEngine__default['default'].find(selector).filter(foundElem => foundElem === this._element);
+	        const filterElement = SelectorEngine__default.default.find(selector).filter(foundElem => foundElem === this._element);
 
 	        if (selector !== null && filterElement.length) {
 	          this._selector = selector;
@@ -2250,11 +2251,11 @@
 	      let activesData;
 
 	      if (this._config.parent) {
-	        const children = SelectorEngine__default['default'].find(`.${CLASS_NAME_COLLAPSE} .${CLASS_NAME_COLLAPSE}`, this._config.parent);
-	        actives = SelectorEngine__default['default'].find(SELECTOR_ACTIVES, this._config.parent).filter(elem => !children.includes(elem)); // remove children if greater depth
+	        const children = SelectorEngine__default.default.find(CLASS_NAME_DEEPER_CHILDREN, this._config.parent);
+	        actives = SelectorEngine__default.default.find(SELECTOR_ACTIVES, this._config.parent).filter(elem => !children.includes(elem)); // remove children if greater depth
 	      }
 
-	      const container = SelectorEngine__default['default'].findOne(this._selector);
+	      const container = SelectorEngine__default.default.findOne(this._selector);
 
 	      if (actives.length) {
 	        const tempActiveData = actives.find(elem => container !== elem);
@@ -2265,7 +2266,7 @@
 	        }
 	      }
 
-	      const startEvent = EventHandler__default['default'].trigger(this._element, EVENT_SHOW);
+	      const startEvent = EventHandler__default.default.trigger(this._element, EVENT_SHOW);
 
 	      if (startEvent.defaultPrevented) {
 	        return;
@@ -2279,7 +2280,7 @@
 	        }
 
 	        if (!activesData) {
-	          Data__default['default'].set(elemActive, DATA_KEY, null);
+	          Data__default.default.set(elemActive, DATA_KEY, null);
 	        }
 	      });
 
@@ -2303,7 +2304,7 @@
 	        this._element.classList.add(CLASS_NAME_COLLAPSE, CLASS_NAME_SHOW);
 
 	        this._element.style[dimension] = '';
-	        EventHandler__default['default'].trigger(this._element, EVENT_SHOWN);
+	        EventHandler__default.default.trigger(this._element, EVENT_SHOWN);
 	      };
 
 	      const capitalizedDimension = dimension[0].toUpperCase() + dimension.slice(1);
@@ -2319,7 +2320,7 @@
 	        return;
 	      }
 
-	      const startEvent = EventHandler__default['default'].trigger(this._element, EVENT_HIDE);
+	      const startEvent = EventHandler__default.default.trigger(this._element, EVENT_HIDE);
 
 	      if (startEvent.defaultPrevented) {
 	        return;
@@ -2354,7 +2355,7 @@
 
 	        this._element.classList.add(CLASS_NAME_COLLAPSE);
 
-	        EventHandler__default['default'].trigger(this._element, EVENT_HIDDEN);
+	        EventHandler__default.default.trigger(this._element, EVENT_HIDDEN);
 	      };
 
 	      this._element.style[dimension] = '';
@@ -2369,7 +2370,7 @@
 
 	    _getConfig(config) {
 	      config = { ...Default,
-	        ...Manipulator__default['default'].getDataAttributes(this._element),
+	        ...Manipulator__default.default.getDataAttributes(this._element),
 	        ...config
 	      };
 	      config.toggle = Boolean(config.toggle); // Coerce string values
@@ -2388,8 +2389,8 @@
 	        return;
 	      }
 
-	      const children = SelectorEngine__default['default'].find(`.${CLASS_NAME_COLLAPSE} .${CLASS_NAME_COLLAPSE}`, this._config.parent);
-	      SelectorEngine__default['default'].find(SELECTOR_DATA_TOGGLE, this._config.parent).filter(elem => !children.includes(elem)).forEach(element => {
+	      const children = SelectorEngine__default.default.find(CLASS_NAME_DEEPER_CHILDREN, this._config.parent);
+	      SelectorEngine__default.default.find(SELECTOR_DATA_TOGGLE, this._config.parent).filter(elem => !children.includes(elem)).forEach(element => {
 	        const selected = getElementFromSelector(element);
 
 	        if (selected) {
@@ -2443,14 +2444,14 @@
 	   */
 
 
-	  EventHandler__default['default'].on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
+	  EventHandler__default.default.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
 	    // preventDefault only for <a> elements (which change the URL) not inside the collapsible element
 	    if (event.target.tagName === 'A' || event.delegateTarget && event.delegateTarget.tagName === 'A') {
 	      event.preventDefault();
 	    }
 
 	    const selector = getSelectorFromElement(this);
-	    const selectorElements = SelectorEngine__default['default'].find(selector);
+	    const selectorElements = SelectorEngine__default.default.find(selector);
 	    selectorElements.forEach(element => {
 	      Collapse.getOrCreateInstance(element, {
 	        toggle: false
@@ -2468,7 +2469,7 @@
 
 	  return Collapse;
 
-	})));
+	}));
 
 	}(collapse$1));
 
@@ -2632,7 +2633,10 @@
 	  return placement.split('-')[0];
 	}
 
-	var round$1 = Math.round;
+	var max = Math.max;
+	var min = Math.min;
+	var round = Math.round;
+
 	function getBoundingClientRect(element, includeScale) {
 	  if (includeScale === void 0) {
 	    includeScale = false;
@@ -2648,23 +2652,23 @@
 	    // Fallback to 1 in case both values are `0`
 
 	    if (offsetWidth > 0) {
-	      scaleX = rect.width / offsetWidth || 1;
+	      scaleX = round(rect.width) / offsetWidth || 1;
 	    }
 
 	    if (offsetHeight > 0) {
-	      scaleY = rect.height / offsetHeight || 1;
+	      scaleY = round(rect.height) / offsetHeight || 1;
 	    }
 	  }
 
 	  return {
-	    width: round$1(rect.width / scaleX),
-	    height: round$1(rect.height / scaleY),
-	    top: round$1(rect.top / scaleY),
-	    right: round$1(rect.right / scaleX),
-	    bottom: round$1(rect.bottom / scaleY),
-	    left: round$1(rect.left / scaleX),
-	    x: round$1(rect.left / scaleX),
-	    y: round$1(rect.top / scaleY)
+	    width: rect.width / scaleX,
+	    height: rect.height / scaleY,
+	    top: rect.top / scaleY,
+	    right: rect.right / scaleX,
+	    bottom: rect.bottom / scaleY,
+	    left: rect.left / scaleX,
+	    x: rect.left / scaleX,
+	    y: rect.top / scaleY
 	  };
 	}
 
@@ -2809,12 +2813,12 @@
 	  return ['top', 'bottom'].indexOf(placement) >= 0 ? 'x' : 'y';
 	}
 
-	var max = Math.max;
-	var min = Math.min;
-	var round = Math.round;
-
 	function within(min$1, value, max$1) {
 	  return max(min$1, min(value, max$1));
+	}
+	function withinMaxClamp(min, value, max) {
+	  var v = within(min, value, max);
+	  return v > max ? max : v;
 	}
 
 	function getFreshSideObject() {
@@ -2938,8 +2942,8 @@
 	  var win = window;
 	  var dpr = win.devicePixelRatio || 1;
 	  return {
-	    x: round(round(x * dpr) / dpr) || 0,
-	    y: round(round(y * dpr) / dpr) || 0
+	    x: round(x * dpr) / dpr || 0,
+	    y: round(y * dpr) / dpr || 0
 	  };
 	}
 
@@ -2954,7 +2958,8 @@
 	      position = _ref2.position,
 	      gpuAcceleration = _ref2.gpuAcceleration,
 	      adaptive = _ref2.adaptive,
-	      roundOffsets = _ref2.roundOffsets;
+	      roundOffsets = _ref2.roundOffsets,
+	      isFixed = _ref2.isFixed;
 
 	  var _ref3 = roundOffsets === true ? roundOffsetsByDPR(offsets) : typeof roundOffsets === 'function' ? roundOffsets(offsets) : offsets,
 	      _ref3$x = _ref3.x,
@@ -2986,16 +2991,18 @@
 	    offsetParent = offsetParent;
 
 	    if (placement === top || (placement === left || placement === right) && variation === end) {
-	      sideY = bottom; // $FlowFixMe[prop-missing]
-
-	      y -= offsetParent[heightProp] - popperRect.height;
+	      sideY = bottom;
+	      var offsetY = isFixed && win.visualViewport ? win.visualViewport.height : // $FlowFixMe[prop-missing]
+	      offsetParent[heightProp];
+	      y -= offsetY - popperRect.height;
 	      y *= gpuAcceleration ? 1 : -1;
 	    }
 
 	    if (placement === left || (placement === top || placement === bottom) && variation === end) {
-	      sideX = right; // $FlowFixMe[prop-missing]
-
-	      x -= offsetParent[widthProp] - popperRect.width;
+	      sideX = right;
+	      var offsetX = isFixed && win.visualViewport ? win.visualViewport.width : // $FlowFixMe[prop-missing]
+	      offsetParent[widthProp];
+	      x -= offsetX - popperRect.width;
 	      x *= gpuAcceleration ? 1 : -1;
 	    }
 	  }
@@ -3028,7 +3035,8 @@
 	    variation: getVariation(state.placement),
 	    popper: state.elements.popper,
 	    popperRect: state.rects.popper,
-	    gpuAcceleration: gpuAcceleration
+	    gpuAcceleration: gpuAcceleration,
+	    isFixed: state.options.strategy === 'fixed'
 	  };
 
 	  if (state.modifiersData.popperOffsets != null) {
@@ -3286,7 +3294,7 @@
 	}
 
 	function getClientRectFromMixedType(element, clippingParent) {
-	  return clippingParent === viewport ? rectToClientRect(getViewportRect(element)) : isHTMLElement(clippingParent) ? getInnerBoundingClientRect(clippingParent) : rectToClientRect(getDocumentRect(getDocumentElement(element)));
+	  return clippingParent === viewport ? rectToClientRect(getViewportRect(element)) : isElement(clippingParent) ? getInnerBoundingClientRect(clippingParent) : rectToClientRect(getDocumentRect(getDocumentElement(element)));
 	} // A "clipping parent" is an overflowable container with the characteristic of
 	// clipping (or hiding) overflowing elements with a position different from
 	// `initial`
@@ -3303,7 +3311,7 @@
 
 
 	  return clippingParents.filter(function (clippingParent) {
-	    return isElement(clippingParent) && contains(clippingParent, clipperElement) && getNodeName(clippingParent) !== 'body';
+	    return isElement(clippingParent) && contains(clippingParent, clipperElement) && getNodeName(clippingParent) !== 'body' && (canEscapeClipping ? getComputedStyle$1(clippingParent).position !== 'static' : true);
 	  });
 	} // Gets the maximum area that the element is visible in due to any number of
 	// clipping parents
@@ -3799,6 +3807,14 @@
 	  var tetherOffsetValue = typeof tetherOffset === 'function' ? tetherOffset(Object.assign({}, state.rects, {
 	    placement: state.placement
 	  })) : tetherOffset;
+	  var normalizedTetherOffsetValue = typeof tetherOffsetValue === 'number' ? {
+	    mainAxis: tetherOffsetValue,
+	    altAxis: tetherOffsetValue
+	  } : Object.assign({
+	    mainAxis: 0,
+	    altAxis: 0
+	  }, tetherOffsetValue);
+	  var offsetModifierState = state.modifiersData.offset ? state.modifiersData.offset[state.placement] : null;
 	  var data = {
 	    x: 0,
 	    y: 0
@@ -3808,13 +3824,15 @@
 	    return;
 	  }
 
-	  if (checkMainAxis || checkAltAxis) {
+	  if (checkMainAxis) {
+	    var _offsetModifierState$;
+
 	    var mainSide = mainAxis === 'y' ? top : left;
 	    var altSide = mainAxis === 'y' ? bottom : right;
 	    var len = mainAxis === 'y' ? 'height' : 'width';
 	    var offset = popperOffsets[mainAxis];
-	    var min$1 = popperOffsets[mainAxis] + overflow[mainSide];
-	    var max$1 = popperOffsets[mainAxis] - overflow[altSide];
+	    var min$1 = offset + overflow[mainSide];
+	    var max$1 = offset - overflow[altSide];
 	    var additive = tether ? -popperRect[len] / 2 : 0;
 	    var minLen = variation === start ? referenceRect[len] : popperRect[len];
 	    var maxLen = variation === start ? -popperRect[len] : -referenceRect[len]; // We need to include the arrow in the calculation so the arrow doesn't go
@@ -3834,36 +3852,45 @@
 	    // width or height)
 
 	    var arrowLen = within(0, referenceRect[len], arrowRect[len]);
-	    var minOffset = isBasePlacement ? referenceRect[len] / 2 - additive - arrowLen - arrowPaddingMin - tetherOffsetValue : minLen - arrowLen - arrowPaddingMin - tetherOffsetValue;
-	    var maxOffset = isBasePlacement ? -referenceRect[len] / 2 + additive + arrowLen + arrowPaddingMax + tetherOffsetValue : maxLen + arrowLen + arrowPaddingMax + tetherOffsetValue;
+	    var minOffset = isBasePlacement ? referenceRect[len] / 2 - additive - arrowLen - arrowPaddingMin - normalizedTetherOffsetValue.mainAxis : minLen - arrowLen - arrowPaddingMin - normalizedTetherOffsetValue.mainAxis;
+	    var maxOffset = isBasePlacement ? -referenceRect[len] / 2 + additive + arrowLen + arrowPaddingMax + normalizedTetherOffsetValue.mainAxis : maxLen + arrowLen + arrowPaddingMax + normalizedTetherOffsetValue.mainAxis;
 	    var arrowOffsetParent = state.elements.arrow && getOffsetParent(state.elements.arrow);
 	    var clientOffset = arrowOffsetParent ? mainAxis === 'y' ? arrowOffsetParent.clientTop || 0 : arrowOffsetParent.clientLeft || 0 : 0;
-	    var offsetModifierValue = state.modifiersData.offset ? state.modifiersData.offset[state.placement][mainAxis] : 0;
-	    var tetherMin = popperOffsets[mainAxis] + minOffset - offsetModifierValue - clientOffset;
-	    var tetherMax = popperOffsets[mainAxis] + maxOffset - offsetModifierValue;
+	    var offsetModifierValue = (_offsetModifierState$ = offsetModifierState == null ? void 0 : offsetModifierState[mainAxis]) != null ? _offsetModifierState$ : 0;
+	    var tetherMin = offset + minOffset - offsetModifierValue - clientOffset;
+	    var tetherMax = offset + maxOffset - offsetModifierValue;
+	    var preventedOffset = within(tether ? min(min$1, tetherMin) : min$1, offset, tether ? max(max$1, tetherMax) : max$1);
+	    popperOffsets[mainAxis] = preventedOffset;
+	    data[mainAxis] = preventedOffset - offset;
+	  }
 
-	    if (checkMainAxis) {
-	      var preventedOffset = within(tether ? min(min$1, tetherMin) : min$1, offset, tether ? max(max$1, tetherMax) : max$1);
-	      popperOffsets[mainAxis] = preventedOffset;
-	      data[mainAxis] = preventedOffset - offset;
-	    }
+	  if (checkAltAxis) {
+	    var _offsetModifierState$2;
 
-	    if (checkAltAxis) {
-	      var _mainSide = mainAxis === 'x' ? top : left;
+	    var _mainSide = mainAxis === 'x' ? top : left;
 
-	      var _altSide = mainAxis === 'x' ? bottom : right;
+	    var _altSide = mainAxis === 'x' ? bottom : right;
 
-	      var _offset = popperOffsets[altAxis];
+	    var _offset = popperOffsets[altAxis];
 
-	      var _min = _offset + overflow[_mainSide];
+	    var _len = altAxis === 'y' ? 'height' : 'width';
 
-	      var _max = _offset - overflow[_altSide];
+	    var _min = _offset + overflow[_mainSide];
 
-	      var _preventedOffset = within(tether ? min(_min, tetherMin) : _min, _offset, tether ? max(_max, tetherMax) : _max);
+	    var _max = _offset - overflow[_altSide];
 
-	      popperOffsets[altAxis] = _preventedOffset;
-	      data[altAxis] = _preventedOffset - _offset;
-	    }
+	    var isOriginSide = [top, left].indexOf(basePlacement) !== -1;
+
+	    var _offsetModifierValue = (_offsetModifierState$2 = offsetModifierState == null ? void 0 : offsetModifierState[altAxis]) != null ? _offsetModifierState$2 : 0;
+
+	    var _tetherMin = isOriginSide ? _min : _offset - referenceRect[_len] - popperRect[_len] - _offsetModifierValue + normalizedTetherOffsetValue.altAxis;
+
+	    var _tetherMax = isOriginSide ? _offset + referenceRect[_len] + popperRect[_len] - _offsetModifierValue - normalizedTetherOffsetValue.altAxis : _max;
+
+	    var _preventedOffset = tether && isOriginSide ? withinMaxClamp(_tetherMin, _offset, _tetherMax) : within(tether ? _tetherMin : _min, _offset, tether ? _tetherMax : _max);
+
+	    popperOffsets[altAxis] = _preventedOffset;
+	    data[altAxis] = _preventedOffset - _offset;
 	  }
 
 	  state.modifiersData[name] = data;
@@ -3895,8 +3922,8 @@
 
 	function isElementScaled(element) {
 	  var rect = element.getBoundingClientRect();
-	  var scaleX = rect.width / element.offsetWidth || 1;
-	  var scaleY = rect.height / element.offsetHeight || 1;
+	  var scaleX = round(rect.width) / element.offsetWidth || 1;
+	  var scaleY = round(rect.height) / element.offsetHeight || 1;
 	  return scaleX !== 1 || scaleY !== 1;
 	} // Returns the composite rect of an element relative to its offsetParent.
 	// Composite means it takes into account transforms as well as layout.
@@ -4265,7 +4292,7 @@
 	var require$$0 = /*@__PURE__*/getAugmentedNamespace(lib);
 
 	/*!
-	  * Bootstrap dropdown.js v5.1.1 (https://getbootstrap.com/)
+	  * Bootstrap dropdown.js v5.1.3 (https://getbootstrap.com/)
 	  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -4273,38 +4300,36 @@
 	(function (module, exports) {
 	(function (global, factory) {
 	  module.exports = factory(require$$0, eventHandler.exports, manipulator.exports, selectorEngine.exports, baseComponent.exports) ;
-	}(commonjsGlobal, (function (Popper, EventHandler, Manipulator, SelectorEngine, BaseComponent) {
-	  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+	})(commonjsGlobal, (function (Popper, EventHandler, Manipulator, SelectorEngine, BaseComponent) {
+	  const _interopDefaultLegacy = e => e && typeof e === 'object' && 'default' in e ? e : { default: e };
 
 	  function _interopNamespace(e) {
 	    if (e && e.__esModule) return e;
-	    var n = Object.create(null);
+	    const n = Object.create(null);
 	    if (e) {
-	      Object.keys(e).forEach(function (k) {
+	      for (const k in e) {
 	        if (k !== 'default') {
-	          var d = Object.getOwnPropertyDescriptor(e, k);
+	          const d = Object.getOwnPropertyDescriptor(e, k);
 	          Object.defineProperty(n, k, d.get ? d : {
 	            enumerable: true,
-	            get: function () {
-	              return e[k];
-	            }
+	            get: () => e[k]
 	          });
 	        }
-	      });
+	      }
 	    }
-	    n['default'] = e;
+	    n.default = e;
 	    return Object.freeze(n);
 	  }
 
-	  var Popper__namespace = /*#__PURE__*/_interopNamespace(Popper);
-	  var EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
-	  var Manipulator__default = /*#__PURE__*/_interopDefaultLegacy(Manipulator);
-	  var SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
-	  var BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
+	  const Popper__namespace = /*#__PURE__*/_interopNamespace(Popper);
+	  const EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
+	  const Manipulator__default = /*#__PURE__*/_interopDefaultLegacy(Manipulator);
+	  const SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
+	  const BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): util/index.js
+	   * Bootstrap (v5.1.3): util/index.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -4488,7 +4513,7 @@
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): dropdown.js
+	   * Bootstrap (v5.1.3): dropdown.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -4554,7 +4579,7 @@
 	   * ------------------------------------------------------------------------
 	   */
 
-	  class Dropdown extends BaseComponent__default['default'] {
+	  class Dropdown extends BaseComponent__default.default {
 	    constructor(element, config) {
 	      super(element);
 	      this._popper = null;
@@ -4589,7 +4614,7 @@
 	      const relatedTarget = {
 	        relatedTarget: this._element
 	      };
-	      const showEvent = EventHandler__default['default'].trigger(this._element, EVENT_SHOW, relatedTarget);
+	      const showEvent = EventHandler__default.default.trigger(this._element, EVENT_SHOW, relatedTarget);
 
 	      if (showEvent.defaultPrevented) {
 	        return;
@@ -4598,7 +4623,7 @@
 	      const parent = Dropdown.getParentFromElement(this._element); // Totally disable Popper for Dropdowns in Navbar
 
 	      if (this._inNavbar) {
-	        Manipulator__default['default'].setDataAttribute(this._menu, 'popper', 'none');
+	        Manipulator__default.default.setDataAttribute(this._menu, 'popper', 'none');
 	      } else {
 	        this._createPopper(parent);
 	      } // If this is a touch-enabled device we add extra
@@ -4608,7 +4633,7 @@
 
 
 	      if ('ontouchstart' in document.documentElement && !parent.closest(SELECTOR_NAVBAR_NAV)) {
-	        [].concat(...document.body.children).forEach(elem => EventHandler__default['default'].on(elem, 'mouseover', noop));
+	        [].concat(...document.body.children).forEach(elem => EventHandler__default.default.on(elem, 'mouseover', noop));
 	      }
 
 	      this._element.focus();
@@ -4619,7 +4644,7 @@
 
 	      this._element.classList.add(CLASS_NAME_SHOW);
 
-	      EventHandler__default['default'].trigger(this._element, EVENT_SHOWN, relatedTarget);
+	      EventHandler__default.default.trigger(this._element, EVENT_SHOWN, relatedTarget);
 	    }
 
 	    hide() {
@@ -4652,7 +4677,7 @@
 
 
 	    _completeHide(relatedTarget) {
-	      const hideEvent = EventHandler__default['default'].trigger(this._element, EVENT_HIDE, relatedTarget);
+	      const hideEvent = EventHandler__default.default.trigger(this._element, EVENT_HIDE, relatedTarget);
 
 	      if (hideEvent.defaultPrevented) {
 	        return;
@@ -4661,7 +4686,7 @@
 
 
 	      if ('ontouchstart' in document.documentElement) {
-	        [].concat(...document.body.children).forEach(elem => EventHandler__default['default'].off(elem, 'mouseover', noop));
+	        [].concat(...document.body.children).forEach(elem => EventHandler__default.default.off(elem, 'mouseover', noop));
 	      }
 
 	      if (this._popper) {
@@ -4674,13 +4699,13 @@
 
 	      this._element.setAttribute('aria-expanded', 'false');
 
-	      Manipulator__default['default'].removeDataAttribute(this._menu, 'popper');
-	      EventHandler__default['default'].trigger(this._element, EVENT_HIDDEN, relatedTarget);
+	      Manipulator__default.default.removeDataAttribute(this._menu, 'popper');
+	      EventHandler__default.default.trigger(this._element, EVENT_HIDDEN, relatedTarget);
 	    }
 
 	    _getConfig(config) {
 	      config = { ...this.constructor.Default,
-	        ...Manipulator__default['default'].getDataAttributes(this._element),
+	        ...Manipulator__default.default.getDataAttributes(this._element),
 	        ...config
 	      };
 	      typeCheckConfig(NAME, config, this.constructor.DefaultType);
@@ -4714,7 +4739,7 @@
 	      this._popper = Popper__namespace.createPopper(referenceElement, this._menu, popperConfig);
 
 	      if (isDisplayStatic) {
-	        Manipulator__default['default'].setDataAttribute(this._menu, 'popper', 'static');
+	        Manipulator__default.default.setDataAttribute(this._menu, 'popper', 'static');
 	      }
 	    }
 
@@ -4723,7 +4748,7 @@
 	    }
 
 	    _getMenuElement() {
-	      return SelectorEngine__default['default'].next(this._element, SELECTOR_MENU)[0];
+	      return SelectorEngine__default.default.next(this._element, SELECTOR_MENU)[0];
 	    }
 
 	    _getPlacement() {
@@ -4799,7 +4824,7 @@
 	      key,
 	      target
 	    }) {
-	      const items = SelectorEngine__default['default'].find(SELECTOR_VISIBLE_ITEMS, this._menu).filter(isVisible);
+	      const items = SelectorEngine__default.default.find(SELECTOR_VISIBLE_ITEMS, this._menu).filter(isVisible);
 
 	      if (!items.length) {
 	        return;
@@ -4832,7 +4857,7 @@
 	        return;
 	      }
 
-	      const toggles = SelectorEngine__default['default'].find(SELECTOR_DATA_TOGGLE);
+	      const toggles = SelectorEngine__default.default.find(SELECTOR_DATA_TOGGLE);
 
 	      for (let i = 0, len = toggles.length; i < len; i++) {
 	        const context = Dropdown.getInstance(toggles[i]);
@@ -4900,7 +4925,7 @@
 	        return;
 	      }
 
-	      const getToggleButton = this.matches(SELECTOR_DATA_TOGGLE) ? this : SelectorEngine__default['default'].prev(this, SELECTOR_DATA_TOGGLE)[0];
+	      const getToggleButton = this.matches(SELECTOR_DATA_TOGGLE) ? this : SelectorEngine__default.default.prev(this, SELECTOR_DATA_TOGGLE)[0];
 	      const instance = Dropdown.getOrCreateInstance(getToggleButton);
 
 	      if (event.key === ESCAPE_KEY) {
@@ -4931,11 +4956,11 @@
 	   */
 
 
-	  EventHandler__default['default'].on(document, EVENT_KEYDOWN_DATA_API, SELECTOR_DATA_TOGGLE, Dropdown.dataApiKeydownHandler);
-	  EventHandler__default['default'].on(document, EVENT_KEYDOWN_DATA_API, SELECTOR_MENU, Dropdown.dataApiKeydownHandler);
-	  EventHandler__default['default'].on(document, EVENT_CLICK_DATA_API, Dropdown.clearMenus);
-	  EventHandler__default['default'].on(document, EVENT_KEYUP_DATA_API, Dropdown.clearMenus);
-	  EventHandler__default['default'].on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
+	  EventHandler__default.default.on(document, EVENT_KEYDOWN_DATA_API, SELECTOR_DATA_TOGGLE, Dropdown.dataApiKeydownHandler);
+	  EventHandler__default.default.on(document, EVENT_KEYDOWN_DATA_API, SELECTOR_MENU, Dropdown.dataApiKeydownHandler);
+	  EventHandler__default.default.on(document, EVENT_CLICK_DATA_API, Dropdown.clearMenus);
+	  EventHandler__default.default.on(document, EVENT_KEYUP_DATA_API, Dropdown.clearMenus);
+	  EventHandler__default.default.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
 	    event.preventDefault();
 	    Dropdown.getOrCreateInstance(this).toggle();
 	  });
@@ -4950,7 +4975,7 @@
 
 	  return Dropdown;
 
-	})));
+	}));
 
 	}(dropdown$1));
 
@@ -4959,7 +4984,7 @@
 	var modal$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap modal.js v5.1.1 (https://getbootstrap.com/)
+	  * Bootstrap modal.js v5.1.3 (https://getbootstrap.com/)
 	  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -4967,17 +4992,17 @@
 	(function (module, exports) {
 	(function (global, factory) {
 	  module.exports = factory(eventHandler.exports, manipulator.exports, selectorEngine.exports, baseComponent.exports) ;
-	}(commonjsGlobal, (function (EventHandler, Manipulator, SelectorEngine, BaseComponent) {
-	  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+	})(commonjsGlobal, (function (EventHandler, Manipulator, SelectorEngine, BaseComponent) {
+	  const _interopDefaultLegacy = e => e && typeof e === 'object' && 'default' in e ? e : { default: e };
 
-	  var EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
-	  var Manipulator__default = /*#__PURE__*/_interopDefaultLegacy(Manipulator);
-	  var SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
-	  var BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
+	  const EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
+	  const Manipulator__default = /*#__PURE__*/_interopDefaultLegacy(Manipulator);
+	  const SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
+	  const BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): util/index.js
+	   * Bootstrap (v5.1.3): util/index.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -5211,7 +5236,7 @@
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): util/scrollBar.js
+	   * Bootstrap (v5.1.3): util/scrollBar.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -5280,18 +5305,18 @@
 	      const actualValue = element.style[styleProp];
 
 	      if (actualValue) {
-	        Manipulator__default['default'].setDataAttribute(element, styleProp, actualValue);
+	        Manipulator__default.default.setDataAttribute(element, styleProp, actualValue);
 	      }
 	    }
 
 	    _resetElementAttributes(selector, styleProp) {
 	      const manipulationCallBack = element => {
-	        const value = Manipulator__default['default'].getDataAttribute(element, styleProp);
+	        const value = Manipulator__default.default.getDataAttribute(element, styleProp);
 
 	        if (typeof value === 'undefined') {
 	          element.style.removeProperty(styleProp);
 	        } else {
-	          Manipulator__default['default'].removeDataAttribute(element, styleProp);
+	          Manipulator__default.default.removeDataAttribute(element, styleProp);
 	          element.style[styleProp] = value;
 	        }
 	      };
@@ -5303,7 +5328,7 @@
 	      if (isElement(selector)) {
 	        callBack(selector);
 	      } else {
-	        SelectorEngine__default['default'].find(selector, this._element).forEach(callBack);
+	        SelectorEngine__default.default.find(selector, this._element).forEach(callBack);
 	      }
 	    }
 
@@ -5315,8 +5340,8 @@
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): util/backdrop.js
-	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	   * Bootstrap (v5.1.3): util/backdrop.js
+	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
 	  const Default$2 = {
@@ -5413,7 +5438,7 @@
 
 	      this._config.rootElement.append(this._getElement());
 
-	      EventHandler__default['default'].on(this._getElement(), EVENT_MOUSEDOWN, () => {
+	      EventHandler__default.default.on(this._getElement(), EVENT_MOUSEDOWN, () => {
 	        execute(this._config.clickCallback);
 	      });
 	      this._isAppended = true;
@@ -5424,7 +5449,7 @@
 	        return;
 	      }
 
-	      EventHandler__default['default'].off(this._element, EVENT_MOUSEDOWN);
+	      EventHandler__default.default.off(this._element, EVENT_MOUSEDOWN);
 
 	      this._element.remove();
 
@@ -5439,8 +5464,8 @@
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): util/focustrap.js
-	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	   * Bootstrap (v5.1.3): util/focustrap.js
+	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
 	  const Default$1 = {
@@ -5482,10 +5507,10 @@
 	        trapElement.focus();
 	      }
 
-	      EventHandler__default['default'].off(document, EVENT_KEY$1); // guard against infinite focus loop
+	      EventHandler__default.default.off(document, EVENT_KEY$1); // guard against infinite focus loop
 
-	      EventHandler__default['default'].on(document, EVENT_FOCUSIN, event => this._handleFocusin(event));
-	      EventHandler__default['default'].on(document, EVENT_KEYDOWN_TAB, event => this._handleKeydown(event));
+	      EventHandler__default.default.on(document, EVENT_FOCUSIN, event => this._handleFocusin(event));
+	      EventHandler__default.default.on(document, EVENT_KEYDOWN_TAB, event => this._handleKeydown(event));
 	      this._isActive = true;
 	    }
 
@@ -5495,7 +5520,7 @@
 	      }
 
 	      this._isActive = false;
-	      EventHandler__default['default'].off(document, EVENT_KEY$1);
+	      EventHandler__default.default.off(document, EVENT_KEY$1);
 	    } // Private
 
 
@@ -5511,7 +5536,7 @@
 	        return;
 	      }
 
-	      const elements = SelectorEngine__default['default'].focusableChildren(trapElement);
+	      const elements = SelectorEngine__default.default.focusableChildren(trapElement);
 
 	      if (elements.length === 0) {
 	        trapElement.focus();
@@ -5542,7 +5567,7 @@
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): util/component-functions.js
+	   * Bootstrap (v5.1.3): util/component-functions.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -5550,7 +5575,7 @@
 	  const enableDismissTrigger = (component, method = 'hide') => {
 	    const clickEvent = `click.dismiss${component.EVENT_KEY}`;
 	    const name = component.NAME;
-	    EventHandler__default['default'].on(document, clickEvent, `[data-bs-dismiss="${name}"]`, function (event) {
+	    EventHandler__default.default.on(document, clickEvent, `[data-bs-dismiss="${name}"]`, function (event) {
 	      if (['A', 'AREA'].includes(this.tagName)) {
 	        event.preventDefault();
 	      }
@@ -5568,7 +5593,7 @@
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): modal.js
+	   * Bootstrap (v5.1.3): modal.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -5618,11 +5643,11 @@
 	   * ------------------------------------------------------------------------
 	   */
 
-	  class Modal extends BaseComponent__default['default'] {
+	  class Modal extends BaseComponent__default.default {
 	    constructor(element, config) {
 	      super(element);
 	      this._config = this._getConfig(config);
-	      this._dialog = SelectorEngine__default['default'].findOne(SELECTOR_DIALOG, this._element);
+	      this._dialog = SelectorEngine__default.default.findOne(SELECTOR_DIALOG, this._element);
 	      this._backdrop = this._initializeBackDrop();
 	      this._focustrap = this._initializeFocusTrap();
 	      this._isShown = false;
@@ -5650,7 +5675,7 @@
 	        return;
 	      }
 
-	      const showEvent = EventHandler__default['default'].trigger(this._element, EVENT_SHOW, {
+	      const showEvent = EventHandler__default.default.trigger(this._element, EVENT_SHOW, {
 	        relatedTarget
 	      });
 
@@ -5674,8 +5699,8 @@
 
 	      this._setResizeEvent();
 
-	      EventHandler__default['default'].on(this._dialog, EVENT_MOUSEDOWN_DISMISS, () => {
-	        EventHandler__default['default'].one(this._element, EVENT_MOUSEUP_DISMISS, event => {
+	      EventHandler__default.default.on(this._dialog, EVENT_MOUSEDOWN_DISMISS, () => {
+	        EventHandler__default.default.one(this._element, EVENT_MOUSEUP_DISMISS, event => {
 	          if (event.target === this._element) {
 	            this._ignoreBackdropClick = true;
 	          }
@@ -5690,7 +5715,7 @@
 	        return;
 	      }
 
-	      const hideEvent = EventHandler__default['default'].trigger(this._element, EVENT_HIDE);
+	      const hideEvent = EventHandler__default.default.trigger(this._element, EVENT_HIDE);
 
 	      if (hideEvent.defaultPrevented) {
 	        return;
@@ -5712,14 +5737,14 @@
 
 	      this._element.classList.remove(CLASS_NAME_SHOW);
 
-	      EventHandler__default['default'].off(this._element, EVENT_CLICK_DISMISS);
-	      EventHandler__default['default'].off(this._dialog, EVENT_MOUSEDOWN_DISMISS);
+	      EventHandler__default.default.off(this._element, EVENT_CLICK_DISMISS);
+	      EventHandler__default.default.off(this._dialog, EVENT_MOUSEDOWN_DISMISS);
 
 	      this._queueCallback(() => this._hideModal(), this._element, isAnimated);
 	    }
 
 	    dispose() {
-	      [window, this._dialog].forEach(htmlElement => EventHandler__default['default'].off(htmlElement, EVENT_KEY));
+	      [window, this._dialog].forEach(htmlElement => EventHandler__default.default.off(htmlElement, EVENT_KEY));
 
 	      this._backdrop.dispose();
 
@@ -5749,7 +5774,7 @@
 
 	    _getConfig(config) {
 	      config = { ...Default,
-	        ...Manipulator__default['default'].getDataAttributes(this._element),
+	        ...Manipulator__default.default.getDataAttributes(this._element),
 	        ...(typeof config === 'object' ? config : {})
 	      };
 	      typeCheckConfig(NAME, config, DefaultType);
@@ -5759,7 +5784,7 @@
 	    _showElement(relatedTarget) {
 	      const isAnimated = this._isAnimated();
 
-	      const modalBody = SelectorEngine__default['default'].findOne(SELECTOR_MODAL_BODY, this._dialog);
+	      const modalBody = SelectorEngine__default.default.findOne(SELECTOR_MODAL_BODY, this._dialog);
 
 	      if (!this._element.parentNode || this._element.parentNode.nodeType !== Node.ELEMENT_NODE) {
 	        // Don't move modal's DOM position
@@ -5792,7 +5817,7 @@
 	        }
 
 	        this._isTransitioning = false;
-	        EventHandler__default['default'].trigger(this._element, EVENT_SHOWN, {
+	        EventHandler__default.default.trigger(this._element, EVENT_SHOWN, {
 	          relatedTarget
 	        });
 	      };
@@ -5802,7 +5827,7 @@
 
 	    _setEscapeEvent() {
 	      if (this._isShown) {
-	        EventHandler__default['default'].on(this._element, EVENT_KEYDOWN_DISMISS, event => {
+	        EventHandler__default.default.on(this._element, EVENT_KEYDOWN_DISMISS, event => {
 	          if (this._config.keyboard && event.key === ESCAPE_KEY) {
 	            event.preventDefault();
 	            this.hide();
@@ -5811,15 +5836,15 @@
 	          }
 	        });
 	      } else {
-	        EventHandler__default['default'].off(this._element, EVENT_KEYDOWN_DISMISS);
+	        EventHandler__default.default.off(this._element, EVENT_KEYDOWN_DISMISS);
 	      }
 	    }
 
 	    _setResizeEvent() {
 	      if (this._isShown) {
-	        EventHandler__default['default'].on(window, EVENT_RESIZE, () => this._adjustDialog());
+	        EventHandler__default.default.on(window, EVENT_RESIZE, () => this._adjustDialog());
 	      } else {
-	        EventHandler__default['default'].off(window, EVENT_RESIZE);
+	        EventHandler__default.default.off(window, EVENT_RESIZE);
 	      }
 	    }
 
@@ -5841,12 +5866,12 @@
 
 	        this._scrollBar.reset();
 
-	        EventHandler__default['default'].trigger(this._element, EVENT_HIDDEN);
+	        EventHandler__default.default.trigger(this._element, EVENT_HIDDEN);
 	      });
 	    }
 
 	    _showBackdrop(callback) {
-	      EventHandler__default['default'].on(this._element, EVENT_CLICK_DISMISS, event => {
+	      EventHandler__default.default.on(this._element, EVENT_CLICK_DISMISS, event => {
 	        if (this._ignoreBackdropClick) {
 	          this._ignoreBackdropClick = false;
 	          return;
@@ -5871,7 +5896,7 @@
 	    }
 
 	    _triggerBackdropTransition() {
-	      const hideEvent = EventHandler__default['default'].trigger(this._element, EVENT_HIDE_PREVENTED);
+	      const hideEvent = EventHandler__default.default.trigger(this._element, EVENT_HIDE_PREVENTED);
 
 	      if (hideEvent.defaultPrevented) {
 	        return;
@@ -5956,27 +5981,27 @@
 	   */
 
 
-	  EventHandler__default['default'].on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
+	  EventHandler__default.default.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
 	    const target = getElementFromSelector(this);
 
 	    if (['A', 'AREA'].includes(this.tagName)) {
 	      event.preventDefault();
 	    }
 
-	    EventHandler__default['default'].one(target, EVENT_SHOW, showEvent => {
+	    EventHandler__default.default.one(target, EVENT_SHOW, showEvent => {
 	      if (showEvent.defaultPrevented) {
 	        // only register focus restorer if modal will actually get shown
 	        return;
 	      }
 
-	      EventHandler__default['default'].one(target, EVENT_HIDDEN, () => {
+	      EventHandler__default.default.one(target, EVENT_HIDDEN, () => {
 	        if (isVisible(this)) {
 	          this.focus();
 	        }
 	      });
 	    }); // avoid conflict when clicking moddal toggler while another one is open
 
-	    const allReadyOpen = SelectorEngine__default['default'].findOne(OPEN_SELECTOR);
+	    const allReadyOpen = SelectorEngine__default.default.findOne(OPEN_SELECTOR);
 
 	    if (allReadyOpen) {
 	      Modal.getInstance(allReadyOpen).hide();
@@ -5997,7 +6022,7 @@
 
 	  return Modal;
 
-	})));
+	}));
 
 	}(modal$1));
 
@@ -6006,7 +6031,7 @@
 	var offcanvas$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap offcanvas.js v5.1.1 (https://getbootstrap.com/)
+	  * Bootstrap offcanvas.js v5.1.3 (https://getbootstrap.com/)
 	  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -6014,17 +6039,17 @@
 	(function (module, exports) {
 	(function (global, factory) {
 	  module.exports = factory(selectorEngine.exports, manipulator.exports, eventHandler.exports, baseComponent.exports) ;
-	}(commonjsGlobal, (function (SelectorEngine, Manipulator, EventHandler, BaseComponent) {
-	  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+	})(commonjsGlobal, (function (SelectorEngine, Manipulator, EventHandler, BaseComponent) {
+	  const _interopDefaultLegacy = e => e && typeof e === 'object' && 'default' in e ? e : { default: e };
 
-	  var SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
-	  var Manipulator__default = /*#__PURE__*/_interopDefaultLegacy(Manipulator);
-	  var EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
-	  var BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
+	  const SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
+	  const Manipulator__default = /*#__PURE__*/_interopDefaultLegacy(Manipulator);
+	  const EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
+	  const BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): util/index.js
+	   * Bootstrap (v5.1.3): util/index.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -6256,7 +6281,7 @@
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): util/scrollBar.js
+	   * Bootstrap (v5.1.3): util/scrollBar.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -6325,18 +6350,18 @@
 	      const actualValue = element.style[styleProp];
 
 	      if (actualValue) {
-	        Manipulator__default['default'].setDataAttribute(element, styleProp, actualValue);
+	        Manipulator__default.default.setDataAttribute(element, styleProp, actualValue);
 	      }
 	    }
 
 	    _resetElementAttributes(selector, styleProp) {
 	      const manipulationCallBack = element => {
-	        const value = Manipulator__default['default'].getDataAttribute(element, styleProp);
+	        const value = Manipulator__default.default.getDataAttribute(element, styleProp);
 
 	        if (typeof value === 'undefined') {
 	          element.style.removeProperty(styleProp);
 	        } else {
-	          Manipulator__default['default'].removeDataAttribute(element, styleProp);
+	          Manipulator__default.default.removeDataAttribute(element, styleProp);
 	          element.style[styleProp] = value;
 	        }
 	      };
@@ -6348,7 +6373,7 @@
 	      if (isElement(selector)) {
 	        callBack(selector);
 	      } else {
-	        SelectorEngine__default['default'].find(selector, this._element).forEach(callBack);
+	        SelectorEngine__default.default.find(selector, this._element).forEach(callBack);
 	      }
 	    }
 
@@ -6360,8 +6385,8 @@
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): util/backdrop.js
-	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	   * Bootstrap (v5.1.3): util/backdrop.js
+	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
 	  const Default$2 = {
@@ -6458,7 +6483,7 @@
 
 	      this._config.rootElement.append(this._getElement());
 
-	      EventHandler__default['default'].on(this._getElement(), EVENT_MOUSEDOWN, () => {
+	      EventHandler__default.default.on(this._getElement(), EVENT_MOUSEDOWN, () => {
 	        execute(this._config.clickCallback);
 	      });
 	      this._isAppended = true;
@@ -6469,7 +6494,7 @@
 	        return;
 	      }
 
-	      EventHandler__default['default'].off(this._element, EVENT_MOUSEDOWN);
+	      EventHandler__default.default.off(this._element, EVENT_MOUSEDOWN);
 
 	      this._element.remove();
 
@@ -6484,8 +6509,8 @@
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): util/focustrap.js
-	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	   * Bootstrap (v5.1.3): util/focustrap.js
+	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
 	  const Default$1 = {
@@ -6527,10 +6552,10 @@
 	        trapElement.focus();
 	      }
 
-	      EventHandler__default['default'].off(document, EVENT_KEY$1); // guard against infinite focus loop
+	      EventHandler__default.default.off(document, EVENT_KEY$1); // guard against infinite focus loop
 
-	      EventHandler__default['default'].on(document, EVENT_FOCUSIN, event => this._handleFocusin(event));
-	      EventHandler__default['default'].on(document, EVENT_KEYDOWN_TAB, event => this._handleKeydown(event));
+	      EventHandler__default.default.on(document, EVENT_FOCUSIN, event => this._handleFocusin(event));
+	      EventHandler__default.default.on(document, EVENT_KEYDOWN_TAB, event => this._handleKeydown(event));
 	      this._isActive = true;
 	    }
 
@@ -6540,7 +6565,7 @@
 	      }
 
 	      this._isActive = false;
-	      EventHandler__default['default'].off(document, EVENT_KEY$1);
+	      EventHandler__default.default.off(document, EVENT_KEY$1);
 	    } // Private
 
 
@@ -6556,7 +6581,7 @@
 	        return;
 	      }
 
-	      const elements = SelectorEngine__default['default'].focusableChildren(trapElement);
+	      const elements = SelectorEngine__default.default.focusableChildren(trapElement);
 
 	      if (elements.length === 0) {
 	        trapElement.focus();
@@ -6587,7 +6612,7 @@
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): util/component-functions.js
+	   * Bootstrap (v5.1.3): util/component-functions.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -6595,7 +6620,7 @@
 	  const enableDismissTrigger = (component, method = 'hide') => {
 	    const clickEvent = `click.dismiss${component.EVENT_KEY}`;
 	    const name = component.NAME;
-	    EventHandler__default['default'].on(document, clickEvent, `[data-bs-dismiss="${name}"]`, function (event) {
+	    EventHandler__default.default.on(document, clickEvent, `[data-bs-dismiss="${name}"]`, function (event) {
 	      if (['A', 'AREA'].includes(this.tagName)) {
 	        event.preventDefault();
 	      }
@@ -6613,8 +6638,8 @@
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): offcanvas.js
-	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+	   * Bootstrap (v5.1.3): offcanvas.js
+	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
 	  /**
@@ -6655,7 +6680,7 @@
 	   * ------------------------------------------------------------------------
 	   */
 
-	  class Offcanvas extends BaseComponent__default['default'] {
+	  class Offcanvas extends BaseComponent__default.default {
 	    constructor(element, config) {
 	      super(element);
 	      this._config = this._getConfig(config);
@@ -6685,7 +6710,7 @@
 	        return;
 	      }
 
-	      const showEvent = EventHandler__default['default'].trigger(this._element, EVENT_SHOW, {
+	      const showEvent = EventHandler__default.default.trigger(this._element, EVENT_SHOW, {
 	        relatedTarget
 	      });
 
@@ -6715,7 +6740,7 @@
 	          this._focustrap.activate();
 	        }
 
-	        EventHandler__default['default'].trigger(this._element, EVENT_SHOWN, {
+	        EventHandler__default.default.trigger(this._element, EVENT_SHOWN, {
 	          relatedTarget
 	        });
 	      };
@@ -6728,7 +6753,7 @@
 	        return;
 	      }
 
-	      const hideEvent = EventHandler__default['default'].trigger(this._element, EVENT_HIDE);
+	      const hideEvent = EventHandler__default.default.trigger(this._element, EVENT_HIDE);
 
 	      if (hideEvent.defaultPrevented) {
 	        return;
@@ -6757,7 +6782,7 @@
 	          new ScrollBarHelper().reset();
 	        }
 
-	        EventHandler__default['default'].trigger(this._element, EVENT_HIDDEN);
+	        EventHandler__default.default.trigger(this._element, EVENT_HIDDEN);
 	      };
 
 	      this._queueCallback(completeCallback, this._element, true);
@@ -6774,7 +6799,7 @@
 
 	    _getConfig(config) {
 	      config = { ...Default,
-	        ...Manipulator__default['default'].getDataAttributes(this._element),
+	        ...Manipulator__default.default.getDataAttributes(this._element),
 	        ...(typeof config === 'object' ? config : {})
 	      };
 	      typeCheckConfig(NAME, config, DefaultType);
@@ -6798,7 +6823,7 @@
 	    }
 
 	    _addEventListeners() {
-	      EventHandler__default['default'].on(this._element, EVENT_KEYDOWN_DISMISS, event => {
+	      EventHandler__default.default.on(this._element, EVENT_KEYDOWN_DISMISS, event => {
 	        if (this._config.keyboard && event.key === ESCAPE_KEY) {
 	          this.hide();
 	        }
@@ -6830,7 +6855,7 @@
 	   */
 
 
-	  EventHandler__default['default'].on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
+	  EventHandler__default.default.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
 	    const target = getElementFromSelector(this);
 
 	    if (['A', 'AREA'].includes(this.tagName)) {
@@ -6841,14 +6866,14 @@
 	      return;
 	    }
 
-	    EventHandler__default['default'].one(target, EVENT_HIDDEN, () => {
+	    EventHandler__default.default.one(target, EVENT_HIDDEN, () => {
 	      // focus on trigger when it is closed
 	      if (isVisible(this)) {
 	        this.focus();
 	      }
 	    }); // avoid conflict when clicking a toggler of an offcanvas, while another is open
 
-	    const allReadyOpen = SelectorEngine__default['default'].findOne(OPEN_SELECTOR);
+	    const allReadyOpen = SelectorEngine__default.default.findOne(OPEN_SELECTOR);
 
 	    if (allReadyOpen && allReadyOpen !== target) {
 	      Offcanvas.getInstance(allReadyOpen).hide();
@@ -6857,7 +6882,7 @@
 	    const data = Offcanvas.getOrCreateInstance(target);
 	    data.toggle(this);
 	  });
-	  EventHandler__default['default'].on(window, EVENT_LOAD_DATA_API, () => SelectorEngine__default['default'].find(OPEN_SELECTOR).forEach(el => Offcanvas.getOrCreateInstance(el).show()));
+	  EventHandler__default.default.on(window, EVENT_LOAD_DATA_API, () => SelectorEngine__default.default.find(OPEN_SELECTOR).forEach(el => Offcanvas.getOrCreateInstance(el).show()));
 	  enableDismissTrigger(Offcanvas);
 	  /**
 	   * ------------------------------------------------------------------------
@@ -6869,7 +6894,7 @@
 
 	  return Offcanvas;
 
-	})));
+	}));
 
 	}(offcanvas$1));
 
@@ -6880,7 +6905,7 @@
 	var tooltip$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap tooltip.js v5.1.1 (https://getbootstrap.com/)
+	  * Bootstrap tooltip.js v5.1.3 (https://getbootstrap.com/)
 	  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -6888,39 +6913,37 @@
 	(function (module, exports) {
 	(function (global, factory) {
 	  module.exports = factory(require$$0, data.exports, eventHandler.exports, manipulator.exports, selectorEngine.exports, baseComponent.exports) ;
-	}(commonjsGlobal, (function (Popper, Data, EventHandler, Manipulator, SelectorEngine, BaseComponent) {
-	  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+	})(commonjsGlobal, (function (Popper, Data, EventHandler, Manipulator, SelectorEngine, BaseComponent) {
+	  const _interopDefaultLegacy = e => e && typeof e === 'object' && 'default' in e ? e : { default: e };
 
 	  function _interopNamespace(e) {
 	    if (e && e.__esModule) return e;
-	    var n = Object.create(null);
+	    const n = Object.create(null);
 	    if (e) {
-	      Object.keys(e).forEach(function (k) {
+	      for (const k in e) {
 	        if (k !== 'default') {
-	          var d = Object.getOwnPropertyDescriptor(e, k);
+	          const d = Object.getOwnPropertyDescriptor(e, k);
 	          Object.defineProperty(n, k, d.get ? d : {
 	            enumerable: true,
-	            get: function () {
-	              return e[k];
-	            }
+	            get: () => e[k]
 	          });
 	        }
-	      });
+	      }
 	    }
-	    n['default'] = e;
+	    n.default = e;
 	    return Object.freeze(n);
 	  }
 
-	  var Popper__namespace = /*#__PURE__*/_interopNamespace(Popper);
-	  var Data__default = /*#__PURE__*/_interopDefaultLegacy(Data);
-	  var EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
-	  var Manipulator__default = /*#__PURE__*/_interopDefaultLegacy(Manipulator);
-	  var SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
-	  var BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
+	  const Popper__namespace = /*#__PURE__*/_interopNamespace(Popper);
+	  const Data__default = /*#__PURE__*/_interopDefaultLegacy(Data);
+	  const EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
+	  const Manipulator__default = /*#__PURE__*/_interopDefaultLegacy(Manipulator);
+	  const SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
+	  const BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): util/index.js
+	   * Bootstrap (v5.1.3): util/index.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -7062,42 +7085,42 @@
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): util/sanitizer.js
+	   * Bootstrap (v5.1.3): util/sanitizer.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
-	  const uriAttrs = new Set(['background', 'cite', 'href', 'itemtype', 'longdesc', 'poster', 'src', 'xlink:href']);
+	  const uriAttributes = new Set(['background', 'cite', 'href', 'itemtype', 'longdesc', 'poster', 'src', 'xlink:href']);
 	  const ARIA_ATTRIBUTE_PATTERN = /^aria-[\w-]*$/i;
 	  /**
 	   * A pattern that recognizes a commonly useful subset of URLs that are safe.
 	   *
-	   * Shoutout to Angular 7 https://github.com/angular/angular/blob/7.2.4/packages/core/src/sanitization/url_sanitizer.ts
+	   * Shoutout to Angular https://github.com/angular/angular/blob/12.2.x/packages/core/src/sanitization/url_sanitizer.ts
 	   */
 
-	  const SAFE_URL_PATTERN = /^(?:(?:https?|mailto|ftp|tel|file):|[^#&/:?]*(?:[#/?]|$))/i;
+	  const SAFE_URL_PATTERN = /^(?:(?:https?|mailto|ftp|tel|file|sms):|[^#&/:?]*(?:[#/?]|$))/i;
 	  /**
 	   * A pattern that matches safe data URLs. Only matches image, video and audio types.
 	   *
-	   * Shoutout to Angular 7 https://github.com/angular/angular/blob/7.2.4/packages/core/src/sanitization/url_sanitizer.ts
+	   * Shoutout to Angular https://github.com/angular/angular/blob/12.2.x/packages/core/src/sanitization/url_sanitizer.ts
 	   */
 
 	  const DATA_URL_PATTERN = /^data:(?:image\/(?:bmp|gif|jpeg|jpg|png|tiff|webp)|video\/(?:mpeg|mp4|ogg|webm)|audio\/(?:mp3|oga|ogg|opus));base64,[\d+/a-z]+=*$/i;
 
-	  const allowedAttribute = (attr, allowedAttributeList) => {
-	    const attrName = attr.nodeName.toLowerCase();
+	  const allowedAttribute = (attribute, allowedAttributeList) => {
+	    const attributeName = attribute.nodeName.toLowerCase();
 
-	    if (allowedAttributeList.includes(attrName)) {
-	      if (uriAttrs.has(attrName)) {
-	        return Boolean(SAFE_URL_PATTERN.test(attr.nodeValue) || DATA_URL_PATTERN.test(attr.nodeValue));
+	    if (allowedAttributeList.includes(attributeName)) {
+	      if (uriAttributes.has(attributeName)) {
+	        return Boolean(SAFE_URL_PATTERN.test(attribute.nodeValue) || DATA_URL_PATTERN.test(attribute.nodeValue));
 	      }
 
 	      return true;
 	    }
 
-	    const regExp = allowedAttributeList.filter(attrRegex => attrRegex instanceof RegExp); // Check if a regular expression validates the attribute.
+	    const regExp = allowedAttributeList.filter(attributeRegex => attributeRegex instanceof RegExp); // Check if a regular expression validates the attribute.
 
 	    for (let i = 0, len = regExp.length; i < len; i++) {
-	      if (regExp[i].test(attrName)) {
+	      if (regExp[i].test(attributeName)) {
 	        return true;
 	      }
 	    }
@@ -7149,23 +7172,22 @@
 
 	    const domParser = new window.DOMParser();
 	    const createdDocument = domParser.parseFromString(unsafeHtml, 'text/html');
-	    const allowlistKeys = Object.keys(allowList);
 	    const elements = [].concat(...createdDocument.body.querySelectorAll('*'));
 
 	    for (let i = 0, len = elements.length; i < len; i++) {
-	      const el = elements[i];
-	      const elName = el.nodeName.toLowerCase();
+	      const element = elements[i];
+	      const elementName = element.nodeName.toLowerCase();
 
-	      if (!allowlistKeys.includes(elName)) {
-	        el.remove();
+	      if (!Object.keys(allowList).includes(elementName)) {
+	        element.remove();
 	        continue;
 	      }
 
-	      const attributeList = [].concat(...el.attributes);
-	      const allowedAttributes = [].concat(allowList['*'] || [], allowList[elName] || []);
-	      attributeList.forEach(attr => {
-	        if (!allowedAttribute(attr, allowedAttributes)) {
-	          el.removeAttribute(attr.nodeName);
+	      const attributeList = [].concat(...element.attributes);
+	      const allowedAttributes = [].concat(allowList['*'] || [], allowList[elementName] || []);
+	      attributeList.forEach(attribute => {
+	        if (!allowedAttribute(attribute, allowedAttributes)) {
+	          element.removeAttribute(attribute.nodeName);
 	        }
 	      });
 	    }
@@ -7175,7 +7197,7 @@
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): tooltip.js
+	   * Bootstrap (v5.1.3): tooltip.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -7265,7 +7287,7 @@
 	   * ------------------------------------------------------------------------
 	   */
 
-	  class Tooltip extends BaseComponent__default['default'] {
+	  class Tooltip extends BaseComponent__default.default {
 	    constructor(element, config) {
 	      if (typeof Popper__namespace === 'undefined') {
 	        throw new TypeError('Bootstrap\'s tooltips require Popper (https://popper.js.org)');
@@ -7343,7 +7365,7 @@
 
 	    dispose() {
 	      clearTimeout(this._timeout);
-	      EventHandler__default['default'].off(this._element.closest(SELECTOR_MODAL), EVENT_MODAL_HIDE, this._hideModalHandler);
+	      EventHandler__default.default.off(this._element.closest(SELECTOR_MODAL), EVENT_MODAL_HIDE, this._hideModalHandler);
 
 	      if (this.tip) {
 	        this.tip.remove();
@@ -7363,7 +7385,7 @@
 	        return;
 	      }
 
-	      const showEvent = EventHandler__default['default'].trigger(this._element, this.constructor.Event.SHOW);
+	      const showEvent = EventHandler__default.default.trigger(this._element, this.constructor.Event.SHOW);
 	      const shadowRoot = findShadowRoot(this._element);
 	      const isInTheDom = shadowRoot === null ? this._element.ownerDocument.documentElement.contains(this._element) : shadowRoot.contains(this._element);
 
@@ -7399,11 +7421,11 @@
 	      const {
 	        container
 	      } = this._config;
-	      Data__default['default'].set(tip, this.constructor.DATA_KEY, this);
+	      Data__default.default.set(tip, this.constructor.DATA_KEY, this);
 
 	      if (!this._element.ownerDocument.documentElement.contains(this.tip)) {
 	        container.append(tip);
-	        EventHandler__default['default'].trigger(this._element, this.constructor.Event.INSERTED);
+	        EventHandler__default.default.trigger(this._element, this.constructor.Event.INSERTED);
 	      }
 
 	      if (this._popper) {
@@ -7426,14 +7448,14 @@
 
 	      if ('ontouchstart' in document.documentElement) {
 	        [].concat(...document.body.children).forEach(element => {
-	          EventHandler__default['default'].on(element, 'mouseover', noop);
+	          EventHandler__default.default.on(element, 'mouseover', noop);
 	        });
 	      }
 
 	      const complete = () => {
 	        const prevHoverState = this._hoverState;
 	        this._hoverState = null;
-	        EventHandler__default['default'].trigger(this._element, this.constructor.Event.SHOWN);
+	        EventHandler__default.default.trigger(this._element, this.constructor.Event.SHOWN);
 
 	        if (prevHoverState === HOVER_STATE_OUT) {
 	          this._leave(null, this);
@@ -7465,12 +7487,12 @@
 
 	        this._element.removeAttribute('aria-describedby');
 
-	        EventHandler__default['default'].trigger(this._element, this.constructor.Event.HIDDEN);
+	        EventHandler__default.default.trigger(this._element, this.constructor.Event.HIDDEN);
 
 	        this._disposePopper();
 	      };
 
-	      const hideEvent = EventHandler__default['default'].trigger(this._element, this.constructor.Event.HIDE);
+	      const hideEvent = EventHandler__default.default.trigger(this._element, this.constructor.Event.HIDE);
 
 	      if (hideEvent.defaultPrevented) {
 	        return;
@@ -7480,7 +7502,7 @@
 	      // empty mouseover listeners we added for iOS support
 
 	      if ('ontouchstart' in document.documentElement) {
-	        [].concat(...document.body.children).forEach(element => EventHandler__default['default'].off(element, 'mouseover', noop));
+	        [].concat(...document.body.children).forEach(element => EventHandler__default.default.off(element, 'mouseover', noop));
 	      }
 
 	      this._activeTrigger[TRIGGER_CLICK] = false;
@@ -7523,7 +7545,7 @@
 	    }
 
 	    _sanitizeAndSetContent(template, content, selector) {
-	      const templateElement = SelectorEngine__default['default'].findOne(selector, template);
+	      const templateElement = SelectorEngine__default.default.findOne(selector, template);
 
 	      if (!content && templateElement) {
 	        templateElement.remove();
@@ -7661,12 +7683,12 @@
 
 	      triggers.forEach(trigger => {
 	        if (trigger === 'click') {
-	          EventHandler__default['default'].on(this._element, this.constructor.Event.CLICK, this._config.selector, event => this.toggle(event));
+	          EventHandler__default.default.on(this._element, this.constructor.Event.CLICK, this._config.selector, event => this.toggle(event));
 	        } else if (trigger !== TRIGGER_MANUAL) {
 	          const eventIn = trigger === TRIGGER_HOVER ? this.constructor.Event.MOUSEENTER : this.constructor.Event.FOCUSIN;
 	          const eventOut = trigger === TRIGGER_HOVER ? this.constructor.Event.MOUSELEAVE : this.constructor.Event.FOCUSOUT;
-	          EventHandler__default['default'].on(this._element, eventIn, this._config.selector, event => this._enter(event));
-	          EventHandler__default['default'].on(this._element, eventOut, this._config.selector, event => this._leave(event));
+	          EventHandler__default.default.on(this._element, eventIn, this._config.selector, event => this._enter(event));
+	          EventHandler__default.default.on(this._element, eventOut, this._config.selector, event => this._leave(event));
 	        }
 	      });
 
@@ -7676,7 +7698,7 @@
 	        }
 	      };
 
-	      EventHandler__default['default'].on(this._element.closest(SELECTOR_MODAL), EVENT_MODAL_HIDE, this._hideModalHandler);
+	      EventHandler__default.default.on(this._element.closest(SELECTOR_MODAL), EVENT_MODAL_HIDE, this._hideModalHandler);
 
 	      if (this._config.selector) {
 	        this._config = { ...this._config,
@@ -7768,7 +7790,7 @@
 	    }
 
 	    _getConfig(config) {
-	      const dataAttributes = Manipulator__default['default'].getDataAttributes(this._element);
+	      const dataAttributes = Manipulator__default.default.getDataAttributes(this._element);
 	      Object.keys(dataAttributes).forEach(dataAttr => {
 	        if (DISALLOWED_ATTRIBUTES.has(dataAttr)) {
 	          delete dataAttributes[dataAttr];
@@ -7885,14 +7907,14 @@
 
 	  return Tooltip;
 
-	})));
+	}));
 
 	}(tooltip$1));
 
 	var tooltip = /*@__PURE__*/getDefaultExportFromCjs(tooltip$1.exports);
 
 	/*!
-	  * Bootstrap popover.js v5.1.1 (https://getbootstrap.com/)
+	  * Bootstrap popover.js v5.1.3 (https://getbootstrap.com/)
 	  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -7900,14 +7922,14 @@
 	(function (module, exports) {
 	(function (global, factory) {
 	  module.exports = factory(tooltip$1.exports) ;
-	}(commonjsGlobal, (function (Tooltip) {
-	  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+	})(commonjsGlobal, (function (Tooltip) {
+	  const _interopDefaultLegacy = e => e && typeof e === 'object' && 'default' in e ? e : { default: e };
 
-	  var Tooltip__default = /*#__PURE__*/_interopDefaultLegacy(Tooltip);
+	  const Tooltip__default = /*#__PURE__*/_interopDefaultLegacy(Tooltip);
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): util/index.js
+	   * Bootstrap (v5.1.3): util/index.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -7962,7 +7984,7 @@
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): popover.js
+	   * Bootstrap (v5.1.3): popover.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -7976,14 +7998,14 @@
 	  const DATA_KEY = 'bs.popover';
 	  const EVENT_KEY = `.${DATA_KEY}`;
 	  const CLASS_PREFIX = 'bs-popover';
-	  const Default = { ...Tooltip__default['default'].Default,
+	  const Default = { ...Tooltip__default.default.Default,
 	    placement: 'right',
 	    offset: [0, 8],
 	    trigger: 'click',
 	    content: '',
 	    template: '<div class="popover" role="tooltip">' + '<div class="popover-arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div>' + '</div>'
 	  };
-	  const DefaultType = { ...Tooltip__default['default'].DefaultType,
+	  const DefaultType = { ...Tooltip__default.default.DefaultType,
 	    content: '(string|element|function)'
 	  };
 	  const Event = {
@@ -8006,7 +8028,7 @@
 	   * ------------------------------------------------------------------------
 	   */
 
-	  class Popover extends Tooltip__default['default'] {
+	  class Popover extends Tooltip__default.default {
 	    // Getters
 	    static get Default() {
 	      return Default;
@@ -8072,7 +8094,7 @@
 
 	  return Popover;
 
-	})));
+	}));
 
 	}(popover$1));
 
@@ -8081,7 +8103,7 @@
 	var scrollspy$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap scrollspy.js v5.1.1 (https://getbootstrap.com/)
+	  * Bootstrap scrollspy.js v5.1.3 (https://getbootstrap.com/)
 	  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -8089,17 +8111,17 @@
 	(function (module, exports) {
 	(function (global, factory) {
 	  module.exports = factory(eventHandler.exports, manipulator.exports, selectorEngine.exports, baseComponent.exports) ;
-	}(commonjsGlobal, (function (EventHandler, Manipulator, SelectorEngine, BaseComponent) {
-	  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+	})(commonjsGlobal, (function (EventHandler, Manipulator, SelectorEngine, BaseComponent) {
+	  const _interopDefaultLegacy = e => e && typeof e === 'object' && 'default' in e ? e : { default: e };
 
-	  var EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
-	  var Manipulator__default = /*#__PURE__*/_interopDefaultLegacy(Manipulator);
-	  var SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
-	  var BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
+	  const EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
+	  const Manipulator__default = /*#__PURE__*/_interopDefaultLegacy(Manipulator);
+	  const SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
+	  const BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): util/index.js
+	   * Bootstrap (v5.1.3): util/index.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -8233,7 +8255,7 @@
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): scrollspy.js
+	   * Bootstrap (v5.1.3): scrollspy.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -8278,7 +8300,7 @@
 	   * ------------------------------------------------------------------------
 	   */
 
-	  class ScrollSpy extends BaseComponent__default['default'] {
+	  class ScrollSpy extends BaseComponent__default.default {
 	    constructor(element, config) {
 	      super(element);
 	      this._scrollElement = this._element.tagName === 'BODY' ? window : this._element;
@@ -8287,7 +8309,7 @@
 	      this._targets = [];
 	      this._activeTarget = null;
 	      this._scrollHeight = 0;
-	      EventHandler__default['default'].on(this._scrollElement, EVENT_SCROLL, () => this._process());
+	      EventHandler__default.default.on(this._scrollElement, EVENT_SCROLL, () => this._process());
 	      this.refresh();
 
 	      this._process();
@@ -8310,16 +8332,16 @@
 	      this._offsets = [];
 	      this._targets = [];
 	      this._scrollHeight = this._getScrollHeight();
-	      const targets = SelectorEngine__default['default'].find(SELECTOR_LINK_ITEMS, this._config.target);
+	      const targets = SelectorEngine__default.default.find(SELECTOR_LINK_ITEMS, this._config.target);
 	      targets.map(element => {
 	        const targetSelector = getSelectorFromElement(element);
-	        const target = targetSelector ? SelectorEngine__default['default'].findOne(targetSelector) : null;
+	        const target = targetSelector ? SelectorEngine__default.default.findOne(targetSelector) : null;
 
 	        if (target) {
 	          const targetBCR = target.getBoundingClientRect();
 
 	          if (targetBCR.width || targetBCR.height) {
-	            return [Manipulator__default['default'][offsetMethod](target).top + offsetBase, targetSelector];
+	            return [Manipulator__default.default[offsetMethod](target).top + offsetBase, targetSelector];
 	          }
 	        }
 
@@ -8332,14 +8354,14 @@
 	    }
 
 	    dispose() {
-	      EventHandler__default['default'].off(this._scrollElement, EVENT_KEY);
+	      EventHandler__default.default.off(this._scrollElement, EVENT_KEY);
 	      super.dispose();
 	    } // Private
 
 
 	    _getConfig(config) {
 	      config = { ...Default,
-	        ...Manipulator__default['default'].getDataAttributes(this._element),
+	        ...Manipulator__default.default.getDataAttributes(this._element),
 	        ...(typeof config === 'object' && config ? config : {})
 	      };
 	      config.target = getElement(config.target) || document.documentElement;
@@ -8403,30 +8425,30 @@
 	      this._clear();
 
 	      const queries = SELECTOR_LINK_ITEMS.split(',').map(selector => `${selector}[data-bs-target="${target}"],${selector}[href="${target}"]`);
-	      const link = SelectorEngine__default['default'].findOne(queries.join(','), this._config.target);
+	      const link = SelectorEngine__default.default.findOne(queries.join(','), this._config.target);
 	      link.classList.add(CLASS_NAME_ACTIVE);
 
 	      if (link.classList.contains(CLASS_NAME_DROPDOWN_ITEM)) {
-	        SelectorEngine__default['default'].findOne(SELECTOR_DROPDOWN_TOGGLE, link.closest(SELECTOR_DROPDOWN)).classList.add(CLASS_NAME_ACTIVE);
+	        SelectorEngine__default.default.findOne(SELECTOR_DROPDOWN_TOGGLE, link.closest(SELECTOR_DROPDOWN)).classList.add(CLASS_NAME_ACTIVE);
 	      } else {
-	        SelectorEngine__default['default'].parents(link, SELECTOR_NAV_LIST_GROUP).forEach(listGroup => {
+	        SelectorEngine__default.default.parents(link, SELECTOR_NAV_LIST_GROUP).forEach(listGroup => {
 	          // Set triggered links parents as active
 	          // With both <ul> and <nav> markup a parent is the previous sibling of any nav ancestor
-	          SelectorEngine__default['default'].prev(listGroup, `${SELECTOR_NAV_LINKS}, ${SELECTOR_LIST_ITEMS}`).forEach(item => item.classList.add(CLASS_NAME_ACTIVE)); // Handle special case when .nav-link is inside .nav-item
+	          SelectorEngine__default.default.prev(listGroup, `${SELECTOR_NAV_LINKS}, ${SELECTOR_LIST_ITEMS}`).forEach(item => item.classList.add(CLASS_NAME_ACTIVE)); // Handle special case when .nav-link is inside .nav-item
 
-	          SelectorEngine__default['default'].prev(listGroup, SELECTOR_NAV_ITEMS).forEach(navItem => {
-	            SelectorEngine__default['default'].children(navItem, SELECTOR_NAV_LINKS).forEach(item => item.classList.add(CLASS_NAME_ACTIVE));
+	          SelectorEngine__default.default.prev(listGroup, SELECTOR_NAV_ITEMS).forEach(navItem => {
+	            SelectorEngine__default.default.children(navItem, SELECTOR_NAV_LINKS).forEach(item => item.classList.add(CLASS_NAME_ACTIVE));
 	          });
 	        });
 	      }
 
-	      EventHandler__default['default'].trigger(this._scrollElement, EVENT_ACTIVATE, {
+	      EventHandler__default.default.trigger(this._scrollElement, EVENT_ACTIVATE, {
 	        relatedTarget: target
 	      });
 	    }
 
 	    _clear() {
-	      SelectorEngine__default['default'].find(SELECTOR_LINK_ITEMS, this._config.target).filter(node => node.classList.contains(CLASS_NAME_ACTIVE)).forEach(node => node.classList.remove(CLASS_NAME_ACTIVE));
+	      SelectorEngine__default.default.find(SELECTOR_LINK_ITEMS, this._config.target).filter(node => node.classList.contains(CLASS_NAME_ACTIVE)).forEach(node => node.classList.remove(CLASS_NAME_ACTIVE));
 	    } // Static
 
 
@@ -8454,8 +8476,8 @@
 	   */
 
 
-	  EventHandler__default['default'].on(window, EVENT_LOAD_DATA_API, () => {
-	    SelectorEngine__default['default'].find(SELECTOR_DATA_SPY).forEach(spy => new ScrollSpy(spy));
+	  EventHandler__default.default.on(window, EVENT_LOAD_DATA_API, () => {
+	    SelectorEngine__default.default.find(SELECTOR_DATA_SPY).forEach(spy => new ScrollSpy(spy));
 	  });
 	  /**
 	   * ------------------------------------------------------------------------
@@ -8468,7 +8490,7 @@
 
 	  return ScrollSpy;
 
-	})));
+	}));
 
 	}(scrollspy$1));
 
@@ -8477,7 +8499,7 @@
 	var tab$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap tab.js v5.1.1 (https://getbootstrap.com/)
+	  * Bootstrap tab.js v5.1.3 (https://getbootstrap.com/)
 	  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -8485,16 +8507,16 @@
 	(function (module, exports) {
 	(function (global, factory) {
 	  module.exports = factory(eventHandler.exports, selectorEngine.exports, baseComponent.exports) ;
-	}(commonjsGlobal, (function (EventHandler, SelectorEngine, BaseComponent) {
-	  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+	})(commonjsGlobal, (function (EventHandler, SelectorEngine, BaseComponent) {
+	  const _interopDefaultLegacy = e => e && typeof e === 'object' && 'default' in e ? e : { default: e };
 
-	  var EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
-	  var SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
-	  var BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
+	  const EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
+	  const SelectorEngine__default = /*#__PURE__*/_interopDefaultLegacy(SelectorEngine);
+	  const BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): util/index.js
+	   * Bootstrap (v5.1.3): util/index.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -8608,7 +8630,7 @@
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): tab.js
+	   * Bootstrap (v5.1.3): tab.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -8644,7 +8666,7 @@
 	   * ------------------------------------------------------------------------
 	   */
 
-	  class Tab extends BaseComponent__default['default'] {
+	  class Tab extends BaseComponent__default.default {
 	    // Getters
 	    static get NAME() {
 	      return NAME;
@@ -8663,14 +8685,14 @@
 
 	      if (listElement) {
 	        const itemSelector = listElement.nodeName === 'UL' || listElement.nodeName === 'OL' ? SELECTOR_ACTIVE_UL : SELECTOR_ACTIVE;
-	        previous = SelectorEngine__default['default'].find(itemSelector, listElement);
+	        previous = SelectorEngine__default.default.find(itemSelector, listElement);
 	        previous = previous[previous.length - 1];
 	      }
 
-	      const hideEvent = previous ? EventHandler__default['default'].trigger(previous, EVENT_HIDE, {
+	      const hideEvent = previous ? EventHandler__default.default.trigger(previous, EVENT_HIDE, {
 	        relatedTarget: this._element
 	      }) : null;
-	      const showEvent = EventHandler__default['default'].trigger(this._element, EVENT_SHOW, {
+	      const showEvent = EventHandler__default.default.trigger(this._element, EVENT_SHOW, {
 	        relatedTarget: previous
 	      });
 
@@ -8681,10 +8703,10 @@
 	      this._activate(this._element, listElement);
 
 	      const complete = () => {
-	        EventHandler__default['default'].trigger(previous, EVENT_HIDDEN, {
+	        EventHandler__default.default.trigger(previous, EVENT_HIDDEN, {
 	          relatedTarget: this._element
 	        });
-	        EventHandler__default['default'].trigger(this._element, EVENT_SHOWN, {
+	        EventHandler__default.default.trigger(this._element, EVENT_SHOWN, {
 	          relatedTarget: previous
 	        });
 	      };
@@ -8698,7 +8720,7 @@
 
 
 	    _activate(element, container, callback) {
-	      const activeElements = container && (container.nodeName === 'UL' || container.nodeName === 'OL') ? SelectorEngine__default['default'].find(SELECTOR_ACTIVE_UL, container) : SelectorEngine__default['default'].children(container, SELECTOR_ACTIVE);
+	      const activeElements = container && (container.nodeName === 'UL' || container.nodeName === 'OL') ? SelectorEngine__default.default.find(SELECTOR_ACTIVE_UL, container) : SelectorEngine__default.default.children(container, SELECTOR_ACTIVE);
 	      const active = activeElements[0];
 	      const isTransitioning = callback && active && active.classList.contains(CLASS_NAME_FADE);
 
@@ -8716,7 +8738,7 @@
 	    _transitionComplete(element, active, callback) {
 	      if (active) {
 	        active.classList.remove(CLASS_NAME_ACTIVE);
-	        const dropdownChild = SelectorEngine__default['default'].findOne(SELECTOR_DROPDOWN_ACTIVE_CHILD, active.parentNode);
+	        const dropdownChild = SelectorEngine__default.default.findOne(SELECTOR_DROPDOWN_ACTIVE_CHILD, active.parentNode);
 
 	        if (dropdownChild) {
 	          dropdownChild.classList.remove(CLASS_NAME_ACTIVE);
@@ -8749,7 +8771,7 @@
 	        const dropdownElement = element.closest(SELECTOR_DROPDOWN);
 
 	        if (dropdownElement) {
-	          SelectorEngine__default['default'].find(SELECTOR_DROPDOWN_TOGGLE, dropdownElement).forEach(dropdown => dropdown.classList.add(CLASS_NAME_ACTIVE));
+	          SelectorEngine__default.default.find(SELECTOR_DROPDOWN_TOGGLE, dropdownElement).forEach(dropdown => dropdown.classList.add(CLASS_NAME_ACTIVE));
 	        }
 
 	        element.setAttribute('aria-expanded', true);
@@ -8783,7 +8805,7 @@
 	   */
 
 
-	  EventHandler__default['default'].on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
+	  EventHandler__default.default.on(document, EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
 	    if (['A', 'AREA'].includes(this.tagName)) {
 	      event.preventDefault();
 	    }
@@ -8806,7 +8828,7 @@
 
 	  return Tab;
 
-	})));
+	}));
 
 	}(tab$1));
 
@@ -8815,7 +8837,7 @@
 	var toast$1 = {exports: {}};
 
 	/*!
-	  * Bootstrap toast.js v5.1.1 (https://getbootstrap.com/)
+	  * Bootstrap toast.js v5.1.3 (https://getbootstrap.com/)
 	  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
 	  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	  */
@@ -8823,16 +8845,16 @@
 	(function (module, exports) {
 	(function (global, factory) {
 	  module.exports = factory(eventHandler.exports, manipulator.exports, baseComponent.exports) ;
-	}(commonjsGlobal, (function (EventHandler, Manipulator, BaseComponent) {
-	  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+	})(commonjsGlobal, (function (EventHandler, Manipulator, BaseComponent) {
+	  const _interopDefaultLegacy = e => e && typeof e === 'object' && 'default' in e ? e : { default: e };
 
-	  var EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
-	  var Manipulator__default = /*#__PURE__*/_interopDefaultLegacy(Manipulator);
-	  var BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
+	  const EventHandler__default = /*#__PURE__*/_interopDefaultLegacy(EventHandler);
+	  const Manipulator__default = /*#__PURE__*/_interopDefaultLegacy(Manipulator);
+	  const BaseComponent__default = /*#__PURE__*/_interopDefaultLegacy(BaseComponent);
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): util/index.js
+	   * Bootstrap (v5.1.3): util/index.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -8978,7 +9000,7 @@
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): util/component-functions.js
+	   * Bootstrap (v5.1.3): util/component-functions.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -8986,7 +9008,7 @@
 	  const enableDismissTrigger = (component, method = 'hide') => {
 	    const clickEvent = `click.dismiss${component.EVENT_KEY}`;
 	    const name = component.NAME;
-	    EventHandler__default['default'].on(document, clickEvent, `[data-bs-dismiss="${name}"]`, function (event) {
+	    EventHandler__default.default.on(document, clickEvent, `[data-bs-dismiss="${name}"]`, function (event) {
 	      if (['A', 'AREA'].includes(this.tagName)) {
 	        event.preventDefault();
 	      }
@@ -9004,7 +9026,7 @@
 
 	  /**
 	   * --------------------------------------------------------------------------
-	   * Bootstrap (v5.1.1): toast.js
+	   * Bootstrap (v5.1.3): toast.js
 	   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 	   * --------------------------------------------------------------------------
 	   */
@@ -9046,7 +9068,7 @@
 	   * ------------------------------------------------------------------------
 	   */
 
-	  class Toast extends BaseComponent__default['default'] {
+	  class Toast extends BaseComponent__default.default {
 	    constructor(element, config) {
 	      super(element);
 	      this._config = this._getConfig(config);
@@ -9072,7 +9094,7 @@
 
 
 	    show() {
-	      const showEvent = EventHandler__default['default'].trigger(this._element, EVENT_SHOW);
+	      const showEvent = EventHandler__default.default.trigger(this._element, EVENT_SHOW);
 
 	      if (showEvent.defaultPrevented) {
 	        return;
@@ -9087,7 +9109,7 @@
 	      const complete = () => {
 	        this._element.classList.remove(CLASS_NAME_SHOWING);
 
-	        EventHandler__default['default'].trigger(this._element, EVENT_SHOWN);
+	        EventHandler__default.default.trigger(this._element, EVENT_SHOWN);
 
 	        this._maybeScheduleHide();
 	      };
@@ -9109,7 +9131,7 @@
 	        return;
 	      }
 
-	      const hideEvent = EventHandler__default['default'].trigger(this._element, EVENT_HIDE);
+	      const hideEvent = EventHandler__default.default.trigger(this._element, EVENT_HIDE);
 
 	      if (hideEvent.defaultPrevented) {
 	        return;
@@ -9123,7 +9145,7 @@
 
 	        this._element.classList.remove(CLASS_NAME_SHOW);
 
-	        EventHandler__default['default'].trigger(this._element, EVENT_HIDDEN);
+	        EventHandler__default.default.trigger(this._element, EVENT_HIDDEN);
 	      };
 
 	      this._element.classList.add(CLASS_NAME_SHOWING);
@@ -9144,7 +9166,7 @@
 
 	    _getConfig(config) {
 	      config = { ...Default,
-	        ...Manipulator__default['default'].getDataAttributes(this._element),
+	        ...Manipulator__default.default.getDataAttributes(this._element),
 	        ...(typeof config === 'object' && config ? config : {})
 	      };
 	      typeCheckConfig(NAME, config, this.constructor.DefaultType);
@@ -9194,10 +9216,10 @@
 	    }
 
 	    _setListeners() {
-	      EventHandler__default['default'].on(this._element, EVENT_MOUSEOVER, event => this._onInteraction(event, true));
-	      EventHandler__default['default'].on(this._element, EVENT_MOUSEOUT, event => this._onInteraction(event, false));
-	      EventHandler__default['default'].on(this._element, EVENT_FOCUSIN, event => this._onInteraction(event, true));
-	      EventHandler__default['default'].on(this._element, EVENT_FOCUSOUT, event => this._onInteraction(event, false));
+	      EventHandler__default.default.on(this._element, EVENT_MOUSEOVER, event => this._onInteraction(event, true));
+	      EventHandler__default.default.on(this._element, EVENT_MOUSEOUT, event => this._onInteraction(event, false));
+	      EventHandler__default.default.on(this._element, EVENT_FOCUSIN, event => this._onInteraction(event, true));
+	      EventHandler__default.default.on(this._element, EVENT_FOCUSOUT, event => this._onInteraction(event, false));
 	    }
 
 	    _clearTimeout() {
@@ -9234,7 +9256,7 @@
 
 	  return Toast;
 
-	})));
+	}));
 
 	}(toast$1));
 
