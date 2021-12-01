@@ -84,4 +84,4 @@ npm run watch-bs
 
 This child theme uses Bootstrap 5 and requires Understrap Parent Theme 1.1 or greater for best functionality. It does not create JS or CSS files that work with Bootstrap 4 markup. In fact, in the `functions.php` file, this child theme overrides the parent theme's customizer settings.
 
-If you want to build a child theme with Bootstrap 4, please use [the 1.0.0 child theme release](https://github.com/understrap/understrap-child/releases/tag/v1.0.0) as it was the last version built to support Bootstrap 4.
+If you want to build a child theme with Bootstrap 4, please use [the 1.0.1 child theme release](https://github.com/understrap/understrap-child/releases/tag/v1.0.1) as it was the last version built to support Bootstrap 4.
