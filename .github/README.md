@@ -32,7 +32,7 @@ It will be outputted into:
 
 So you have one clean CSS file at the end and just one request.
 
-Add your own JS files to `/src/js/` to have them bundled into `/js/child-theme.js` and `/js/child-theme.min.js`.
+Add your own JS to `/src/js/custom-javascript.js` to have it bundled into `/js/child-theme.js` and `/js/child-theme.min.js`. If you'd like to add additional files, you'll need to add the filenames to the Rollup.js config file: `/src/build/rollup.config.js`.
 
 ## Developing With NPM, postCSS, Rollup, SASS and BrowserSync
 
@@ -44,7 +44,7 @@ Some basics about the files that come with Understrap:
 - The theme itself uses the `/style.css` file only to identify the theme inside of WordPress. The file is not loaded by the theme and does not include any styles.
 - The `/css/child-theme.css` and its minified little brother `/css/child-theme.min.css` file(s) provides all styles. It is composed of different SCSS sets and one variable file, all imported at `/src/sass/child-theme.scss`
 - Your design goes into: `/src/sass/child-theme`.
-  - Override Bootstrap by addind your variables to the `/src/sass/theme/_child_theme_variables.scss`
+  - Override Bootstrap by adding your variables to the `/src/sass/theme/_child_theme_variables.scss`
   - Add your custom styles to the `/src/sass/theme/_child_theme.scss` file
   - Or add other .scss files into it and `@import` it into `/src/sass/theme/_child_theme.scss`.
 
@@ -76,6 +76,12 @@ module.exports = {
 then run: 
 
 ```bash
-npm run watch
+npm run watch-bs
 ```
 
+
+## Bootstrap 4 Support
+
+This child theme uses Bootstrap 5 and requires Understrap Parent Theme 1.1 or greater for best functionality. It does not create JS or CSS files that work with Bootstrap 4 markup. In fact, in the `functions.php` file, this child theme overrides the parent theme's customizer settings.
+
+If you want to build a child theme with Bootstrap 4, please use [the 1.0.1 child theme release](https://github.com/understrap/understrap-child/releases/tag/v1.0.1) as it was the last version built to support Bootstrap 4.
