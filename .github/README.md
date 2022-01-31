@@ -21,14 +21,6 @@ Full documentation for this starter theme is available at [docs.understrap.com](
 
 For support requests and bugs, we recommend browsing our issues [here (parent theme)](https://github.com/understrap/understrap/issues) and [here (child theme)](https://github.com/understrap/understrap-child/issues) and opening a new issue if necessary. For more broad discussion, like questions about the roadmap, visit our [discussion board](https://github.com/understrap/understrap/discussions).
 
-
-## License
-
-Copyright 2021 [Howard Development & Consulting, LLC](https://howarddc.com)
-Understrap is distributed under the terms of the GNU GPL version 2
-
-http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
-
 ## Basic Features
 
 - Combines Underscore’s PHP/JS files and Bootstrap’s HTML/CSS/JS.
@@ -41,11 +33,22 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 - Contact Form 7 support
 - Translation ready
 
-## Bootstrap 5 and Bootstrap 4 Support
+## Understrap Academy 
+
+[Become an Understrap Expert.](https://www.understrapacademy.com) Presented by the team behind the Understrap Theme Framework, Understrap Academy is a collection of online courses that will help you speed up your development process, make your projects more profitable, and become an Understrap expert in record time.
+
+## Bootstrap 5 (and Bootstrap 4 Support)
 
 This child theme uses Bootstrap 5 and requires [Understrap Parent Theme 1.1](https://wordpress.org/themes/understrap) or greater for best functionality. It does not create JS or CSS files that work with Bootstrap 4 markup. In fact, in the `functions.php` file, this child theme overrides the parent theme's customizer settings.
 
 If you want to build a child theme with Bootstrap 4, please use [the 1.0.1 child theme release](https://github.com/understrap/understrap-child/releases/tag/v1.0.1) as it was the last version built to support Bootstrap 4.
+
+## License
+
+Copyright 2021 [Howard Development & Consulting, LLC](https://howarddc.com)
+Understrap is distributed under the terms of the GNU GPL version 2
+
+http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
 ## Credits
 - Font Awesome: https://fontawesome.com/v4.7/license/ (Font: SIL OFL 1.1, (S)CSS: MIT)
