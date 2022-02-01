@@ -1,3 +1,5 @@
+<p align="center"><img src="https://understrap.com/wp-content/uploads/2022/02/Understrap_Logo_Color.svg" width="320" height="auto"></p>
+
 #### See: [Official Demo](https://demos.understrap.com) | Read: [Official Docs Page](https://docs.understrap.com/)
 
 # Understrap Child Starter Theme
@@ -37,7 +39,7 @@ For support requests and bugs, we recommend browsing our issues [here (parent th
 
 [Become an Understrap Expert.](https://www.understrapacademy.com) Presented by the team behind the Understrap Theme Framework, Understrap Academy is a collection of online courses that will help you speed up your development process, make your projects more profitable, and become an Understrap expert in record time.
 
-## Bootstrap 5 (and Bootstrap 4 Support)
+## Bootstrap 5 (and Bootstrap 4) Support
 
 This child theme uses Bootstrap 5 and requires [Understrap Parent Theme 1.1](https://wordpress.org/themes/understrap) or greater for best functionality. It does not create JS or CSS files that work with Bootstrap 4 markup. In fact, in the `functions.php` file, this child theme overrides the parent theme's customizer settings.
 
@@ -45,7 +47,7 @@ If you want to build a child theme with Bootstrap 4, please use [the 1.0.1 child
 
 ## License
 
-Copyright 2021 [Howard Development & Consulting, LLC](https://howarddc.com)
+Copyright 2022 [Howard Development & Consulting, LLC](https://howarddc.com).
 Understrap is distributed under the terms of the GNU GPL version 2
 
 http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
