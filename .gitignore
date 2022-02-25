@@ -13,3 +13,7 @@ dist-product
 npm-debug.log
 
 /vendor/
+
+.vscode
+
+.DS_Store
