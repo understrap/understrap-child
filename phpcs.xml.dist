@@ -97,6 +97,6 @@
 		Also exlude theme.js which includes bootstrap.js.
 	-->
 	<rule ref="WPThemeReview.Privacy.ShortenedURLs.Found">
-		<exclude-pattern>/js/theme*\.js</exclude-pattern>
+		<exclude-pattern>/js/child-theme*\.js</exclude-pattern>
 	</rule>
 </ruleset>
