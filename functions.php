@@ -64,10 +64,9 @@ add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
  * This function uses the `theme_mod_{$name}` hook and
  * can be duplicated to override other theme settings.
  *
- * @param string $current_mod The current value of the theme_mod.
  * @return string
  */
-function understrap_default_bootstrap_version( $current_mod ) {
+function understrap_default_bootstrap_version() {
 	return 'bootstrap5';
 }
 add_filter( 'theme_mod_understrap_bootstrap_version', 'understrap_default_bootstrap_version', 20 );
