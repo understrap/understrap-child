@@ -1,87 +1,58 @@
-# understrap-child
-Basic Child Theme for Understrap Theme Framework: https://github.com/understrap/understrap
+<p align="center"><img src="https://understrap.com/wp-content/uploads/2022/02/Understrap_Logo_Color.svg" width="320" height="auto"></p>
 
-## How it works
-Understrap Child Theme shares with the parent theme all PHP files and adds its own functions.php on top of the Understrap parent theme's functions.php.
+#### See: [Official Demo](https://demos.understrap.com) | Read: [Official Docs Page](https://docs.understrap.com/)
 
-**IT DOES NOT LOAD THE PARENT THEMES CSS FILE(S)!** Instead it uses the Understrap Parent Theme as a dependency via npm and compiles its own CSS file from it.
+# Understrap Child Starter Theme
 
-Understrap Child Theme uses the Enqueue method to load and sort the CSS file the right way instead of the old @import method.
+Website: [understrap.com](https://understrap.com)
 
-## Installation
-1. Install the parent theme Understrap first: `https://github.com/understrap/understrap` or `https://wordpress.org/themes/understrap/`
-   - IMPORTANT: If you download Understrap from GitHub make sure you rename the "understrap-master.zip" file to "understrap.zip" or you might have problems using this child theme!
-1. Upload the understrap-child folder to your wp-content/themes directory
-1. Go into your WP admin backend 
-1. Go to "Appearance -> Themes"
-1. Activate the Understrap Child theme
+Parent Theme Project: [github.com/understrap/understrap](https://github.com/understrap/understrap)
 
-## Editing
-Add your own CSS styles to `/src/sass/theme/_child_theme.scss`
-or import you own files into `/src/sass/theme/understrap-child.scss`
+Premium Child Themes: [understrap.com/child-themes/](https://understrap.com/child-themes/)
 
-To overwrite Bootstrap's or Understrap's base variables just add your own value to:
-`/src/sass/theme/_child_theme_variables.scss`
+## About
 
-For example, the "$primary" variable is used by both Bootstrap and Understrap.
+Understrap is the renowned open-source WordPress starter theme that combines Underscores with Bootstrap. Trusted by more than 100,000 developers. This repo holds the **Child Starter Theme** for developers using the [Understrap Theme Framework](https://github.com/understrap/understrap).
 
-Add your own color like: `$primary: #ff6600;` in `/src/sass/theme/_child_theme_variables.scss` to overwrite it. This change will automatically apply to all elements that use the $brand-primary variable.
+## Documentation
 
-It will be outputted into:
-`/css/understrap-child.min.css` and `/css/understrap-child.css`
-
-So you have one clean CSS file at the end and just one request.
-
-Add your own JS to `/src/js/custom-javascript.js` to have it bundled into `/js/child-theme.js` and `/js/child-theme.min.js`. If you'd like to add additional files, you'll need to add the filenames to the Rollup.js config file: `/src/build/rollup.config.js`.
-
-## Developing With NPM, postCSS, Rollup, SASS and BrowserSync
-
-This theme uses [sass](https://www.npmjs.com/package/sass) and [postCSS](https://postcss.org) to handle compiling all of the styles into one style sheet. The theme also includes [rollup.js](https://www.rollupjs.org/) to handle javascript compilation and minification. These choices are based on the same libraries and npm commands used in Bootstrap. In addition, it comes with [BrowserSync](http://browsersync.io) to handle live reloading while you develop.
-
-### Confused by All the CSS, SCSS, and SASS Files?
-
-Some basics about the files that come with Understrap:
-- The theme itself uses the `/style.css` file only to identify the theme inside of WordPress. The file is not loaded by the theme and does not include any styles.
-- The `/css/child-theme.css` and its minified little brother `/css/child-theme.min.css` file(s) provides all styles. It is composed of different SCSS sets and one variable file, all imported at `/src/sass/child-theme.scss`
-- Your design goes into: `/src/sass/child-theme`.
-  - Override Bootstrap by adding your variables to the `/src/sass/theme/_child_theme_variables.scss`
-  - Add your custom styles to the `/src/sass/theme/_child_theme.scss` file
-  - Or add other .scss files into it and `@import` it into `/src/sass/theme/_child_theme.scss`.
-
-The same goes for Javascript. Just add your javascript to `/src/js/custom-javascript.js` and let rollup.js handle the rest.
-
-### Installing Dependencies
-- Make sure you have installed Node.js and BrowserSync on your computer globally
-- Open your terminal and browse to the location of your Understrap copy
-- Run: `$ npm install`
-
-### Running
-To work and compile your Sass files on the fly start:
-
-```bash
-npm run watch
-```
-
-Or, to run with BrowserSync:
-
-First change the browser-sync options to reflect your environment in the file `/build/browser-sync.config.js` in the beginning of the file:
-```javascript
-module.exports = {
-	"proxy": "localhost/",
-	"notify": false,
-	"files": ["./css/*.min.css", "./js/*.min.js", "./**/*.php"]
-};
-```
-
-then run: 
-
-```bash
-npm run watch-bs
-```
+Full documentation for this starter theme is available at [docs.understrap.com](https://docs.understrap.com).
 
 
-## Bootstrap 4 Support
+## Questions
 
-This child theme uses Bootstrap 5 and requires Understrap Parent Theme 1.1 or greater for best functionality. It does not create JS or CSS files that work with Bootstrap 4 markup. In fact, in the `functions.php` file, this child theme overrides the parent theme's customizer settings.
+For support requests and bugs, we recommend browsing our issues [here (parent theme)](https://github.com/understrap/understrap/issues) and [here (child theme)](https://github.com/understrap/understrap-child/issues) and opening a new issue if necessary. For more broad discussion, like questions about the roadmap, visit our [discussion board](https://github.com/understrap/understrap/discussions).
+
+## Basic Features
+
+- Combines Underscore’s PHP/JS files and Bootstrap’s HTML/CSS/JS.
+- Comes with Bootstrap v5 Sass source files and additional .scss files. Nicely sorted and ready to add your own variables and customize the Bootstrap variables.
+- Uses sass and postCSS to handle compiling all of the styles into one style sheet. The theme also includes rollup.js to handle javascript compilation and minification. 
+- Uses a single minified CSS file for all the basic stuff.
+- [Font Awesome](http://fortawesome.github.io/Font-Awesome/) integration (v4.7.0)
+- Jetpack ready
+- WooCommerce support
+- Contact Form 7 support
+- Translation ready
+
+## Understrap Academy 
+
+[Become an Understrap Expert.](https://www.understrapacademy.com) Presented by the team behind the Understrap Theme Framework, Understrap Academy is a collection of online courses that will help you speed up your development process, make your projects more profitable, and become an Understrap expert in record time.
+
+## Bootstrap 5 (and Bootstrap 4) Support
+
+This child theme uses Bootstrap 5 and requires [Understrap Parent Theme 1.1](https://wordpress.org/themes/understrap) or greater for best functionality. It does not create JS or CSS files that work with Bootstrap 4 markup. In fact, in the `functions.php` file, this child theme overrides the parent theme's customizer settings.
 
 If you want to build a child theme with Bootstrap 4, please use [the 1.0.1 child theme release](https://github.com/understrap/understrap-child/releases/tag/v1.0.1) as it was the last version built to support Bootstrap 4.
+
+## License
+
+Copyright 2022 [Howard Development & Consulting, LLC](https://howarddc.com).
+Understrap is distributed under the terms of the GNU GPL version 2
+
+http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+
+## Credits
+- Font Awesome: https://fontawesome.com/v4.7/license/ (Font: SIL OFL 1.1, (S)CSS: MIT)
+- Bootstrap: http://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (MIT)
+- WP Bootstrap Navwalker by Edward McIntyre & William Patton: https://github.com/wp-bootstrap/wp-bootstrap-navwalker (GNU GPLv3)
