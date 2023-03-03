@@ -9,6 +9,7 @@ async function copyDir(src, dest) {
 		'dist',
 		'src',
 		'.github',
+		'.git',
 		'.browserslistrc',
 		'.editorconfig',
 		'.gitattributes',
