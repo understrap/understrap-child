@@ -13,4 +13,9 @@
  GitHub Theme URI: understrap/understrap-child
 
  These are changes from Local
+
+ 
 */
+body {
+    font-family: 'Open Sans', sans-serif;
+}
